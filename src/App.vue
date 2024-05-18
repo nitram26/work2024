@@ -3,7 +3,7 @@
     <v-main>
       <v-app-bar scroll-behavior="hide" color="teal-darken-4" >
   <v-app-bar-nav-icon><v-btn to="/">
-    <v-img src="@/assets/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
+    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
   </v-app-bar-nav-icon>
   <v-app-bar-title>OPUS</v-app-bar-title>
 

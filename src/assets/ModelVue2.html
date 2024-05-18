@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color: antiquewhite;}</style>
+  <title>01 Model Vue2</title>
+</head>
+<body>
+  <pre>
+  01 MODEL VUE2
+innovation.js
+
+//////////////////////////////////
+
+'use strict'
+
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const InnovationSchema = Schema({
+  clientName: {
+    type: String,
+  },
+  title: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+})
+
+module.exports = mongoose.model('Innovations', InnovationSchema)
+
+//////////////////////////////////////////////////////////////////////////
+EXITMODEL
+1.	Poner solo unos 2 campos para ver el funcionamiento
+2.	Cambiar el nombre del archivo
+'use strict'
+
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const ExitSchema = Schema({
+  clientName: {
+    type: String,
+    required: true,
+    trim: true,
+    maxLength: [50, 'El nombre no puede tener más de 50 caracteres'],
+  },
+  amount: {
+    type: String,
+    required: [true, 'El campo es obligatorio'],
+  },
+  saveDate: {
+    type: Date,
+    default: Date.now
+  }
+})
+
+module.exports = mongoose.model('Exits', ExitSchema)
+
+</pre>
+</body>
+</html>
+
+    
