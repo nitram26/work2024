@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color: antiquewhite;}</style>
+  <title> 02 CONTROLLER</title>
+</head>
+<body>
+  <pre>
+    <div>
+     
+
+1.	Cambiar mayúsculas y minúsculas
+/* eslint-disable import/order */
+/* eslint-disable curly */
+/* eslint-disable no-unused-vars */
+'use strict'
+
+const Exit = require('../models/exit')
+const f = require('../services/functions')
+
+async function getListExit(req, res) {
+  try {
+    const paramsQuery = {}
+    const parameterError = f.validateFields(req.query, {
+      skip: { type: 'number', default: 0, min: 0, eCode: 'GLU0101' },
+      limit: { type: 'number', default: 10, min: 1, max: 25, eCode: 'GLU0102' },
+      query: { type: 'string', eCode: 'GLU0103' }
+    }, paramsQuery)
+    if (parameterError) { return res.status(400).send({ code: parameterError.code, message: parameterError.message, messagePublic: parameterError.messagePublic }) }
+    let query = {}
+    if (paramsQuery.query) { query = f.buildQueryStructure(paramsQuery.query) }
+    let sort = { saveDate: -1 }
+    const exitCount = await Exit.countDocuments(query).exec()
+    const exit = await Exit.find(query).sort(sort).skip(parseInt(paramsQuery.limit) * parseInt(paramsQuery.skip)).limit(parseInt(paramsQuery.limit)).exec()
+    if (!exit || exit.length === 0) { return res.status(400).send({ code: 'GLU0104', message: 'No existen registros en la base de datos.', messagePublic: 'No existen registros en la base de datos.' }) }
+    return res.status(200).send({ code: 'GLUS01', data: exit, docs: exitCount, messagePublic: 'Búsqueda exitosa.' })
+  } catch (error) {
+    return res.status(500).send({ code: 'GLU0105', message: `Error al realizar la petición: ${error}.`, messagePublic: '¡Algo anda mal! Inténtelo más tarde.' })
+  }
+}
+
+async function getExitById(req, res) {
+  try {
+    const exit = await Exit.findOne({ _id: req.params.id }).exec()
+    if (!exit) {
+      return res.status(404).send({ message: 'Exite no encontrado.' })
+    }
+    return res.status(200).send({ data: exit })
+  } catch (error) {
+    return res.status(500).send({ message: `Error al hacer la solicitud: ${error}.` })
+  }
+}
+
+async function saveExit(req, res) {
+  try {
+    const exit = new Exit()
+    exit.clientName = req.body.clientName
+    exit.amount = req.body.amount
+    if (req.body.saveDate) { exit.saveDate = req.body.saveDate }
+    exit.user = req.user
+    const newExit = await exit.save()
+    return res.status(200).send({ message: 'Ingreso agregado.', data: newExit })
+  } catch (error) {
+    return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
+  }
+}
+
+async function updateExit(req, res) {
+  try {
+    await Exit.findByIdAndUpdate(req.params.id, req.body).exec()
+    return res.status(200).send({ message: 'Ingreso actualizado.' })
+  } catch (error) {
+    return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
+  }
+}
+
+module.exports = {
+  getListExit,
+  getExitById,
+  saveExit,
+  updateExit
+}
+
+
+
+
+    </div>
+  </pre>
+</body>
+</html>
