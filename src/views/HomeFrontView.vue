@@ -2,7 +2,7 @@
 
   <v-row>
       <v-col cols="12" class="text-center">
-          <h2 class="bg-purple-darken-4 pa-4 "> <v-btn @click="toggleDrawer" class="bg-red mx-7">MENU</v-btn>Opciones del Front </h2>
+          <h2 class="bg-purple-darken-4 pa-4 ">FRONT </h2>
      
     </v-col>
   </v-row>
@@ -14,11 +14,12 @@
         app
       >
         <v-list-item link to="/" title="Home" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
+        <v-list-item link to="" title="" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
         <!-- <v-list-item link to="/backend" title="Backend" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
         <v-list-item link to="/data" title="Data" prepend-icon="mdi-database-cog-outline"></v-list-item>
         <v-list-item link to="/store" title="Store" prepend-icon="mdi-store"></v-list-item> -->
       </v-navigation-drawer>
+      
     <!-- /////////////////////////////////////// -->
     <v-row>
       <!-- ****************************************************************************** -->
@@ -98,11 +99,11 @@
   <script setup>
   import { ref } from 'vue';
   
-  const drawer = ref(false);
+  // const drawer = ref(false);
   
-  const toggleDrawer = () => {
-    drawer.value = !drawer.value;
-  };
+  // const toggleDrawer = () => {
+  //   drawer.value = !drawer.value;
+  // };
   </script>
   <!-- ******************************* --> 
   

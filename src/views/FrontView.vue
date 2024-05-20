@@ -133,7 +133,6 @@
 </script>
 <!-- ******************************* -->
 <style scoped>
-.img{
-  width: 2em;
-}
+
+
 </style>

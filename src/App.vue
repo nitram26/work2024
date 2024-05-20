@@ -21,7 +21,7 @@
     <!-- Data *********************************************************-->
   <v-app-bar-nav-icon class="ma-12"><v-btn icon="mdi-store" to="/store"></v-btn>Store</v-app-bar-nav-icon>
 </v-app-bar>
-    <!-- Navigation Drawer *********************************************************-->
+    <!-- Navigation Drawer ********************************************************* -->
  <v-navigation-drawer
       v-model="drawer"
       class="br-teal-darken-4"
@@ -48,9 +48,7 @@ const drawer = ref(false);
 const toggleDrawer = () => {
   drawer.value = !drawer.value;
 };
-//nombre de variable de ND
-let nombre = ref("Store")
-let ruta = ref("/store")
+
 
 
 </script>
