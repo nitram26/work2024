@@ -7,7 +7,7 @@
   </v-app-bar-nav-icon>
   <v-app-bar-title>OPUS</v-app-bar-title>
 
-  <v-app-bar-nav-icon class="ma-12"><v-btn icon="mdi-arrange-bring-to-front" to="/front"></v-btn>Front</v-app-bar-nav-icon>
+  <v-app-bar-nav-icon class="ma-12"><v-btn icon="mdi-arrange-bring-to-front" to="/homeFront"></v-btn>Front</v-app-bar-nav-icon>
 
   <v-app-bar-nav-icon class="ma-12"><v-btn icon="mdi-arrange-send-to-back" to="/backend"></v-btn>
     

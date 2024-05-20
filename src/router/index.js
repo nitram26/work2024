@@ -6,6 +6,7 @@ import Vue2View from '@/views/Vue2View.vue'
 import Vue3View from '@/views/Vue3View.vue'
 import DataView from '@/views/DataView.vue'
 import FrontView from '@/views/FrontView.vue'
+import HomeFrontView from '@/views/HomeFrontView.vue'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/vue3',
     name: 'Vue3',
     component: Vue3View
+  },
+  {
+    path: '/homeFront',
+    name: 'HomeFront',
+    component: HomeFrontView
   },
 
 ]
