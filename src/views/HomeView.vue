@@ -1,25 +1,4 @@
 <template>
-
-  <v-row>
-      <v-col cols="12" class="text-center">
-          <h2 class="bg-blue-darken-4 pa-4 "> <v-btn @click="toggleDrawer" class="bg-red mx-7">MENU</v-btn>Desarrollo de Proyecto </h2>
-     
-    </v-col>
-  </v-row>
-  <!-- ********************************************* -->
-      <v-navigation-drawer
-        v-model="drawer"
-        class="br-teal-darken-4"
-        theme="dark"
-        app
-      >
-        <v-list-item link to="/" title="Home" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/" title="Vuetify" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/" title="Material Design" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/" title="Traductor" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/" title="Chat GPT" prepend-icon="mdi-store"></v-list-item>
-      </v-navigation-drawer>
-    <!-- /////////////////////////////////////////////////////////////////////////////// -->
     <v-row>
       <!-- ****************************************************************************** -->
       <v-col cols="3" class="bg-teal-lighten-5">
