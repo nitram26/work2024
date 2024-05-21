@@ -24,11 +24,11 @@
     <!-- Navigation Drawer ********************************************************* -->
  <v-navigation-drawer
       v-model="drawer" class="br-teal-darken-4" theme="dark" >
-      <v-list-item link to="/" title="Home" prepend-icon="mdi-grid"></v-list-item>
-      <v-list-item link to="/front" title="VUE2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-      <v-list-item link to="/vue2" title="VUE3" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-      <v-list-item link to="/homeFront" title="Home Front" prepend-icon="mdi-database-cog-outline"></v-list-item>
+      <v-list-item link to="/homeFront" title="HOME FRONT" prepend-icon="mdi-grid"></v-list-item>
+      <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
+      <v-list-item link to="/vue2" title="Vue3" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
       <v-list-item link to="/backend" title="BACK" prepend-icon="mdi-store"></v-list-item>
+      <v-list-item link to="/homeFront" title="DATA" prepend-icon="mdi-database-cog-outline"></v-list-item>
     </v-navigation-drawer>
     <!-- Main  y router*********************************************************-->
    <v-main>
