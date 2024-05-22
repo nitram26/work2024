@@ -1,7 +1,7 @@
 <template>
-  <v-row class="bg-purple-darken-4 pa-2" >
+  <v-row class="bg-purple-darken-4 pa-1 mt-14 fixed-top" >
       <v-col cols="11" class="text-center">
-          <h2 >FRONT </h2>
+          <h2 >HOME FRONT </h2>
     </v-col>
     <v-col cols="1" >
 
@@ -19,9 +19,8 @@
         <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
-      
     <!-- /////////////////////////////////////// -->
-    <v-row class="ma-3">
+    <v-row class="mt-10">
       <!-- ****************************************************************************** -->
       <v-col cols="3" class="bg-teal-lighten-5">
           <v-card
@@ -37,7 +36,7 @@
       <v-card-text>
      Navegador con botón Familiar para abrir el segundo drawer
       </v-card-text>
-    </v-card> 
+    </v-card>
         </v-col>
   <!-- ****************************************************************************** -->
       <v-col cols="3" class="bg-teal-lighten-5">
@@ -52,17 +51,15 @@
         <v-card-subtitle>Para agregar a las paginas HTML</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-        &lt;style>body{background-color: antiquewhite;}&lt;/style>
+       Agregar color a las paginas HTML
       </v-card-text>
-    </v-card> 
+    </v-card>
         </v-col>
   <!-- ****************************************************************************** -->
 
   </v-row>
-  
   </template>
-  <!-- ******************************* --> 
-  
+  <!-- ******************************* -->
   <script setup>
   import { ref } from 'vue';
 const drawer = ref(false);
@@ -71,5 +68,14 @@ const toggleDrawer = () => {
   drawer.value = !drawer.value;
 }
   </script>
-  <!-- ******************************* --> 
-  
+  <!-- ******************************* -->
+<style scoped>
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 101%;
+  z-index: 1000
+}
+
+</style>

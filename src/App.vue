@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-app-bar scroll-behavior="hide" color="teal-darken-4" >
+      <v-app-bar scroll-behavior="hide" color="teal-darken-4 fixed-top" >
   <!-- botón de menu lateral -->
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon> </v-btn>
@@ -25,8 +25,8 @@
  <v-navigation-drawer
       v-model="drawer" class="br-teal-darken-4" theme="dark" >
       <v-list-item link to="/homeFront" title="HOME FRONT" prepend-icon="mdi-grid"></v-list-item>
-      <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-      <v-list-item link to="/vue2" title="Vue3" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
+      <v-list-item link to="/vue2" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
+      <v-list-item link to="/vue3" title="Vue3" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
       <v-list-item link to="/backend" title="BACK" prepend-icon="mdi-store"></v-list-item>
       <v-list-item link to="/homeFront" title="DATA" prepend-icon="mdi-database-cog-outline"></v-list-item>
     </v-navigation-drawer>
@@ -48,3 +48,13 @@ const toggleDrawer = () => {
 
 
 </script>
+
+<style scoped>
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000
+}
+</style>
