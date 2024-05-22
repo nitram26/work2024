@@ -9,208 +9,218 @@
 <body>
   <pre>
     <div>
-      
+pages/novedades.vue 
+innovation traducido por novedades.vue 
 
-&lt;template>
-&lt;v-card height="100%" tile>
-  &lt;v-toolbar flat>
-    &lt;v-toolbar-title>&lt;v-icon>mdi-shield-plus&lt;/v-icon> Salidas &lt;/v-toolbar-title>
-    &lt;v-spacer />
-  &lt;/v-toolbar>
-  &lt;v-divider />
-  &lt;v-card-text class="pa-1">
-    &lt;v-container class="pa-2" fluid>
-      &lt;v-row dense>
-        &lt;v-col cols="12">
-          &lt;v-card>
-            &lt;v-card-title class="pa-2">
-              &lt;v-container class="pa-0" fluid>
-                &lt;v-row dense>
-                  &lt;v-btn @click="dialog = true" class="ma-4" outlined small icon color="primary">&lt;v-icon>mdi-plus&lt;/v-icon>&lt;/v-btn>
-                  &lt;v-spacer />
-                  &lt;v-col cols="12" sm="4">
-                    &lt;searchs
-                      :outlined="true"
-                      :iheaders-search="headersSearch"
-                      @searchState="searchState"
-                      @refrescar="refrescar"
-                      @buscar="buscar"
+      Verificar el funcionamiento de la pagina 
+      Añadir la pagina al menú
+        Store/permissions
+      
+      
+      Agregar la ruta en route/index.js
+      Ir a ver el mongo 
+      
+      ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+      &lt;template>
+  &lt;v-card height="100%" tile>
+    &lt;v-toolbar flat>
+      &lt;v-toolbar-title>&lt;v-icon>mdi-file-document-arrow-right&lt;/v-icon> Novedades &lt;/v-toolbar-title>
+      &lt;v-spacer />
+    &lt;/v-toolbar>
+    &lt;v-divider />
+    &lt;v-card-text class="pa-1">
+      &lt;v-container class="pa-2" fluid>
+        &lt;v-row dense>
+          &lt;v-col cols="12">
+            &lt;v-card>
+              &lt;v-card-title class="pa-2">
+                &lt;v-container class="pa-0" fluid>
+                  &lt;v-row dense>
+                    &lt;v-btn @click="dialog = true" class="ma-4" outlined small icon color="primary">&lt;v-icon>mdi-plus&lt;/v-icon>&lt;/v-btn>
+                    &lt;v-spacer />
+                    &lt;v-col cols="12" sm="4">
+                      &lt;searchs
+                        :outlined="true"
+                        :iheaders-search="headersSearch"
+                        @searchState="searchState"
+                        @refrescar="refrescar"
+                        @buscar="buscar"
+                      />
+                    &lt;/v-col>
+                    &lt;innovations
+                      :edited-id="editedId"
+                      :edited-index="editedIndex"
+                      :dialog="dialog"
+                      @closedialog="closedialog"
+                      @innovationEdit="buscar"
+                      @innovationChange="buscar"
                     />
-                  &lt;/v-col>
-                  &lt;exits
-                    :edited-id="editedId"
-                    :edited-index="editedIndex"
-                    :dialog="dialog"
-                    @closedialog="closedialog"
-                    @exitEdit="buscar"
-                    @exitChange="buscar"
-                  />
-                &lt;/v-row>
-              &lt;/v-container>
-            &lt;/v-card-title>
-            &lt;v-divider />
-            &lt;v-card-text class="pa-0">
-              &lt;v-data-table
-                :mobile-breakpoint="0"
-                :footer-props="variableGlobals.rowsPerPageItems"
-                :headers="headers"
-                :items="exit"
-                :loading="loading"
-                :options.sync="pagination"
-                :items-per-page="itemsPerPage"
-                :page.sync="paginaActual"
-                :loading-text="'Cargando... Espere por favor'"
-                dense
-                :server-items-length="total"
-                no-data-text="No existen registros"
-              >
-                &lt;template #[`item.index`]="{ item }">
-                  &lt;strong> {{ exit.indexOf(item) + 1 }}.&lt;/strong>
-                &lt;/template>
-                &lt;template #[`item.ruc`]="{ item }">
-                  &lt;span> {{ item.ruc }}&lt;/span>
-                &lt;/template>
-                &lt;template #[`item.actions`]="{ item }">
-                  &lt;actions :edit-show="true" :delete-show="true" :register="item" @editRegister="editExit" @deleteRegister="deleteExit" />
-                &lt;/template>
-              &lt;/v-data-table>
-            &lt;/v-card-text>
-          &lt;/v-card>
-        &lt;/v-col>
-      &lt;/v-row>
-    &lt;/v-container>
-  &lt;/v-card-text>
-&lt;/v-card>
+                  &lt;/v-row>
+                &lt;/v-container>
+              &lt;/v-card-title>
+              &lt;v-divider />
+              &lt;v-card-text class="pa-0">
+                &lt;v-data-table
+                  :mobile-breakpoint="0"
+                  :footer-props="variableGlobals.rowsPerPageItems"
+                  :headers="headers"
+                  :items="innovation"
+                  :loading="loading"
+                  :options.sync="pagination"
+                  :items-per-page="itemsPerPage"
+                  :page.sync="paginaActual"
+                  :loading-text="'Cargando... Espere por favor'"
+                  dense
+                  :server-items-length="total"
+                  no-data-text="No existen registros"
+                >
+                  &lt;template #[`item.index`]="{ item }">
+                    &lt;strong> {{ innovation.indexOf(item) + 1 }}.&lt;/strong>
+                  &lt;/template>
+                  &lt;template #[`item.ruc`]="{ item }">
+                    &lt;span> {{ item.ruc }}&lt;/span>
+                  &lt;/template>
+                  &lt;template #[`item.actions`]="{ item }">
+                    &lt;actions :edit-show="true" :delete-show="true" :register="item" @editRegister="editInnovation" @deleteRegister="deleteInnovation" />
+                  &lt;/template>
+                &lt;/v-data-table>
+              &lt;/v-card-text>
+            &lt;/v-card>
+          &lt;/v-col>
+        &lt;/v-row>
+      &lt;/v-container>
+    &lt;/v-card-text>
+  &lt;/v-card>
 &lt;/template>
 
 &lt;script>
 import axios from 'axios'
 import config from '~/config'
 import variableGlobals from '~/plugins/variables'
-import exits from '~/components/administracion/addExit'
+import innovations from '~/components/administracion/addInnovation'
 import actions from '~/components/globals/actions'
 import searchs from '~/components/globals/search'
 export default {
-name: 'Empleados',
-components: {
-  exits,
-  actions,
-  searchs
-},
-middleware: ['auth', 'permission'],
-async asyncData ({ store }) {
-  try {
-    const exit = await axios.get(`${config.URL}exits`)
-    return { exit: exit.data.data, total: exit.data.docs }
-  } catch (error) {
-    // if (error.response && error.response.status !== 404) error({ statusCode: error.response.status, messagePublic: error.response.data.messagePublic })
-  }
-},
-data () {
-  return {
-    dialog: false,
-    editedId: '',
-    pagination: {
-      sortBy: '',
-      page: 1,
-      itemsPerPage: 15
-    },
-    editedIndex: -1,
-    variableGlobals: variableGlobals,
-    query: '',
-    loading: false,
-    total: 0,
-    headers: [
-      { text: 'N°', value: 'index', sortable: false },
-      { text: 'Cliente', value: 'clientName', align: 'rigth', sortable: false },
-      { text: 'Salida', value: 'amount', align: 'rigth', sortable: false },
-      { text: 'Acciones', value: 'actions', align: 'center', sortable: false }
-    ],
-    headersSearch: [
-      { text: 'Nombres y Apellidos', value: 'ExitName' }
-    ],
-    structureOr: '',
-    itemsPerPage: 15,
-    paginaActual: 1,
-    exit: [],
-  }
-},
-watch: {
-  pagination: {
-    handler (val, oldVal) {
-      if (val.page !== oldVal.page || val.itemsPerPage !== oldVal.itemsPerPage) this.buscar()
-    },
-    deep: true
-  }
-},
- beforeMount () {
-  axios.get(`${config.URL}exits`).then((data) => {
-  this.exit = data.data.data
-  console.log(this.exit);
-   })
-},
-methods: {
-  async buscar () {
-    this.loading = true
-    let query = this.structureOr
-    let params = {
-      skip: this.pagination.page - 1,
-      limit: this.pagination.itemsPerPage,
-      query: query
+  name: 'Empleados',
+  components: {
+    innovations,
+    actions,
+    searchs
+  },
+  middleware: ['auth', 'permission'],
+  async asyncData ({ store }) {
+    try {
+      const innovation = await axios.get(`${config.URL}innovations`)
+      return { innovation: innovation.data.data, total: innovation.data.docs }
+    } catch (error) {
+      // if (error.response && error.response.status !== 404) error({ statusCode: error.response.status, messagePublic: error.response.data.messagePublic })
     }
-    await axios.get(`${config.URL}exits`, {
-      headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']),
-      params: {
-          query: query
-        }
-    }).then((data) => {
-      this.exit = data.data.data
-      console.log(this.exit, 'data')
+  },
+  data () {
+    return {
+      dialog: false,
+      editedId: '',
+      pagination: {
+        sortBy: '',
+        page: 1,
+        itemsPerPage: 15
+      },
+      editedIndex: -1,
+      variableGlobals: variableGlobals,
+      query: '',
+      loading: false,
+      total: 0,
+      headers: [
+        { text: 'N°', value: 'index', sortable: false },
+        { text: 'Titulo', value: 'title', align: 'rigth', sortable: false },
+        { text: 'Descripcion', value: 'description', align: 'rigth', sortable: false },
+        { text: 'Acciones', value: 'actions', align: 'center', sortable: false }
+      ],
+      headersSearch: [
+        { text: 'Nombres y Apellidos', value: 'InnovationName' }
+      ],
+      structureOr: '',
+      itemsPerPage: 15,
+      paginaActual: 1,
+      innovation: [],
+    }
+  },
+  watch: {
+    pagination: {
+      handler (val, oldVal) {
+        if (val.page !== oldVal.page || val.itemsPerPage !== oldVal.itemsPerPage) this.buscar()
+      },
+      deep: true
+    }
+  },
+   beforeMount () {
+    axios.get(`${config.URL}innovations`).then((data) => {
+    this.innovation = data.data.data
+     })
+  },
+  methods: {
+    async buscar () {
+      this.loading = true
+      let query = this.structureOr
+      let params = {
+        skip: this.pagination.page - 1,
+        limit: this.pagination.itemsPerPage,
+        query: query
+      }
+      await axios.get(`${config.URL}innovations`, {
+        headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']),
+        params: {
+            query: query
+          }
+      }).then((data) => {
+        this.innovation = data.data.data
+        this.loading = false
+      }).catch((error) => {
+        this.loading = false
+        console.log(error)
+      })
       this.loading = false
-    }).catch((error) => {
-      this.loading = false
-      console.log(error)
-    })
-    this.loading = false
-  },
-  deleteExit (item) {
-    axios.delete(`${config.URL}exit/${item._id}`, { headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+    },
+    deleteInnovation (item) {
+      axios.delete(`${config.URL}innovation/${item._id}`, { headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+        this.buscar()
+      }).catch((error) => {
+        console.log(error)
+        this.$root.$emit('NotificationError', error.response.data.message)
+      })
+    },
+    changeStatus (item) {
+      axios.put(`${config.URL}statusInnovation/${item._id}`, { status: !item.status }, { headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+        this.buscar()
+      }).catch((error) => {
+        console.log(error)
+        this.$root.$emit('NotificationError', error.response.data.message)
+      })
+    },
+    refrescar (structureOr) {
+      this.structureOr = structureOr
       this.buscar()
-    }).catch((error) => {
-      console.log(error)
-      this.$root.$emit('NotificationError', error.response.data.message)
-    })
-  },
-  changeStatus (item) {
-    axios.put(`${config.URL}statusExit/${item._id}`, { status: !item.status }, { headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
-      this.buscar()
-    }).catch((error) => {
-      console.log(error)
-      this.$root.$emit('NotificationError', error.response.data.message)
-    })
-  },
-  refrescar (structureOr) {
-    this.structureOr = structureOr
-    this.buscar()
-  },
-  searchState (search, structureOr) {
-    this.structureOr = structureOr
-    this.pagination.page = 1
-  },
-  editExit(exit) {
-    console.log(exit, 'pagina')
-    this.editedIndex = this.exit.indexOf(exit)
-    this.editedId = exit._id
-    this.dialog = true
-  },
-  closedialog () {
-    this.dialog = false
-    setTimeout(() => {
-      this.editedIndex = -1
-      this.editedId = ''
-    }, 500)
+    },
+    searchState (search, structureOr) {
+      this.structureOr = structureOr
+      this.pagination.page = 1
+    },
+    editInnovation(innovation) {
+      this.editedIndex = this.innovation.indexOf(innovation)
+      this.editedId = innovation._id
+      this.dialog = true
+    },
+    closedialog () {
+      this.dialog = false
+      setTimeout(() => {
+        this.editedIndex = -1
+        this.editedId = ''
+      }, 500)
+    }
   }
-}
 }
 &lt;/script>
 

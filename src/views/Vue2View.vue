@@ -1,31 +1,33 @@
 <template>
-  <v-row class="bg-purple-darken-4 pa-1 mt-16 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >VUE2 </h2>
+  <v-row class="bg-purple-darken-4 pa-1 mt-15 fixed-top">
+    <v-col cols="11" class="text-center">
+      <h2>
+        VUE2 
+        <v-btn icon @click="scrollToTop" class="mx-6">
+          <v-img src="@/assets/image/logo.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />  
+        </v-btn>
+      </h2>
     </v-col>
-    <v-col cols="1" >
-
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
+    <v-col cols="1">
+      <v-btn icon @click="toggleDrawer">
+        <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />
+      </v-btn>
     </v-col>
   </v-row>
-  <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="Carlos" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/vue2" title="dos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <!-- /////////////////////////////////////// -->
-    <v-row class="ma-3">
-      <!-- ****************************************************************************** -->
-  </v-row>
+    <v-list>
+      <v-list-item @click="() => scrollTo('section1')" title="Sección 1" prepend-icon="mdi-grid"></v-list-item>
+      <v-list-item @click="() => scrollTo('section2')" title="Sección 2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
+      <v-list-item @click="() => scrollTo('section3')" title="Sección 3" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
+      <v-list-item @click="() => scrollTo('section4')" title="Sección 4" prepend-icon="mdi-database-cog-outline"></v-list-item>
+      <v-list-item @click="() => scrollTo('section5')" title="Sección 5" prepend-icon="mdi-store"></v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+  <v-row class="mt-16"></v-row>
+    <div id="section1" class="mt-12">
+      <h3 class="bg-blue ma-4 pa-4 text-center">MODELOS DE PAGINAS COMPLETAS</h3>
       <v-row>
-      <v-col cols="3" class="bg-red-lighten-4">
+        <v-col cols="3" class="bg-red-lighten-4">
 <!-- ****************************************************************************** -->
         <v-card
     class="mx-auto my-8"
@@ -42,7 +44,6 @@
     </v-card-text>
   </v-card>
       </v-col>
-<!-- ****************************************************************************** -->
       <v-col cols="3" class="bg-red-lighten-4">
         <v-card
     class="mx-auto my-8"
@@ -114,17 +115,16 @@
     </v-card-text>
   </v-card>
 </v-col>
-<!-- ********************************************************************** -->
-       </v-row>
-<!-- /////////////////////////////////////////////////////// -->
-<v-row class="my-12">
+      </v-row>
+    </div>
+    <div id="section2">
+      <v-row class="my-12 text-center">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS -TEXT HTML</h2>
-      <p class="bg-orange-lighten-4 pa-4 mb-4">Acciones concretas de mejoramiento y adecuación del proyecto </p>
   </v-col>
   <!-- ****************************************** -->
   <v-col cols="3" class="bg-pink-lighten-4">
-        <v-card
+    <v-card
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
@@ -141,8 +141,49 @@
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
-  </v-row>
+</v-row>
+    </div>
+    <div id="section3">
+      <h3>Sección 3</h3>
+     
+    </div>
+    <div id="section4">
+      <h3>Sección 4</h3>
+      <p>Contenido de la sección 4...</p>
+    </div>
+    <div id="section5">
+      <h3>Sección 5</h3>
+      <p>Contenido de la sección 5...</p>
+    </div>
+  
 
+   
+<!-- /////////////////////////////////////////////////////// -->
+
+<v-row>
+  <!-- ********************************************************************** -->
+  <v-col cols="12">
+    <h2 class="bg-pink-darken-4 pa-4">titulo</h2>
+  </v-col>
+  <!-- ********************************************************************** -->
+  <v-col cols="3" class="bg-pink-lighten-4">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> titulo </v-card-title>
+      <v-card-subtitle>detalle</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      explicación
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+</v-row>
 
 </template>
 <!-- ******************************* -->

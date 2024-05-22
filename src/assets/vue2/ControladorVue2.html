@@ -9,84 +9,91 @@
 <body>
   <pre>
     <div>
-     
+      controller innovation.js 
 
-1.	Cambiar mayúsculas y minúsculas
-/* eslint-disable import/order */
-/* eslint-disable curly */
-/* eslint-disable no-unused-vars */
-'use strict'
-
-const Exit = require('../models/exit')
-const f = require('../services/functions')
-
-async function getListExit(req, res) {
-  try {
-    const paramsQuery = {}
-    const parameterError = f.validateFields(req.query, {
-      skip: { type: 'number', default: 0, min: 0, eCode: 'GLU0101' },
-      limit: { type: 'number', default: 10, min: 1, max: 25, eCode: 'GLU0102' },
-      query: { type: 'string', eCode: 'GLU0103' }
-    }, paramsQuery)
-    if (parameterError) { return res.status(400).send({ code: parameterError.code, message: parameterError.message, messagePublic: parameterError.messagePublic }) }
-    let query = {}
-    if (paramsQuery.query) { query = f.buildQueryStructure(paramsQuery.query) }
-    let sort = { saveDate: -1 }
-    const exitCount = await Exit.countDocuments(query).exec()
-    const exit = await Exit.find(query).sort(sort).skip(parseInt(paramsQuery.limit) * parseInt(paramsQuery.skip)).limit(parseInt(paramsQuery.limit)).exec()
-    if (!exit || exit.length === 0) { return res.status(400).send({ code: 'GLU0104', message: 'No existen registros en la base de datos.', messagePublic: 'No existen registros en la base de datos.' }) }
-    return res.status(200).send({ code: 'GLUS01', data: exit, docs: exitCount, messagePublic: 'Búsqueda exitosa.' })
-  } catch (error) {
-    return res.status(500).send({ code: 'GLU0105', message: `Error al realizar la petición: ${error}.`, messagePublic: '¡Algo anda mal! Inténtelo más tarde.' })
-  }
-}
-
-async function getExitById(req, res) {
-  try {
-    const exit = await Exit.findOne({ _id: req.params.id }).exec()
-    if (!exit) {
-      return res.status(404).send({ message: 'Exite no encontrado.' })
-    }
-    return res.status(200).send({ data: exit })
-  } catch (error) {
-    return res.status(500).send({ message: `Error al hacer la solicitud: ${error}.` })
-  }
-}
-
-async function saveExit(req, res) {
-  try {
-    const exit = new Exit()
-    exit.clientName = req.body.clientName
-    exit.amount = req.body.amount
-    if (req.body.saveDate) { exit.saveDate = req.body.saveDate }
-    exit.user = req.user
-    const newExit = await exit.save()
-    return res.status(200).send({ message: 'Ingreso agregado.', data: newExit })
-  } catch (error) {
-    return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
-  }
-}
-
-async function updateExit(req, res) {
-  try {
-    await Exit.findByIdAndUpdate(req.params.id, req.body).exec()
-    return res.status(200).send({ message: 'Ingreso actualizado.' })
-  } catch (error) {
-    return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
-  }
-}
-
-module.exports = {
-  getListExit,
-  getExitById,
-  saveExit,
-  updateExit
-}
-
+      agregar cambiar mayúsculas y minúsculas
+      ingles
+      en el async function saveDeposit agregar los campos
+      **************************************************************************************
+       
+      
+      
+      /* eslint-disable import/order */
+      /* eslint-disable curly */
+      /* eslint-disable no-unused-vars */
+      'use strict'
+      
+      const Innovation = require('../models/innovation')
+      const f = require('../services/functions')
+      
+      async function getListInnovation(req, res) {
+        try {
+          const paramsQuery = {}
+          const parameterError = f.validateFields(req.query, {
+            skip: { type: 'number', default: 0, min: 0, eCode: 'GLU0101' },
+            limit: { type: 'number', default: 10, min: 1, max: 25, eCode: 'GLU0102' },
+            query: { type: 'string', eCode: 'GLU0103' }
+          }, paramsQuery)
+          if (parameterError) { return res.status(400).send({ code: parameterError.code, message: parameterError.message, messagePublic: parameterError.messagePublic }) }
+          let query = {}
+          if (paramsQuery.query) { query = f.buildQueryStructure(paramsQuery.query) }
+          let sort = { saveDate: -1 }
+          const innovationCount = await Innovation.countDocuments(query).exec()
+          const innovation = await Innovation.find(query).sort(sort).skip(parseInt(paramsQuery.limit) * parseInt(paramsQuery.skip)).limit(parseInt(paramsQuery.limit)).exec()
+          if (!innovation || innovation.length === 0) { return res.status(400).send({ code: 'GLU0104', message: 'No existen registros en la base de datos.', messagePublic: 'No existen registros en la base de datos.' }) }
+          return res.status(200).send({ code: 'GLUS01', data: innovation, docs: innovationCount, messagePublic: 'Búsqueda innovationosa.' })
+        } catch (error) {
+          return res.status(500).send({ code: 'GLU0105', message: `Error al realizar la petición: ${error}.`, messagePublic: '¡Algo anda mal! Inténtelo más tarde.' })
+        }
+      }
+      
+      async function getInnovationById(req, res) {
+        try {
+          const innovation = await Innovation.findOne({ _id: req.params.id }).exec()
+          if (!innovation) {
+            return res.status(404).send({ message: 'Innovatione no encontrado.' })
+          }
+          return res.status(200).send({ data: innovation })
+        } catch (error) {
+          return res.status(500).send({ message: `Error al hacer la solicitud: ${error}.` })
+        }
+      }
+      
+      async function saveInnovation(req, res) {
+        try {
+          const innovation = new Innovation()
+          innovation.title = req.body.title
+          innovation.description = req.body.description
+          if (req.body.saveDate) { innovation.saveDate = req.body.saveDate }
+          innovation.user = req.user
+          const newInnovation = await innovation.save()
+          return res.status(200).send({ message: 'Ingreso agregado.', data: newInnovation })
+        } catch (error) {
+          return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
+        }
+      }
+      
+      async function updateInnovation(req, res) {
+        try {
+          await Innovation.findByIdAndUpdate(req.params.id, req.body).exec()
+          return res.status(200).send({ message: 'Ingreso actualizado.' })
+        } catch (error) {
+          return res.status(500).send({ message: `error al hacer la solicitud: ${error}.` })
+        }
+      }
+      
+      module.exports = {
+        getListInnovation,
+        getInnovationById,
+        saveInnovation,
+        updateInnovation
+      }
+           
 
 
 
     </div>
   </pre>
+  <img src="/src/assets/image/modelInn.png" alt="model basic" style="width: 40em;">
 </body>
 </html>
