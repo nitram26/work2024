@@ -2,9 +2,9 @@
   <v-row class="bg-purple-darken-4 pa-1 mt-15 fixed-top">
     <v-col cols="11" class="text-center">
       <h2>
-        VUE2 
+        VUE2
         <v-btn icon @click="scrollToTop" class="mx-6">
-          <v-img src="@/assets/image/logo.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />  
+          <v-img src="@/assets/image/logo.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />
         </v-btn>
       </h2>
     </v-col>

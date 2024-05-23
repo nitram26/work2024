@@ -8,210 +8,200 @@
 </head>
 <body>
   <pre>
-    <div>
-      
-&lt;template>
-&lt;v-col cols="12">
-  &lt;dialog-form
-    :form-title="formTitle"
-    :dialog="dialog"
-    :loading="loading"
-    :edited-index="editedIndex"
-    :width="'600'"
-    :height="'280'"
-    @closedialog="close"
-    @savedialog="save"
-  >
+  component addInnovation.js
+  
+  agregar cambiar mayúsculas y minúsculas
+  ingles
+ cambiar en el controlador los body 
+  **************************************************************************************
+   <div>
+    &lt;template>
+    &lt;v-col cols="12">
+    &lt;dialog-form :form-title="formTitle" :dialog="dialog" :loading="loading" :edited-index="editedIndex" :width="'500'"
+    :height="'350'" @closedialog="close" @savedialog="save">
     &lt;v-form ref="form">
-      &lt;v-container>
-        &lt;loadingComponent :loading="loadingData" :type="'form'" :quanty="7" :clases="'xs12'" />
-        &lt;v-row dense style="margin-bottom: 10px;">
-          &lt;v-col cols="12">
-            &lt;v-text-field
-              hide-details
-              v-model.trim="exit.amount"
-              label="Egreso"
-              outlined
-              dense
-            />
-          &lt;/v-col>
-          &lt;v-col cols="12">
-            &lt;v-text-field
-              hide-details
-              v-model.trim="exit.clientName"
-              label="Cliente"
-              outlined
-              dense
-            />
-          &lt;/v-col>
-        &lt;/v-row>
-      &lt;/v-container>
+    &lt;v-container>
+    &lt;loadingComponent :loading="loadingData" :type="'form'" :quanty="7" :clases="'xs12'" />
+    &lt;v-row dense>
+    &lt;v-col cols="12">
+    &lt;v-text-field hide-details ref="title" v-model.trim="innovation.title" label="Titulo" outlined
+    :error-messages="titleErrors" dense />
+    &lt;/v-col>
+    &lt;v-col cols="12">
+    &lt;v-text-field hide-details ref="description" v-model.trim="innovation.description" label="Descripcion"
+    outlined :error-messages="descriptionErrors" dense />
+    &lt;/v-col>
+    &lt;/v-row>
+    &lt;/v-container>
     &lt;/v-form>
-  &lt;/dialog-form>
-&lt;/v-col>
-&lt;/template>
-&lt;script>
-import axios from 'axios'
-import { validationMixin } from 'vuelidate'
-import { required } from 'vuelidate/lib/validators'
-import config from '~/config'
-import plugin from '~/plugins/format'
-import dialogForm from '~/components/globals/form'
-import loadingComponent from '~/components/globals/loading'
-const _hoy = new Date((new Date()).getTime())
-export default {
-exitName: 'Exit',
-components: {
-  dialogForm,
-  loadingComponent
-},
-mixins: [validationMixin],
-validations () {
-  return {
-    exit: {
-      amount: { required },
+    &lt;/dialog-form>
+    &lt;/v-col>
+    &lt;/template>
+    &lt;script>
+    import axios from 'axios'
+    import { validationMixin } from 'vuelidate'
+    import { required } from 'vuelidate/lib/validators'
+    import config from '~/config'
+    import plugin from '~/plugins/format'
+    import dialogForm from '~/components/globals/form'
+    import loadingComponent from '~/components/globals/loading'
+    const _hoy = new Date((new Date()).getTime())
+    export default {
+    innovationName: 'Innovation',
+    components: {
+    dialogForm,
+    loadingComponent
+    },
+    mixins: [validationMixin],
+    validations() {
+    return {
+    innovation: {
+    title: { required },
+    description: { required }
     }
-  }
-},
-props: {
-  editedId: { type: String, default: '' },
-  dialog: { type: Boolean, default: false },
-  editedIndex: { type: Number, default: -1 }
-},
-data () {
-  return {
+    }
+    },
+    props: {
+    editedId: { type: String, default: '' },
+    dialog: { type: Boolean, default: false },
+    editedIndex: { type: Number, default: -1 }
+    },
+    data() {
+    return {
     color: '',
     text: '',
     loading: false,
     loadingData: false,
-    exit: {
-      amount: '',
-      clientName: ''
+    innovation: {
+    title: ''
     },
     clients: [],
-    show1: false
-  }
-},
-computed: {
-  formTitle () {
+    show1: false,
+    }
+    },
+    computed: {
+    formTitle() {
     return this.editedIndex === -1 ? 'Agregar' : 'Editar'
-  },
-  exitNumberErrors () {
+    },
+    titleErrors() {
     const errors = []
-    if (!this.$v.exit.exitNumber.$dirty) { return errors }
-    !this.$v.exit.exitNumber.required && errors.push('Se requiere DNI del empleado')
+    if (!this.$v.innovation.title.$dirty) { return errors }
+    !this.$v.innovation.title.required && errors.push('Se requiere EL TITULO')
     return errors
-  }
-},
-watch: {
-  editedId (val) {
+    },
+    clientNameErrors() {
+    const errors = []
+    if (!this.$v.innovation.clientName.$dirty) { return errors }
+    !this.$v.innovation.clientName.required && errors.push('Se requiere el NOMBRE DEL CLIENTE')
+    return errors
+    },
+    descriptionErrors() {
+    const errors = []
+    if (!this.$v.innovation.description.$dirty) { return errors }
+    !this.$v.innovation.description.required && errors.push('Se requiere LA DESCRIPCIÓN')
+    return errors
+    },
+    },
+    watch: {
+    editedId(val) {
     if (val) {
-      this.loadingData = true
-      axios.get(`${config.URL}exit/${val}`, { headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
-        this.exit = Object.assign({}, data.data.data)
-        const fi = new Date(this.exit.creationDate)
-        const fi1 = new Date(this.exit.paymentDate)
-        this.exit.creationDate = this.formatNewDate(fi)
-        this.exit.paymentDate = this.formatNewDate(fi1)
-        this.loadingData = false
-      }).catch((error) => {
-        this.loadingData = false
-        console.log(error)
-      })
+    this.loadingData = true
+    axios.get(`${config.URL}innovation/${val}`, { headers:
+    this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+    this.innovation = Object.assign({}, data.data.data)
+    const fi = new Date(this.innovation.creationDate)
+    const fi1 = new Date(this.innovation.paymentDate)
+    this.innovation.creationDate = this.formatNewDate(fi)
+    this.innovation.paymentDate = this.formatNewDate(fi1)
+    this.loadingData = false
+    }).catch((error) => {
+    this.loadingData = false
+    console.log(error)
+    })
     }
-  },
-},
- beforeMount () {
-  axios.get(`${config.URL}clients`, {
-    headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders'])
-  }).then((data) => {
-  this.clients = data.data.data
-  })
-},
-methods: {
-  save () {
-    // this.$v.$touch()
-    // if (!this.$v.$invalid) {
+    },
+    },
+    methods: {
+    save() {
+    this.$v.$touch()
+    if (this.$v.innovation.title.$invalid) {
+    this.$refs.title.focus()
+    return { error: true, message: this.$root.$emit('NotificationError', this.titleErrors[0]) }
+    } else if (this.$v.innovation.description.$invalid) {
+    this.$refs.description.focus()
+    return { error: true, message: this.$root.$emit('NotificationError', this.descriptionErrors[0]) }
+    }
+    if (!this.$v.$invalid) {
     const self = this
-    // const [yi, mi, di] = self.parseDate(self.exit.creationDate).split('-')
-    // const [yi1, mi1, di1] = self.parseDate(self.exit.paymentDate).split('-')
-    const nuevoExit = Object.assign({}, self.exit)
-    // nuevoExit.creationDate = new Date(yi, (parseInt(mi) - 1), di)
-    // nuevoExit.paymentDate = new Date(yi1, (parseInt(mi1) - 1), di1)
+    // const [yi, mi, di] = self.parseDate(self.innovation.creationDate).split('-')
+    // const [yi1, mi1, di1] = self.parseDate(self.innovation.paymentDate).split('-')
+    const nuevoInnovation = Object.assign({}, self.innovation)
+    // nuevoInnovation.creationDate = new Date(yi, (parseInt(mi) - 1), di)
+    // nuevoInnovation.paymentDate = new Date(yi1, (parseInt(mi1) - 1), di1)
     self.loading = true
-     if (self.editedIndex > -1) {
-      axios.put(`${config.URL}exitTemp/${nuevoExit._id}`, nuevoExit, { headers: self.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
-        self.$emit('exitEdit', nuevoExit)
-        self.close()
-        this.$root.$emit('NotificationSuccess', 'Se actualizó correctamente')
-      }).catch((error) => {
-        self.loading = false
-        console.log(error)
-        this.$root.$emit('NotificationError', error.response.data.message)
-      })
+    if (self.editedIndex > -1) {
+    axios.put(`${config.URL}innovationTemp/${nuevoInnovation._id}`, nuevoInnovation, { headers:
+    self.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+    self.$emit('innovationEdit', nuevoInnovation)
+    self.close()
+    this.$root.$emit('NotificationSuccess', 'Se actualizó correctamente')
+    }).catch((error) => {
+    self.loading = false
+    console.log(error)
+    this.$root.$emit('NotificationError', error.response.data.message)
+    })
     } else {
-      axios.post(`${config.URL}exitTemp`, nuevoExit, { headers: self.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
-        self.$emit('exitChange', data.data.data)
-        self.close()
-        this.$root.$emit('NotificationSuccess', 'Se guardo correctamente')
-      }).catch((error) => {
-        self.loading = false
-        console.log(error)
-        this.$root.$emit('NotificationError', error.response.data.message)
-      })
+    axios.post(`${config.URL}innovationTemp`, nuevoInnovation, { headers:
+    self.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']) }).then((data) => {
+    self.$emit('innovationChange', data.data.data)
+    self.close()
+    this.$root.$emit('NotificationSuccess', 'Se guardo correctamente')
+    }).catch((error) => {
+    self.loading = false
+    console.log(error)
+    this.$root.$emit('NotificationError', error.response.data.message)
+    })
     }
-    // }
-  },
-  formatDate (date) {
+    }
+    },
+    formatDate(date) {
     if (!date) {
-      return null
+    return null
     }
     const [year, month, day] = date.split('-')
     return `${day}/${month}/${year}`
-  },
-  formatNewDate (date) {
+    },
+    formatNewDate(date) {
     if (!date) { return null }
     return `${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`
-  },
-  parseDate (date) {
+    },
+    parseDate(date) {
     if (!date) { return null }
     const [day, month, year] = date.split('/')
     return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
-  },
-  close () {
+    },
+    close() {
     let self = this
     self.loading = false
     this.$emit('closedialog')
     setTimeout(() => {
-      self.exit = {
-        charge: [],
-        creationDate: this.formatNewDate(new Date()),
-        paymentDate: this.formatNewDate(new Date())
-      }
+    self.innovation = {
+    charge: [],
+    creationDate: this.formatNewDate(new Date()),
+    paymentDate: this.formatNewDate(new Date())
+    }
     }, 300)
     this.$v.$reset()
-  }
-}
-}
-&lt;/script>
-&lt;style scoped>
-.picker >>> .primary--text button::first-letter {
-  text-transform: capitalize !important;
-}
-&lt;/style>
-
-
-AXIOS
-beforeMount() {
-  axios.get(`${config.URL}clients`).then((data) => {
-    this.clientNames=data.data.data
-    console.log(data.data.data);
-  })
-},
-
-
-
-    </div>
+    }
+    }
+    }
+    &lt;/script>
+    &lt;style scoped>
+    .picker>>>.primary--text button::first-letter {
+    text-transform: capitalize !important;
+    }
+    &lt;/style>
+   </div>
   </pre>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  <title>AXIOS</title>
+</head>
+<body>
+  <pre>
+    beforeMount () {
+      axios.get(`${config.URL}closeBox`).then((data) => {
+        this.closeBox = data.data.data
+        console.log(this.closeBox)
+      })
+    },
+  </pre>
+</body>
+</html>
