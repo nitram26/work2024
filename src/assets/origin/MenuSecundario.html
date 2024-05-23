@@ -7,112 +7,55 @@
 </head>
 <body>
   <pre>
-    <div class="">
-      &lt;template>
-  &lt;v-row class="bg-purple-darken-4 pa-1 mt-15 fixed-top">
-    &lt;v-col cols="11" class="text-center">
-      &lt;h2>
-        VUE3 PRACTICA
-        &lt;v-btn icon @click="scrollToTop" class="mx-6">
-          &lt;v-img src="@/assets/image/logo.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />  
-        &lt;/v-btn>
-      &lt;/h2>
+ <div>
+  &lt;template>
+  &lt;v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
+      &lt;v-col cols="11" class="text-center">
+          &lt;h2 >HOME FRONT &lt;/h2>
     &lt;/v-col>
-    &lt;v-col cols="1">
-      &lt;v-btn icon @click="toggleDrawer">
-        &lt;v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;" />
-      &lt;/v-btn>
+    &lt;v-col cols="1" >
+
+&lt;v-btn icon @click="toggleDrawer" >
+    &lt;v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/>&lt;/v-btn>
     &lt;/v-col>
   &lt;/v-row>
+  &lt;!-- ********************************************* -->
   &lt;v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-    &lt;v-list>
-      &lt;v-list-item @click="() => scrollTo('section1')" title="Sección 1" prepend-icon="mdi-grid">&lt;/v-list-item>
-      &lt;v-list-item @click="() => scrollTo('section2')" title="Sección 2" prepend-icon="mdi-arrange-bring-to-front">&lt;/v-list-item>
-      &lt;v-list-item @click="() => scrollTo('section3')" title="Sección 3" prepend-icon="mdi-arrange-send-to-back">&lt;/v-list-item>
-      &lt;v-list-item @click="() => scrollTo('section4')" title="Sección 4" prepend-icon="mdi-database-cog-outline">&lt;/v-list-item>
-      &lt;v-list-item @click="() => scrollTo('section5')" title="Sección 5" prepend-icon="mdi-store">&lt;/v-list-item>
-    &lt;/v-list>
-  &lt;/v-navigation-drawer>
-  &lt;div id="section1">
-    &lt;h3>Sección 1&lt;/h3>
-    &lt;p>Contenido de la sección 1..&lt;/p>
-  &lt;/div>
-  &lt;div id="section2">
-    &lt;h3>Sección 2&lt;/h3>
-    &lt;p>Contenido de la sección 2...&lt;/p>
-  &lt;/div>
-  &lt;div id="section3">
-    &lt;h3>Sección 3&lt;/h3>
-    &lt;p>Contenido de la sección 3..&lt;/p>
-  &lt;/div>
-  &lt;div id="section4">
-    &lt;h3>Sección 4&lt;/h3>
-    &lt;p>Contenido de la sección 4...&lt;/p>
-  &lt;/div>
-  &lt;div id="section5">
-    &lt;h3>Sección 5&lt;/h3>
-    &lt;p>Contenido de la sección 5...&lt;/p>
-  &lt;/div>
-&lt;/template>
-
-&lt;script setup>
-import { ref } from 'vue';
-
-const drawer = ref(false);
-
-
-const scrollTo = (sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: 'smooth',
-    });
-  }
-  drawer.value = false; // Cierra el drawer después de hacer clic
-};
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-};
-
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-};
-&lt;/script>
-
-&lt;style scoped>
-/* Estilos adicionales */
-#section1, #section2, #section3, #section4, #section5 {
-  padding: 20px;
-  margin: 20px 0;
-}
-
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-v-icon {
-  margin-left: 10px;
-  cursor: pointer;
-}
-.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 101%;
-  z-index: 1000
-}
-
-&lt;/style>
-
-
-    </div>
+      &lt;v-list>
+        &lt;v-list-item link to="/" title="Carlos" prepend-icon="mdi-grid">&lt;/v-list-item>
+        &lt;v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front">&lt;/v-list-item>
+        &lt;v-list-item link to="/vue2" title="dos" prepend-icon="mdi-arrange-send-to-back">&lt;/v-list-item>
+        &lt;v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline">&lt;/v-list-item>
+        &lt;v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store">&lt;/v-list-item>
+      &lt;/v-list>
+    &lt;/v-navigation-drawer>
+  &lt;v-row class="mt-12">
+    &lt;v-col class="mt-4">
+      &lt;h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS&lt;/h3>
+    &lt;/v-col>
+     
+      &lt;/v-row>
+      &lt;!-- fin de navegador derecho -->
+      &lt;script setup>
+        import { ref } from 'vue';
+      const drawer = ref(false);
+      
+      const toggleDrawer = () => {
+        drawer.value = !drawer.value;
+      }
+      &lt;/script>
+      &lt;!-- ******************************* -->
+      &lt;style scoped>
+      .fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 101%;
+        z-index: 1000
+      }
+      
+      &lt;/style>
+ </div>
   </pre>
 </body>
 </html>
