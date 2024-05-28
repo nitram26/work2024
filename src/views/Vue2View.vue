@@ -27,8 +27,30 @@
       </v-row>
       <!-- fin de navegador derecho -->
       <v-row class="bg-red-lighten-4">
+        <!-- ****************************************************************************** -->
         <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/ModelVue2.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> CREACIÓN  </v-card-title>
+      <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+   1. Model
+   2. Controller
+   3. Pages
+   4. Route
+   5. Component
+   6. Validaciones
+    </v-card-text>
+  </v-card>
+  </v-col>
 <!-- ****************************************************************************** -->
+ <v-col cols="3">
         <v-card
     class="mx-auto my-8"
     elevation="16"
@@ -44,6 +66,7 @@
     </v-card-text>
   </v-card>
       </v-col>
+<!-- ****************************************************************************** -->
       <v-col cols="3">
         <v-card
     class="mx-auto my-8"
@@ -132,8 +155,8 @@
       </v-card-text>
     </v-card>
         </v-col>
-<!-- ****************************************************************************** -->
       </v-row>
+      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS -TEXT HTML</h2>
@@ -157,9 +180,8 @@
   </v-card>
 </v-col>
 </v-row>
+<!-- ********************************************************************** -->
 <v-row class="bg-purple-lighten-4">
-  
-  <!-- ********************************************************************** -->
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">titulo</h2>
   </v-col>

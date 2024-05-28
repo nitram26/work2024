@@ -1,7 +1,0 @@
-beforeMount () {
-axios.get(`${config.URL}clients`, {
-headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders'])
-}).then((data) => {
-this.clients = data.data.data
-})
-},
