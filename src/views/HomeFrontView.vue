@@ -15,8 +15,8 @@
         <v-list-item link to="/" title="INICIO" prepend-icon="mdi-grid"></v-list-item>
         <v-list-item link to="/vue2" title="Vue2" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
         <v-list-item link to="/vue3" title="Vue3" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
+        <v-list-item link to="/store" title="Vuetify" prepend-icon="mdi-database-cog-outline"></v-list-item>
+        <v-list-item link to="/backend" title="Material D" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- /////////////////////////////////////// -->
@@ -51,7 +51,7 @@
         <v-card-subtitle>Para agregar a las paginas HTML</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-       Agregar color a las paginas HTML
+       Agregar color a las paginas HTML, uso temporal
       </v-card-text>
     </v-card>
         </v-col>

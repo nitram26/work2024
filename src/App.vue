@@ -44,11 +44,12 @@
     </v-app-bar>
     <!-- Navigation Drawer -->
     <v-navigation-drawer v-model="drawer" color="teal-darken-4" dark>
-      <v-list-item link to="/homeFront" title="HOME FRONT" prepend-icon="mdi-grid" @click="handle"></v-list-item>
-      <v-list-item link to="/vue2" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
-      <v-list-item link to="/vue3" title="Vue3" prepend-icon="mdi-arrange-send-to-back" @click="handle"></v-list-item>
+      <v-list-item link to="/homeFront" title=" FRONT" prepend-icon="mdi-grid" @click="handle"></v-list-item>
       <v-list-item link to="/backend" title="BACK" prepend-icon="mdi-store" @click="handle"></v-list-item>
       <v-list-item link to="/homeFront" title="DATA" prepend-icon="mdi-database-cog-outline" @click="handle"></v-list-item>
+
+      <v-list-item link to="/" title="STUDIUM" prepend-icon="mdi-arrange-send-to-back" @click="handle"></v-list-item>
+      <v-list-item link to="/" title="PROYECTOS" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
     </v-navigation-drawer>
     <!-- Main y router -->
     <v-main>
