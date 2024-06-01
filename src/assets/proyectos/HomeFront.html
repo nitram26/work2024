@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>body{background-color: antiquewhite;}</style>
-  <title>Home Front</title>
+  <style>body{background-color:bisque;}</style>
+  <title>Document</title>
 </head>
 <body>
   <pre>
     <div>
       &lt;template>
-  &lt;v-row class="bg-purple-darken-4 pa-2" >
+  &lt;v-row class="bg-teal-darken-2 pa-2" >
       &lt;v-col cols="11" class="text-center">
-          &lt;h2 >HOME FRONT &lt;/h2>
+          &lt;h2 >ESTUDIOS &lt;/h2>
     &lt;/v-col>
     &lt;v-col cols="1" >
 
@@ -30,8 +30,14 @@
         &lt;v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store">&lt;/v-list-item>
       &lt;/v-list>
     &lt;/v-navigation-drawer>
+    &lt;!-- *********************************************** -->
+&lt;v-row>
+  &lt;v-col cols="12" class="bg-red-darken-2 text-center">
+&lt;h2>titulo&lt;/h2>
+  &lt;/v-col>
+&lt;/v-row>    
       &lt;/template>
-  &lt;!-- *********************************************** -->
+&lt;!-- ///////////////////////////////////////////////////// -->
   &lt;script setup>
   import { ref } from 'vue';
 const drawer = ref(false);
@@ -41,7 +47,10 @@ const toggleDrawer = () => {
 }
   &lt;/script>
   &lt;!-- ************************************************* -->
-
+      
+          
+      
+        
     </div>
   </pre>
 </body>

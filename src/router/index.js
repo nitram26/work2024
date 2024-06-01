@@ -9,6 +9,7 @@ import FrontView from '@/views/FrontView.vue'
 import HomeFrontView from '@/views/HomeFrontView.vue'
 import ProjectView from '@/views/ProjectView.vue'
 import WorkView from '@/views/WorkView.vue'
+import StudiumView from '@/views/StudiumView.vue'
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
     path: '/work',
     name: 'Work',
     component: WorkView
+  },
+  {
+    path: '/studium',
+    name: 'Studium',
+    component: StudiumView
   },
 
 ]

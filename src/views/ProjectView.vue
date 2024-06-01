@@ -14,7 +14,7 @@
         <!-- ********************************************* -->
         <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
             <v-list>
-              <v-list-item link to="/" title="Carlos" prepend-icon="mdi-grid"></v-list-item>
+              <v-list-item link to="/" title="INICIO" prepend-icon="mdi-grid"></v-list-item>
               <v-list-item link to="/work" title="Work24" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
               <v-list-item link to="/vue2" title="dos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
               <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>

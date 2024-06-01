@@ -21,24 +21,6 @@
     </v-navigation-drawer>
     <!-- /////////////////////////////////////// -->
     <v-row class="mt-10">
-      <!-- ****************************************************************************** -->
-      <v-col cols="3" class="bg-teal-lighten-5">
-          <v-card
-      class="mx-auto my-8"
-      elevation="16"
-      target="_blank"
-      href="http://127.0.0.1:5500/src/assets/origin/HomeFront.html"
-      max-width="344" >
-      <v-card-item>
-        <v-card-title> Navegador de Página </v-card-title>
-        <v-card-subtitle>Código para este navegador</v-card-subtitle>
-      </v-card-item>
-      <v-card-text>
-     Navegador con botón Familiar para abrir el segundo drawer
-      </v-card-text>
-    </v-card>
-        </v-col>
-  <!-- ****************************************************************************** -->
       <v-col cols="3" class="bg-teal-lighten-5">
           <v-card
       class="mx-auto my-8"
@@ -51,7 +33,7 @@
         <v-card-subtitle>Para agregar a las paginas HTML</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-       Agregar color a las paginas HTML, uso temporal
+     Estructura Básica
       </v-card-text>
     </v-card>
         </v-col>
