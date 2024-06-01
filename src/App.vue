@@ -49,7 +49,7 @@
       <v-list-item link to="/homeFront" title="DATA" prepend-icon="mdi-database-cog-outline" @click="handle"></v-list-item>
 
       <v-list-item link to="/" title="STUDIUM" prepend-icon="mdi-arrange-send-to-back" @click="handle"></v-list-item>
-      <v-list-item link to="/" title="PROYECTOS" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
+      <v-list-item link to="/project" title="PROYECTOS" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
     </v-navigation-drawer>
     <!-- Main y router -->
     <v-main>

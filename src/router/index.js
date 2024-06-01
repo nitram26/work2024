@@ -7,6 +7,8 @@ import Vue3View from '@/views/Vue3View.vue'
 import DataView from '@/views/DataView.vue'
 import FrontView from '@/views/FrontView.vue'
 import HomeFrontView from '@/views/HomeFrontView.vue'
+import ProjectView from '@/views/ProjectView.vue'
+import WorkView from '@/views/WorkView.vue'
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path: '/homeFront',
     name: 'HomeFront',
     component: HomeFrontView
+  },
+  {
+    path: '/project',
+    name: 'Project',
+    component: ProjectView
+  },
+  {
+    path: '/work',
+    name: 'Work',
+    component: WorkView
   },
 
 ]

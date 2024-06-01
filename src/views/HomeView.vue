@@ -13,7 +13,7 @@
         <v-card-subtitle>Menu principal y lateral</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-     Barra principal de navegación y menu navigation-drawer con las áreas principales
+    Menu navigation-drawer 
       </v-card-text>
     </v-card> 
         </v-col>
@@ -30,7 +30,7 @@
         <v-card-subtitle>Menu SECUNDARIO lateral</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-     Barra de sub titulo y botón de menu lateral secundario y botón de regresar al principio de página
+ uso de enlaces internos
       </v-card-text>
     </v-card> 
         </v-col>
