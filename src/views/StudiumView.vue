@@ -106,10 +106,10 @@ href="http://127.0.0.1:5500/src/assets/studium/vue3/CondicionalTernario.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Condicional Ternaria</v-card-title>
-  <v-card-subtitle>Bindear estilos y clases</v-card-subtitle>
+  <v-card-subtitle>Bindear estilos desde style  no ref</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Uso de condición Ternaria para estilos
+  &lt;div :class="ahorro >= 500 ? 'azul' : 'rojo'">
 </v-card-text>
 </v-card>
   </v-col>
