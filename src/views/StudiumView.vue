@@ -34,7 +34,7 @@
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/CrearProyecto.html"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/CrearProyecto.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Crear Estructura </v-card-title>
@@ -45,9 +45,117 @@ max-width="344" >
 </v-card-text>
 </v-card>
   </v-col>
-<!-- ****************************************************************************** -->
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/Snippet.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Crear Snippet </v-card-title>
+  <v-card-subtitle>link</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Como instalarlo en VSCode
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/InterpolarTexto.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Interpolar Texto</v-card-title>
+  <v-card-subtitle>link</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Llamado estático
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/ExampleSelective.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> ExampleSelective </v-card-title>
+  <v-card-subtitle>Condicionales</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de If y/o Show
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/CondicionalTernario.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Condicional Ternaria</v-card-title>
+  <v-card-subtitle>Bindear estilos y clases</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de condición Ternaria para estilos
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/IfShow.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> If & Show </v-card-title>
+  <v-card-subtitle>Condicionales</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Características de uso de cada uno
+</v-card-text>
+</v-card>
+  </v-col>
 </v-row>
-       
+<!-- //////////////////////////////////////////////////// -->
+  <v-row class="bg-blue-darken-2 pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >Componentes Simples </h2>
+    </v-col>
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row>
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/Contador.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> If & Show </v-card-title>
+  <v-card-subtitle>Condicionales</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Características de uso de cada uno
+</v-card-text>
+</v-card>
+  </v-col>
+  </v-row>
       </template>
 <!-- ///////////////////////////////////////////////////// -->
   <script setup>
