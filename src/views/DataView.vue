@@ -1,13 +1,12 @@
 <template>
-  <v-container :fluid="true">
-   <h1>data</h1> 
-  </v-container>
+  
+  <v-app>
+    <v-main>
+      <DataTable />
+    </v-main>
+  </v-app>
 </template>
-<!-- ******************************* --> 
+
 <script setup>
-
+import DataTable from '@/components/DataTable.vue';
 </script>
-<!-- ******************************* -->
-<style scoped>
-
-</style>
