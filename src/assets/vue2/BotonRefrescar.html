@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color:bisque;}</style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;h2>BOTON REFRESACAR&lt;/h2>
+
+
+&lt;template>
+  &lt;v-col>
+    &lt;v-btn @click="dialog = true" class="mr-4 mt-2" outlined small icon color="primary">&lt;v-icon>mdi-plus&lt;/v-icon>&lt;/v-btn>
+  &lt;/v-col>
+&lt;/template>
+
+
+&lt;script> 
+
+methods:
+    refreshPage() {
+      location.reload()
+    },
+&lt;/script>
+
+&lt;p> Fue fácil, el botón llamo a la función y listo.&lt;/p>
+>
+    </div>
+  </pre>
+</body>
+</html>

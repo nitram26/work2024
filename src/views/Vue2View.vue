@@ -170,15 +170,48 @@
     href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> Tema al menu  </v-card-title>
+      <v-card-title> Color según Estado </v-card-title>
       <v-card-subtitle>Color de acuerdo al cambio de estado</v-card-subtitle>
     </v-card-item>
-    <v-card-text>
-      1.	En la pagina(pages) el color del botón cambiará de acuerdo al estado <br>
-      2. Ver imagen
+    <v-card-text>     Ver imagen
     </v-card-text>
   </v-card>
 </v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/BotonRefrescar.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> Botón refrescar </v-card-title>
+      <v-card-subtitle>Ver imagen</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      El botón refrescará la pagina 
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/numRegistro.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> Ver N° de Registros</v-card-title>
+      <v-card-subtitle>Ver imagen</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Cantidad de registros de una Página
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
 </v-row>
 <!-- ********************************************************************** -->
 <v-row class="bg-purple-lighten-4">
@@ -186,6 +219,23 @@
     <h2 class="bg-pink-darken-4 pa-4">titulo</h2>
   </v-col>
   <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> titulo </v-card-title>
+      <v-card-subtitle>detalle</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      explicación
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
   <v-col cols="3" >
     <v-card
     class="mx-auto my-8"

@@ -23,23 +23,26 @@
       </v-app-bar-nav-icon>
       <!-- homeFront -->
       <v-app-bar-nav-icon class="ma-14">
-        <v-btn icon="mdi-arrange-bring-to-front" to="/homeFront"></v-btn>
-        Traductor
+        <v-btn icon="mdi-arrange-bring-to-front" to=""></v-btn>
+        <a href="https://translate.google.com.pe/?sl=es&tl=en&op=translate" class="text-white" target="_blank">Traductor</a>
+        
       </v-app-bar-nav-icon>
       <!-- Back -->
       <v-app-bar-nav-icon class="ma-14">
-        <v-btn icon="mdi-arrange-send-to-back" to="/backend"></v-btn>
-        Chat GPT
+        <v-btn icon="mdi-arrange-send-to-back" to=""></v-btn>
+        <a href="https://chatgpt.com/?oai-dm=1" class="text-white" target="_blank"> Chat GPT</a>
       </v-app-bar-nav-icon>
       <!-- Data -->
       <v-app-bar-nav-icon class="ma-14">
-        <v-btn icon="mdi-database-cog-outline" to="/data"></v-btn>
-        Vuetify
+        <v-btn icon="mdi-database-cog-outline" to=""></v-btn>
+        <a href="https://vuetifyjs.com/en/" class="text-white" target="_blank">  Vuetify</a>
+       
       </v-app-bar-nav-icon>
       <!-- Store -->
       <v-app-bar-nav-icon class="ma-14">
-        <v-btn icon="mdi-store" to="/store"></v-btn>
-        M Design
+        <v-btn icon="mdi-store" to=""></v-btn>
+        <a href="https://pictogrammers.com/library/mdi/" class="text-white" target="_blank">M Design</a>
+        
       </v-app-bar-nav-icon>
     </v-app-bar>
     <!-- Navigation Drawer -->

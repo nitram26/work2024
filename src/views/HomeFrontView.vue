@@ -26,14 +26,14 @@
       class="mx-auto my-8"
       elevation="16"
       target="_blank"
-      href="http://127.0.0.1:5500/src/assets/origin/ElementosRapidos.html"
+      href=""
       max-width="344" >
       <v-card-item>
-        <v-card-title> Elementos para HTML </v-card-title>
-        <v-card-subtitle>Para agregar a las paginas HTML</v-card-subtitle>
+        <v-card-title> title </v-card-title>
+        <v-card-subtitle>subtitle</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-     Estructura Básica
+     explicación
       </v-card-text>
     </v-card>
         </v-col>
