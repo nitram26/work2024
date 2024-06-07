@@ -12,7 +12,6 @@
     </v-data-table>
 
 </template>
-
 <script setup>
 import {  } from 'vue';
 

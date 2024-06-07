@@ -20,8 +20,17 @@
       </v-list>
     </v-navigation-drawer>
     <!-- /////////////////////////////////////// -->
-    <v-row class="mt-10">
-      <v-col cols="3" class="bg-teal-lighten-5">
+    <v-row class="mt-12">
+    <v-col class="mt-4">
+      <h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS</h3>
+    </v-col>
+     
+      </v-row>
+      <!-- fin de navegador derecho -->
+      <v-row class="bg-red-lighten-4">
+        <!-- ****************************************************************************** -->
+
+      <v-col cols="3" >
           <v-card
       class="mx-auto my-8"
       elevation="16"

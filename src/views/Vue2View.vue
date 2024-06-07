@@ -19,6 +19,7 @@
         <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- ********************************** -->
   <v-row class="mt-12">
     <v-col class="mt-4">
       <h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS</h3>
@@ -151,7 +152,7 @@
         <v-card-subtitle>Para obtener el enlace a la base de datos</v-card-subtitle>
       </v-card-item>
       <v-card-text>
-      axios básico con el ojeto de hacer una prueba inicial
+      axios básico con el objeto de hacer una prueba inicial
       </v-card-text>
     </v-card>
         </v-col>
@@ -159,7 +160,7 @@
       <!-- /////////////////////////////////////////////////////////////////////////////////////-->
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS -TEXT HTML</h2>
+    <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
   </v-col>
   <!-- ****************************************** -->
   <v-col cols="3">
@@ -212,11 +213,28 @@
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/SeleccionarCampo.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> Seleccionar Campo</v-card-title>
+      <v-card-subtitle>En la tabla</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+     Traer registros de acuerdo a selección
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
 </v-row>
 <!-- ********************************************************************** -->
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">titulo</h2>
+    <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
   </v-col>
   <!-- ********************************************************************** -->
   <v-col cols="3" >
@@ -224,14 +242,14 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> titulo </v-card-title>
-      <v-card-subtitle>detalle</v-card-subtitle>
+      <v-card-title> FECHA SIN HORA </v-card-title>
+      <v-card-subtitle> Eliminar la hora</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-      explicación
+    fecha sin hora
     </v-card-text>
   </v-card>
 </v-col>

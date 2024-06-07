@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color:bisque;}</style>
+  <title>SeleccionarCampo</title>
+</head>
+<body>
+  <pre>
+    <div>
+      SELECCIONAR REGISTROS DE ACUERDO A MODELO
+
+      Studio//pages//tickets.vue
+      
+      TRABANDO MODELS
+      
+      1.	Ingresar el autocomplete
+      &lt;!-- inicio -->
+        &lt;v-col cols="2">
+          &lt;v-autocomplete
+          label="Módulo"
+          outlined
+          dense
+          hide-details
+          >
+      
+       
+      
+      2.	Los items
+           &lt;!-- inicio -->
+        &lt;v-col cols="2">
+          &lt;v-autocomplete
+          :items="models"
+          label="Módulo"
+          outlined
+          dense
+          hide-details
+          >
+      
+      3.	En la data
+        models: [
+          { text: 'Todos', value: 'all' },
+          { text: 'VENTAS', value: 'progress' },
+          { text: 'CAJA', value: 'canceled' }
+        ],
+      
+      4.	En el autocomplete y el async buscar
+      Agregar el filtro se pone el v-model y el filtro
+      &lt;v-autocomplete
+        v-model="selectedModel"
+        :items="models"
+        label="Módulo"
+        outlined
+        dense
+        hide-details
+        >
+      &lt;/v-autocomplete>
+      
+      En la data
+      selectedModel: 'all',
+      models: [
+        { text: 'Todos', value: 'all' },
+        { text: 'VENTAS', value: 'progress' },
+        { text: 'CAJA', value: 'canceled' }
+      ],
+      
+      En el async
+      Se añade el parámetro de búsqueda: CAJA Y VENTAS
+        async buscar() {
+            this.loading = true
+            try {
+              let params = {
+                skip: this.pagination.page - 1,
+                limit: this.pagination.itemsPerPage,
+                initialDate: this.initialDate,
+                finalDate: this.finalDate,
+                query: this.structureOr
+              }
+      
+              // Añadir el filtro de estado del ticket a los parámetros de consulta
+              if (this.ticketState !== 'all') {
+                params.ticketStatus = this.ticketState
+              }
+      
+              if (this.userSale !== 'all') params.userSale = this.userSale
+      
+              // Añadir el filtro del cliente seleccionado a los parámetros de consulta
+              if (this.selectedClientRuc && this.selectedClientRuc !== 'all') {
+                params.clientRuc = this.selectedClientRuc
+              }
+              // Añadir el filtro del modelo seleccionado (CAJA o VENTAS)
+               if (this.selectedModel && this.selectedModel !== 'all') {
+            params.model = this.selectedModel;
+              }
+              // Realizar la solicitud GET con los parámetros
+              let response = await axios.get(`${config.URL}tickets`, {
+                headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']),
+                params
+              })
+              // Manejar la respuesta
+              this.ticket = response.data.data
+              this.total = response.data.total
+            } catch (error) {
+              // Manejar errores
+              this.ticket = []
+              this.total = 0
+              console.log(error)
+            } finally {
+              this.loading = false
+            }
+          },
+      
+      AGRGAR EL METODO BUSCAR
+      &lt;v-autocomplete
+        v-model="selectedModel"
+        :items="models"
+        item-text="text"
+        item-value="value"
+        label="Módulo"
+        outlined
+        dense
+        hide-details
+        @change="buscar"
+      >
+      
+      CORREGIR EL VALOR DE LA DATA 
+      selectedModel: 'all',
+          models: [
+            { text: 'Todos', value: 'all' },
+            { text: 'VENTAS', value: 'VENTAS' },
+            { text: 'CAJA', value: 'CAJA' }
+          ],
+      
+      En el async
+       async buscar() {
+            this.loading = true
+            try {
+              let params = {
+                skip: this.pagination.page - 1,
+                limit: this.pagination.itemsPerPage,
+                initialDate: this.initialDate,
+                finalDate: this.finalDate,
+                query: this.structureOr
+              }
+      
+              // Añadir el filtro de estado del ticket a los parámetros de consulta
+              if (this.ticketState !== 'all') {
+                params.ticketStatus = this.ticketState
+              }
+      
+              if (this.userSale !== 'all') params.userSale = this.userSale
+      
+              // Añadir el filtro del cliente seleccionado a los parámetros de consulta
+              if (this.selectedClientRuc && this.selectedClientRuc !== 'all') {
+                params.clientRuc = this.selectedClientRuc
+              }
+              // Añadir el filtro del modelo seleccionado (CAJA o VENTAS)
+               if (this.selectedModel && this.selectedModel !== 'all') {
+            params.model = this.selectedModel;
+              }
+              // Realizar la solicitud GET con los parámetros
+              let response = await axios.get(`${config.URL}tickets`, {
+                headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders']),
+                params
+              })
+              // Manejar la respuesta
+              this.ticket = response.data.data
+              this.total = response.data.total
+            } catch (error) {
+              // Manejar errores
+              this.ticket = []
+              this.total = 0
+              console.log(error)
+            } finally {
+              this.loading = false
+            }
+          },
+      
+      En el controller
+      async function getListTicket(req, res) {
+        try {
+          let query = {};
+      
+          // Si el estado del ticket está presente en los parámetros de consulta, añadirlo al query
+          if (req.query.ticketStatus && req.query.ticketStatus !== 'all') {
+            query.status = req.query.ticketStatus;
+          }
+      
+          // Si el ID del cliente está presente en los parámetros de consulta, añadirlo al query
+          if (req.query.clientRuc) {
+            query.usersCompany = req.query.clientRuc;
+          }
+      
+          // Si el modelo (VENTAS o CAJA) está presente en los parámetros de consulta, añadirlo al query
+          if (req.query.model && req.query.model !== 'all') {
+            query.model = req.query.model
+          }
+      
+          // Otras posibles condiciones de búsqueda pueden ser añadidas aquí
+          // if (!userAdmin.admin) {
+          //   query.user = req.user;
+          // }
+      
+          // Realizar la consulta en la base de datos
+          const tickets = await Ticket.find(query).sort({ saveDate: -1 }).exec();
+      
+          if (!tickets || tickets.length === 0) {
+            return res.status(404).send({ message: 'No existen registros en la categoría de datos.' });
+          }
+      
+          res.status(200).send({ data: tickets });
+        } catch (err) {
+          console.error(`Error al realizar la petición: ${err}`);
+          res.status(500).send({ message: `Error al realizar la petición ${err}` });
+        }
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </pre>
+</body>
+</html>

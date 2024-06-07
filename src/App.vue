@@ -53,6 +53,8 @@
 
       <v-list-item link to="/studium" title="STUDIUM" prepend-icon="mdi-arrange-send-to-back" @click="handle"></v-list-item>
       <v-list-item link to="/project" title="PROYECTOS" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
+      <v-list-item link to="/store" title="STORE" prepend-icon="mdi-cart"  @click="handle"></v-list-item>
+      <v-list-item link to="/work" title="PRÁCTICAS" prepend-icon="mdi-briefcase-outline"  @click="handle"></v-list-item>
     </v-navigation-drawer>
     <!-- Main y router -->
     <v-main>

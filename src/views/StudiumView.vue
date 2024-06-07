@@ -3,7 +3,7 @@
 <template>
   <v-row class="bg-teal-darken-2 pa-2" >
       <v-col cols="11" class="text-center">
-          <h2 >ESTUDIOS </h2>
+          <h2 >STUDIUM </h2>
     </v-col>
     <v-col cols="1" >
 
@@ -147,14 +147,32 @@ target="_blank"
 href="http://127.0.0.1:5500/src/assets/studium/vue3/Contador.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> If & Show </v-card-title>
-  <v-card-subtitle>Condicionales</v-card-subtitle>
+  <v-card-title> Contador </v-card-title>
+  <v-card-subtitle>uso de if-show, imagen referencial</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Características de uso de cada uno
+Contador que aumente y disminuya un número
 </v-card-text>
 </v-card>
   </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/VforRecorrido.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> V-FOR </v-card-title>
+  <v-card-subtitle>Recorrido Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Números, palabras, arrays, objetos
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
   </v-row>
       </template>
 <!-- ///////////////////////////////////////////////////// -->

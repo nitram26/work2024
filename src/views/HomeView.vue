@@ -1,5 +1,5 @@
 <template>
-  <v-row class="bg-brown-darken-2 pa-2 mt-12 fixed-top" >
+  <v-row class="bg-cyan-darken-1 pa-2 mt-12 fixed-top" >
       <v-col cols="11" class="text-center">
           <h2 >HOME </h2>
     </v-col>
@@ -21,7 +21,7 @@
     </v-navigation-drawer>
   <v-row class="mt-12">
     <v-col class="mt-4">
-      <h3 class="bg-blue pa-4  text-center">MODELOS RÁPIDOS</h3>
+      <h3 class="bg-green-darken-4 pa-4  text-center">MODELOS RÁPIDOS</h3>
     </v-col>
      
       </v-row>
