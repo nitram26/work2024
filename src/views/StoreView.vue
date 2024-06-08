@@ -1,17 +1,17 @@
 <template>
   <v-container :fluid="true">
-   <h1>Padre</h1> 
+   <h1>PADRE MÉTODO INJECTION</h1> <br><br>
 
-   <WorkView :nombre="nombre" :edad="edad"/>
+   <WorkView/>
   </v-container>
 </template>
 <!-- ******************************* --> 
 <script setup>
-import { ref } from 'vue'
+import { provide, ref } from 'vue'
 import WorkView from './WorkView.vue'
 
-let nombre = ref('Carlos')
-let edad = ref(65)
+let canal = ref('Sofia')
+provide('mi canal', canal)
 </script>
 <!-- ******************************* -->
 <style scoped>

@@ -289,14 +289,31 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/.html"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/EmitVue.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>title </v-card-title>
-  <v-card-subtitle>title</v-card-subtitle>
+  <v-card-title>EMITS </v-card-title>
+  <v-card-subtitle>Básico</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-  title
+  interacción mediante función
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/Injection.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>INJECTION </v-card-title>
+  <v-card-subtitle>Hace el trabajo de Props y Emits</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+ Envía con provide, recibe con injection
 </v-card-text>
 </v-card>
   </v-col>

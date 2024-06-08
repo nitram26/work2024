@@ -1,20 +1,25 @@
 <template>
   <div>
-   <h1>Hijo</h1> 
-   <h2>Te llamas {{ nombre }} y tienes {{ edad }} años</h2>
-
-   <v-btn>Cambiar valores</v-btn>
-  </div>
+   <h1>HIJO MÉTODO INJECTION</h1> 
+  <h2>{{ canalHijo }}</h2> <br><br>
+<v-btn @click="modificar">Cambiar</v-btn>
+</div>
 </template>
 <!-- ******************************* --> 
 <script setup>
+import { inject } from 'vue';
 
-const props = defineProps({
-  nombre: String,
-  edad: Number
-})
+let canalHijo = inject('mi canal')
+
+const modificar = () =>{
+  canalHijo.value = 'Ingrid'
+}
+
 </script>
 <!-- ******************************* -->
 <style scoped>
-
+div{
+  background-color: antiquewhite;
+  padding: 4em;
+}
 </style>
