@@ -25,7 +25,7 @@
 <v-row>
   <!-- columna -->
   <v-col cols="12" class="bg-red-darken-2 text-center">
-<h2>Vue3 2024</h2>
+<h2>Vue3 Intro</h2>
   </v-col>
 </v-row> 
 <v-row>
@@ -134,7 +134,7 @@ Características de uso de cada uno
 <!-- //////////////////////////////////////////////////// -->
   <v-row class="bg-blue-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
-      <h2 >Componentes Simples </h2>
+      <h2 >Componentes Nivel1 </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
@@ -151,12 +151,29 @@ max-width="344" >
   <v-card-subtitle>uso de if-show, imagen referencial</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Contador que aumente y disminuya un número
+Que aumente y disminuya +-1
 </v-card-text>
 </v-card>
   </v-col>
   <!-- **************************************************** -->
     <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/ReactividadBasica.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Reactividad Básica </v-card-title>
+  <v-card-subtitle>Ejemplo con ref</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Introducción a la reactividad
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -173,7 +190,119 @@ Números, palabras, arrays, objetos
 </v-card>
   </v-col>
   <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/VmodelUno.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> V-MODEL </v-card-title>
+  <v-card-subtitle>fUNCIONAMIENTO Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+En v-text-field y v-checkbox
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
   </v-row>
+  <!-- /////////////////////////////////////////////////////// -->
+  <v-row class="bg-lime-darken-2 pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >Componentes Nivel2 </h2>
+    </v-col>
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row>
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Practica Uno </v-card-title>
+  <v-card-subtitle>Uso de nivel1</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Repaso General
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/CuestionarioVfor.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Cuestionario V-FOR </v-card-title>
+  <v-card-subtitle>Recorrido de objeto y array</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Preguntas y respuestas 
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/OpcionVfor.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Opciones con V-for </v-card-title>
+  <v-card-subtitle>Cuestionario en Tarjetas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  Visor temporal de respuesta usando setTimeout
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/propsVuetres.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>PROPS </v-card-title>
+  <v-card-subtitle>Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+ Interacción de componentes
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>title </v-card-title>
+  <v-card-subtitle>title</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  title
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  </v-row>
+  <!-- /////////////////////////////////////////////////////// -->
       </template>
 <!-- ///////////////////////////////////////////////////// -->
   <script setup>
