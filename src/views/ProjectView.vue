@@ -1,7 +1,7 @@
 <template>
   <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
       <v-col cols="11" class="text-center">
-          <h2 >VUE2 </h2>
+          <h2 >PROJECT view </h2>
     </v-col>
     <v-col cols="1" >
 
