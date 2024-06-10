@@ -42,7 +42,6 @@
       <v-app-bar-nav-icon class="ma-14">
         <v-btn icon="mdi-store" to=""></v-btn>
         <a href="https://pictogrammers.com/library/mdi/" class="text-white" target="_blank">M Design</a>
-        
       </v-app-bar-nav-icon>
     </v-app-bar>
     <!-- Navigation Drawer -->

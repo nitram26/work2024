@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: bisque;
+      }
+
+      .img {
+        width: 800px;
+        margin: 4em;
+        border: brown double 6px;
+      }
+    </style>
+    <title>ELEMENTOS RÁPIDOS</title>
+  </head>
+
+  <body>
+    <h1>Registros por Estado y Por Categoria</h1>
+    <img src="/src/assets/image/iconoColor.png" alt="" class="img">
+    <pre>
+      <div>
+      VER POR CONSOLA
+      ELEMENTOS DE CATEGORY DE LA BASE TICKETS
+      DENTRO DEL BEFOREMOUNT
+      Pero funciona sin esto solo con lo siguiente en  traer a text-field
+      // category
+      axios.get(`${config.URL}tickets`).then((response) => {
+      const tickets = response.data.data;
+      // Crear un objeto para almacenar las cantidades de cada categoría
+      const categoryCounts = tickets.reduce((acc, ticket) => {
+      const category = ticket.category;
+      if (category in acc) {
+      acc[category]++;
+      } else {
+      acc[category] = 1;
+      }
+      return acc;
+      }, {});
+      console.log(categoryCounts, 'Cantidad de elementos por categoría 313');
+      });
+      
+      <img src="/src/assets/image/consola1.png" alt="consola1" class="img">
+      
+      EN LA CONSOLA
+      
+      
+      PARA TRAER TODOS LOS ELEMENTOS CON IMAGEN
+      &lt;v-col cols="1" class="pa-1">
+      &lt;v-text-field v-model="total" label="N° Tickets" dense hide-details outlined>
+      &lt;template v-slot:prepend-inner>
+      &lt;v-icon color="blue">mdi-cart&lt;/v-icon>
+      &lt;/template>
+      &lt;/v-text-field>
+      &lt;/v-col>
+      
+      PARA TRAERLOS A UN TEXT FIELD
+      IMAGEN iconColor
+      &lt;v-row dense>
+      &lt;v-col cols="1" class="pa-1">
+      &lt;v-text-field v-model="total" label="N° Tickets" dense hide-details outlined>
+      &lt;template v-slot:prepend-inner>
+      &lt;v-icon color="blue">mdi-cart&lt;/v-icon>
+      &lt;/template>
+      &lt;/v-text-field>
+      &lt;/v-col>
+      &lt;v-col v-for="(count, status) in statusCounts" :key="status" cols="2">
+      &lt;v-text-field :label="`Estado: ${status}`" :value="count" readonly outlined dense
+      prepend-inner-icon="mdi-list-status">&lt;/v-text-field>
+      &lt;/v-col>
+      &lt;/v-row>
+      
+      &lt;script>
+      import axios from 'axios';
+      
+      export default {
+      data() {
+      return {
+      tickets: [],
+      categoryCounts: {}
+      };
+      },
+      mounted() {
+      this.fetchTickets();
+      },
+      methods: {
+      fetchTickets() {
+      axios.get(`${config.URL}tickets`).then((response) => {
+      this.tickets = response.data.data;
+      this.calculateCategoryCounts();
+      });
+      },
+      calculateCategoryCounts() {
+      this.categoryCounts = this.tickets.reduce((acc, ticket) => {
+      const category = ticket.category;
+      if (category in acc) {
+      acc[category]++;
+      } else {
+      acc[category] = 1;
+      }
+      return acc;
+      }, {});
+      }
+      }
+      };
+      &lt;/script>
+      
+      PARAA TRAER 2 CONTEOS DE ELEMENTOS
+      
+      &lt;template>
+      &lt;v-container>
+      &lt;v-row>
+      &lt;v-col v-for="(count, category) in categoryCounts" :key="`category-${category}`" cols="12" sm="6" md="4">
+      &lt;v-text-field :label="`Cantidad de categoría ${category}`" :value="count" readonly>&lt;/v-text-field>
+      &lt;/v-col>
+      &lt;v-col v-for="(count, status) in statusCounts" :key="`status-${status}`" cols="12" sm="6" md="4">
+      &lt;v-text-field :label="`Cantidad de estado ${status}`" :value="count" readonly>&lt;/v-text-field>
+      &lt;/v-col>
+      &lt;/v-row>
+      &lt;/v-container>
+      &lt;/template>
+      
+      &lt;script>
+      import axios from 'axios';
+      
+      export default {
+      data() {
+      return {
+      tickets: [],
+      categoryCounts: {},
+      statusCounts: {}
+      };
+      },
+      mounted() {
+      this.fetchTickets();
+      },
+      methods: {
+      fetchTickets() {
+      axios.get(`${config.URL}tickets`).then((response) => {
+      this.tickets = response.data.data;
+      this.calculateCounts();
+      });
+      },
+      calculateCounts() {
+      this.categoryCounts = this.tickets.reduce((acc, ticket) => {
+      const category = ticket.category;
+      if (category in acc) {
+      acc[category]++;
+      } else {
+      acc[category] = 1;
+      }
+      return acc;
+      }, {});
+      
+      this.statusCounts = this.tickets.reduce((acc, ticket) => {
+      const status = ticket.status;
+      if (status in acc) {
+      acc[status]++;
+      } else {
+      acc[status] = 1;
+      }
+      return acc;
+      }, {});
+      }
+      }
+      };
+      &lt;/script>
+      </div>
+        </pre>
+  </body>
+
+</html>

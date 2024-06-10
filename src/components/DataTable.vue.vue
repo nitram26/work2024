@@ -6,7 +6,7 @@
     >
       <template v-slot:top>
         <v-toolbar class="text-white text-center bg-blue-darken-4">
-          <v-toolbar-title>Datos de la Tabla</v-toolbar-title> 
+          <v-toolbar-title>Datos de la Tabla</v-toolbar-title>
         </v-toolbar>
       </template>
     </v-data-table>

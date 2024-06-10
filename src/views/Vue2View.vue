@@ -191,7 +191,7 @@
       <v-card-subtitle>Ver imagen</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-      El botón refrescará la pagina 
+      El botón refrescará la pagina
     </v-card-text>
   </v-card>
 </v-col>
@@ -209,6 +209,40 @@
     </v-card-item>
     <v-card-text>
       Cantidad de registros de una Página
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/TextfieldStatus.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>Registros por Estado y Categoria</v-card-title>
+      <v-card-subtitle>Incluye Iconos con color</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Ver por consola o en Pantalla
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/ListarporNombre.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> Listar por Nombre</v-card-title>
+      <v-card-subtitle>En Add</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+     Traer registros de BD de acuerdo a selección
     </v-card-text>
   </v-card>
 </v-col>
