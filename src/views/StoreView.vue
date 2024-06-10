@@ -46,6 +46,32 @@
   </v-card>
   </v-col>
   </v-row>
+  <v-row class="mt-12">
+    <v-col class="mt-4">
+      <h3 class="bg-blue-darken-4 pa-4  text-center">PC & IMPRESORA</h3>
+    </v-col>
+     
+      </v-row>
+      <!-- fin de navegador derecho -->
+      <v-row class="bg-green-lighten-4">
+        <!-- ****************************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/store/ImpresoraEpson.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> IMPRESORA </v-card-title>
+      <v-card-subtitle>Epson L3110</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+   Limpieza de cabezales
+    </v-card-text>
+  </v-card>
+  </v-col>
+  </v-row>
 </template>
 <!-- /////////////////////////////////////////////////////////////////////////////////////-->
 

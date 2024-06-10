@@ -1,25 +1,36 @@
 <template>
-  <div>
-   <h1>HIJO MÉTODO INJECTION</h1> 
-  <h2>{{ canalHijo }}</h2> <br><br>
-<v-btn @click="modificar">Cambiar</v-btn>
-</div>
+
+    <h1>VALORES COMPUTADOS</h1> 
+<v-row>
+  <v-col cols="2">
+
+<v-text-field 
+  v-model="input"
+  placeholder="Escriba aquí"
+  outlined
+  dense
+
+/>
+<h2>{{ input }}</h2>
+</v-col>
+</v-row>
+
+ 
+ 
+
 </template>
 <!-- ******************************* --> 
 <script setup>
-import { inject } from 'vue';
+import { ref } from 'vue';
 
-let canalHijo = inject('mi canal')
 
-const modificar = () =>{
-  canalHijo.value = 'Ingrid'
-}
+let input = ref('')
 
 </script>
 <!-- ******************************* -->
 <style scoped>
 div{
   background-color: antiquewhite;
-  padding: 4em;
+
 }
 </style>
