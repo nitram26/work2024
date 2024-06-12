@@ -12,26 +12,22 @@
   <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
-        <v-list-item link to="/" title="TEMAS" prepend-icon="mdi-grid"></v-list-item>
+        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
         <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">MODELOS DE PAG</v-btn></v-list-item>
 
-        <v-list-item title="UNO" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item title="DOS" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item  title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item  title="cuatro" prepend-icon="mdi-store"></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-database-cog-outline">FECHAS</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-arrange-bring-to-front">uno</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section5')" prepend-icon="mdi-arrange-send-to-back">dos</v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- fin de navegador derecho -->
     <!-- ********************************** -->
-  <v-row class="mt-12">
-   
-    <v-col class="mt-4">
+    <div id="section1" class="mt-12" >
+      <v-row class="bg-red-lighten-4">
+    <v-col cols="12" class="mt-6">
       <h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS</h3>
     </v-col>
-     
-      </v-row>
-      <!-- fin de navegador derecho -->
-      <div id="section1" >
-      <v-row class="bg-red-lighten-4">
         <!-- ****************************************************************************** -->
         <v-col cols="3">
       <v-card
@@ -164,6 +160,7 @@
     </div>
 
       <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+      <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
@@ -271,7 +268,9 @@
 </v-col>
 <!-- ********************************************************************** -->
 </v-row>
+</div>
 <!-- ********************************************************************** -->
+ <div id="section3">
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
@@ -312,7 +311,7 @@
 </v-col>
 <!-- ********************************************************************** -->
 </v-row>
-
+</div>
 </template>
 <!-- ******************************* -->
 <script setup>
