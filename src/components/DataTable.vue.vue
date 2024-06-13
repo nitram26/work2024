@@ -1,49 +1,69 @@
 <template>
-
-    <v-data-table
-      :items="datum"
-      class="elevation-2 bg-teal text-white"
-    >
-      <template v-slot:top>
-        <v-toolbar class="text-white text-center bg-blue-darken-4">
-          <v-toolbar-title>Datos de la Tabla</v-toolbar-title>
-        </v-toolbar>
-      </template>
-    </v-data-table>
-
+  <v-data-table
+    :headers="headers"
+    :items="datum"
+    class="elevation-2 text-h6"
+  >
+    <template v-slot:top>
+      <v-row>
+        <v-col cols="2" class="bg-blue-darken-1 text-center">
+          <span>PLACEHOLDER</span>
+        </v-col>
+        <v-col cols="1" class="mt-2">
+          <v-text-field
+            variant="outlined"
+            :value="cantidadRegistros"
+            readonly
+          />
+        </v-col>
+      </v-row>
+      <v-row class="bg-cyan text-h6 pl-4">
+        <v-col cols="3">
+          APELLIDOS
+        </v-col>
+        <v-col cols="3" class="pl-8">
+          NOMBRE
+        </v-col>
+        <v-col cols="3">
+          CORREO
+        </v-col>
+        <v-col cols="3" class="pl-10">
+          <span class="pl-8">CIUDAD</span>
+        </v-col>
+      </v-row>
+    </template>
+  </v-data-table>
 </template>
+
 <script setup>
-import {  } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import axios from 'axios';
 
-let datum = [
-    { nombre: 'Juan', apellidos: 'Pérez', edad: 30, estado: 'Activo', lugar: 'Lima' },
-    { nombre: 'Carlos', apellidos: 'Cervera', edad: 65, estado: 'Activo', lugar: 'Lima' },
-    { nombre: 'Ana', apellidos: 'Gómez', edad: 25, estado: 'Inactivo', lugar: 'Lima' }
-  ];
+const datum = ref([]);
+const headers = [
+  { text: 'Name', value: 'name' },
+  { text: 'Username', value: 'username' },
+  { text: 'Email', value: 'email' },
+  { text: 'City', value: 'city' }
+];
 
+const cantidadRegistros = computed(() => datum.value.length);
 
-
-// Función para obtener los datos de la base de datos local
-// const fetchData = async () => {
-  // Aquí iría la lógica para obtener datos de tu base de datos local
-  // Por ejemplo, usando fetch si estás obteniendo datos de un endpoint local:
-  // const response = await fetch('http://localhost:3000/data');
-  // const data = await response.json();
-
-  // Simulación de datos obtenidos
-//   const data = [
-//     { nombre: 'Juan', apellidos: 'Pérez', edad: 30, estado: 'Activo' },
-//     { nombre: 'Ana', apellidos: 'Gómez', edad: 25, estado: 'Inactivo' }
-//   ];
-
-//   items.value = data;
-// };
-
-// onMounted(() => {
-//   fetchData();
-// });
+onMounted(async () => {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    datum.value = response.data.map(user => ({
+      name: user.name,
+      username: user.username,
+      email: user.email,
+      city: user.address.city
+    }));
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+});
 </script>
 
 <style scoped>
-
+/* Puedes agregar tus estilos aquí */
 </style>
