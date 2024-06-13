@@ -23,7 +23,7 @@
     </v-navigation-drawer>
     <!-- fin de navegador derecho -->
     <!-- ********************************** -->
-    <div id="section1" class="mt-12" >
+    <div id="section1" class="mt-12" style="height: 100vh;" >
       <v-row class="bg-red-lighten-4">
     <v-col cols="12" class="mt-6">
       <h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS</h3>
@@ -160,7 +160,7 @@
     </div>
 
       <!-- /////////////////////////////////////////////////////////////////////////////////////-->
-      <div id="section2">
+      <div id="section2" style="height: 100vh;">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
@@ -270,7 +270,7 @@
 </v-row>
 </div>
 <!-- ********************************************************************** -->
- <div id="section3">
+ <div id="section3" style="height: 100vh;">
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>

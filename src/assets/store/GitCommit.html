@@ -13,6 +13,9 @@
   li{
     margin: 2em;
   }
+  pre{
+    margin-left: 2em;
+  }
   </style>
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
@@ -51,9 +54,34 @@
     <li>Regresar a la rama principal <br>git checkout main </li>
     <li>Verificar que se esta en la rama principal <br> git branch</li>
    </ol>
-   <br><br><br><br><br><br><br>
- 
-      <div>
+   <br>
+ <pre>
+<H1>CONFLICTOS DE FUSION- MERGE</H1>
+Para salir de un estado de fusión en Git sin fusionar los cambios y regresar a la rama main (o cualquier otra rama en la
+que estabas antes), puedes seguir estos pasos:
+
+Abortar la fusión:
+
+<b>git merge --abort</b>
+
+
+Este comando abortará la fusión en curso y revertirá tu repositorio al estado en el que estaba antes de que comenzara la
+fusión. Este es el método preferido y más seguro.
+
+Alternativa: Reset (en caso de problemas):
+Si por alguna razón git merge --abort no funciona, puedes usar git reset para deshacer los cambios de la fusión:
+
+<b>git reset --merge</b>
+
+Esto hará un reset de la fusión, similar a git merge --abort.
+
+Volver a la rama main:
+Después de abortar la fusión, puedes volver a la rama main con:
+
+<b>git checkout main/master/rama</b>
+
+ </pre>
+      <div><br><br><br>
     </div>
  
 </body>
