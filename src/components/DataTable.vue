@@ -11,9 +11,14 @@
         </v-col>
         <v-col cols="1" class="mt-2">
           <v-text-field
+            label="Cantidad"
             variant="outlined"
-            :value="cantidadRegistros"
+            prepend-inner-icon="mdi-cart"
+            class="text-green-darken-4"
+            hide-details="auto"
+            hint="Registros"
             readonly
+            :value="cantidadRegistros"
           />
         </v-col>
       </v-row>
@@ -65,5 +70,5 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Puedes agregar tus estilos aquí */
+
 </style>
