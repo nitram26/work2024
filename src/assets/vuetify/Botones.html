@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;v-btn density="compact" class="ma-3">Compact Button&lt;/v-btn> 
+      &lt;v-btn density="comfortable" class="ma-3" >Comfortable Button&lt;/v-btn>
+      &lt;v-btn density="default" class="ma-3">Default Button&lt;/v-btn>
+        &lt;H3 class="ma-4">BOTÓN PARA BAR&lt;/H3>
+      &lt;div class="text-center">
+      &lt;v-btn
+        append-icon="mdi-account-circle"
+        prepend-icon="mdi-check-circle"
+      >
+        &lt;template v-slot:prepend>
+          &lt;v-icon color="success">&lt;/v-icon>
+        &lt;/template>
+        Button
+        &lt;template v-slot:append>
+          &lt;v-icon color="warning">&lt;/v-icon>
+        &lt;/template>
+      &lt;/v-btn>
+      &lt;/div>
+      &lt;H3 class="ma-4">BOTÓN DE NAVEGACIÓN&lt;/H3>
+      &lt;v-layout
+      class="overflow-visible"
+      style="height: 56px;"
+      >
+      &lt;v-bottom-navigation
+        v-model="cambio"
+        active
+      >
+        &lt;v-btn>Home&lt;/v-btn>
+      
+        &lt;v-btn>recientes&lt;/v-btn>
+      
+        &lt;v-btn>Favoritos&lt;/v-btn>
+      &lt;/v-bottom-navigation>
+      &lt;/v-layout>
+    </div>
+  </pre>
+</body>
+</html>
+
+

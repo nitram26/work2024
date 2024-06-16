@@ -67,6 +67,23 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
+    href="http://127.0.0.1:5500/src/assets/home/MenuPrimario.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> Menu Primario  </v-card-title>
+      <v-card-subtitle>Para sub-página principal</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Antes del navegador interno
+    </v-card-text>
+  </v-card>
+  </v-col>
+<!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
     href="http://127.0.0.1:5500/src/assets/home/MenuSecundario.html"
     max-width="344" >
     <v-card-item>
@@ -74,7 +91,7 @@
       <v-card-subtitle>Plantilla para páginas</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-      Plantilla para menú secundario VUE3
+      Para navegador dentro de página
     </v-card-text>
   </v-card>
   </v-col>
