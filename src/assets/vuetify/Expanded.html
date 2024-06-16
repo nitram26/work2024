@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;v-card>
+      &lt;v-layout>
+        &lt;v-navigation-drawer
+          expand-on-hover
+          rail
+        >
+          &lt;v-list>
+            &lt;v-list-item
+              prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
+              subtitle="sandra_a88@gmailcom"
+              title="Sandra Adams"
+            >&lt;/v-list-item>
+          &lt;/v-list>
+    
+          &lt;v-divider>&lt;/v-divider>
+    
+          &lt;v-list density="compact" nav>
+            &lt;v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles">&lt;/v-list-item>
+            &lt;v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared">&lt;/v-list-item>
+            &lt;v-list-item prepend-icon="mdi-star" title="Starred" value="starred">&lt;/v-list-item>
+          &lt;/v-list>
+        &lt;/v-navigation-drawer>
+    
+        &lt;v-main style="height: 250px">&lt;/v-main>
+      &lt;/v-layout>
+    &lt;/v-card>
+    </div>
+  </pre>
+</body>
+</html>
