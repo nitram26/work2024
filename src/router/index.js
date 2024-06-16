@@ -12,6 +12,7 @@ import WorkView from '@/views/WorkView.vue'
 import StudiumView from '@/views/StudiumView.vue'
 import VuetifyView from '@/views/VuetifyView.vue'
 import ContainmentView from '@/views/vuetify/containment/ContainmentView.vue'
+import NavigationView from '@/views/vuetify/navigation/NavigationView.vue'
 
 
 const routes = [
@@ -79,6 +80,11 @@ const routes = [
     path: '/containment',
     name: 'Containment',
     component: ContainmentView
+  },
+  {
+    path: '/navigation',
+    name: 'Navigation',
+    component: NavigationView
   },
   
   

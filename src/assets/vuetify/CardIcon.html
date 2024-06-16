@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;v-col cols="4">
+      &lt;h2 class="bg-orange-lighten-3 pa-4">ICONO E IMAGEN &lt;/h2>
+      &lt;v-card
+        append-avatar="https://cdn.vuetifyjs.com/images/john.jpg"
+        class="mx-auto"
+        prepend-avatar="https://cdn.vuetifyjs.com/images/logos/v-alt.svg"
+        subtitle="prepend-avatar and append-avatar"
+        title="Avatars"
+      >
+        &lt;v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.&lt;/v-card-text>
+        &lt;/v-card>
+    &lt;/v-col>
+    &lt;!-- ***************************************************** -->
+    &lt;v-col cols="4">
+      &lt;h2 class="bg-brown-lighten-3 pa-4">REJILLAS &lt;br>SCRIPT&lt;/h2>
+    &lt;v-card
+      class="mx-auto"
+      max-width="500"
+    >
+      &lt;v-container fluid>
+        &lt;v-row dense>
+          &lt;v-col
+            v-for="card in cards"
+            :key="card.title"
+            :cols="card.flex"
+          >
+            &lt;v-card>
+              &lt;v-img
+                :src="card.src"
+                class="align-end"
+                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                height="200px"
+                cover
+              >
+                &lt;v-card-title class="text-white" v-text="card.title">&lt;/v-card-title>
+              &lt;/v-img>
+    
+              &lt;v-card-actions>
+                &lt;v-spacer>&lt;/v-spacer>
+    
+                &lt;v-btn
+                  color="medium-emphasis"
+                  icon="mdi-heart"
+                  size="small"
+                >&lt;/v-btn>
+    
+                &lt;v-btn
+                  color="medium-emphasis"
+                  icon="mdi-bookmark"
+                  size="small"
+                >&lt;/v-btn>
+    
+                &lt;v-btn
+                  color="medium-emphasis"
+                  icon="mdi-share-variant"
+                  size="small"
+                >&lt;/v-btn>
+              &lt;/v-card-actions>
+            &lt;/v-card>
+          &lt;/v-col>
+        &lt;/v-row>
+      &lt;/v-container>
+    &lt;/v-card>
+    &lt;!-- ******************************************************** -->
+    &lt;/v-col>
+    &lt;v-col cols=" 4">
+      &lt;h2 class="bg-light-blue-lighten-3 pa-4 ma-6">IMAGEN Y TEXTO &lt;br> SCRIPT &lt;/h2>
+    &lt;v-card
+      class="mx-auto"
+      max-width="400"
+    >
+      &lt;v-img
+        class="align-end text-white"
+        height="200"
+        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        cover
+      >
+        &lt;v-card-title>Top 10 Australian beaches&lt;/v-card-title>
+      &lt;/v-img>
+    
+      &lt;v-card-subtitle class="pt-4">
+        Number 10
+      &lt;/v-card-subtitle>
+    
+      &lt;v-card-text>
+        &lt;div>Whitehaven Beach&lt;/div>
+    
+        &lt;div>Whitsunday Island, Whitsunday Islands&lt;/div>
+      &lt;/v-card-text>
+    
+      &lt;v-card-actions>
+        &lt;v-btn color="orange" text="Share">&lt;/v-btn>
+    
+        &lt;v-btn color="orange" text="Explore">&lt;/v-btn>
+      &lt;/v-card-actions>
+    &lt;/v-card>
+    &lt;/v-col>
+    &lt;!-- ***************************************************** -->
+    &lt;v-col cols="4">
+      &lt;h2 class="bg-yellow-lighten-3 pa-4 ma-6">TARJETA DE FINANCIACIÓN &lt;br> SCRIPT &lt;/h2>
+    &lt;v-container>
+      &lt;v-card>
+        &lt;v-card-title class="text-overline">
+          Progress
+    
+          &lt;div class="text-green-darken-3 text-h3 font-weight-bold">90%&lt;/div>
+    
+          &lt;div class="text-h6 text-medium-emphasis font-weight-regular">
+            $2,938.00 remaining
+          &lt;/div>
+        &lt;/v-card-title>
+        &lt;br>
+        &lt;v-card-text>
+          &lt;div
+            :style="`right: calc(${review} - 32px)`"
+            class="position-absolute mt-n8 text-caption text-green-darken-3"
+          >
+            Eligibility review
+          &lt;/div>
+          &lt;v-progress-linear
+            color="green-darken-3"
+            height="22"
+            model-value="90"
+            rounded="lg"
+          >
+            &lt;v-badge
+              :style="`right: ${review}`"
+              class="position-absolute"
+              color="white"
+              dot
+              inline
+            >&lt;/v-badge>
+          &lt;/v-progress-linear>
+    
+          &lt;div class="d-flex justify-space-between py-3">
+            &lt;span class="text-green-darken-3 font-weight-medium">
+              $26,442.00 remitted
+            &lt;/span>
+    
+            &lt;span class="text-medium-emphasis"> $29,380.00 total &lt;/span>
+          &lt;/div>
+        &lt;/v-card-text>
+    
+        &lt;v-divider>&lt;/v-divider>
+    
+        &lt;v-list-item
+          append-icon="mdi-chevron-right"
+          lines="two"
+          subtitle="Details and agreement"
+          link
+        >&lt;/v-list-item>
+      &lt;/v-card>
+    &lt;/v-container>
+    &lt;/v-col>
+    &lt;!-- ********************************************************************** --> 
+    </div>
+  </pre>
+</body>
+</html>

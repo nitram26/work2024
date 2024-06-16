@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;v-col cols="3">
+      &lt;h2 class="bg-blue-lighten-4 pa-4">Modelo Simple&lt;/h2>
+      &lt;v-card
+    class="mx-auto"
+    prepend-icon="$vuetify"
+    subtitle="The #1 Vue UI Library"
+    width="340"
+    >
+    &lt;template v-slot:title>
+      &lt;span class="font-weight-black">Welcome to Vuetify&lt;/span>
+    &lt;/template>
+    
+    &lt;v-card-text class="bg-surface-light pt-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!
+    &lt;/v-card-text>
+    &lt;/v-card>
+    &lt;/v-col>
+    &lt;v-col cols="3">
+    &lt;h2 class="bg-green-lighten-4 pa-4">CON ELEVACIÓN&lt;/h2>
+    &lt;v-card
+    class="mx-auto my-8"
+    elevation="16"
+    max-width="344"
+    >
+    &lt;v-card-item>
+      &lt;v-card-title>
+        Card title
+      &lt;/v-card-title>
+    
+      &lt;v-card-subtitle>
+        Card subtitle secondary text
+      &lt;/v-card-subtitle>
+    &lt;/v-card-item>
+    
+    &lt;v-card-text>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/v-card-text>
+    &lt;/v-card>
+    &lt;/v-col>
+    &lt;v-col cols="3">
+    &lt;h2 class="bg-lime-lighten-4 pa-4">FLOTANTE&lt;/h2>
+    &lt;v-card
+    class="mx-auto"
+    max-width="344"
+    hover
+    >
+    &lt;v-card-item>
+      &lt;v-card-title>
+        Card title
+      &lt;/v-card-title>
+    
+      &lt;v-card-subtitle>
+        Card subtitle secondary text
+      &lt;/v-card-subtitle>
+    &lt;/v-card-item>
+    
+    &lt;v-card-text>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/v-card-text>
+    &lt;/v-card>
+    &lt;/v-col>
+    &lt;v-col cols="3">
+    &lt;h2 class="bg-brown-lighten-3 pa-4">IMAGEN DE FONDO&lt;/h2>
+    &lt;v-card
+    class="mx-auto"
+    color="surface-variant"
+    image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg"
+    max-width="340"
+    subtitle="Take a walk down the beach"
+    title="Evening sunset"
+    >
+    &lt;template v-slot:actions>
+      &lt;v-btn
+        append-icon="mdi-chevron-right"
+        color="red-lighten-2"
+        text="Book Activity"
+        variant="outlined"
+        block
+      >&lt;/v-btn>
+    &lt;/template>
+    &lt;/v-card>
+    &lt;/v-col>   
+    </div>
+  </pre>
+</body>
+</html>
+
+
