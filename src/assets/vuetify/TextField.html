@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;v-col cols="2">
+      &lt;h2>MODELO BASE &lt;/h2>
+    &lt;/v-col>
+    &lt;v-col cols="4">
+        &lt;v-text-field 
+        width="400"
+        clearable 
+        label="Label" 
+        prepend-icon="$vuetify">
+    &lt;/v-text-field>
+    &lt;/v-col>
+    &lt;v-col cols="2">
+      &lt;h2>MODELO PLACEHOLDER &lt;/h2>
+    &lt;/v-col>
+      &lt;v-col cols="4">
+        &lt;v-text-field
+          label="Email address"
+          placeholder="johndoe@gmail.com"
+          type="email"
+      >&lt;/v-text-field>
+    &lt;/v-col>
+    &lt;/v-row>
+    &lt;v-row >
+    &lt;v-col cols="2">
+      &lt;h2 class="bg-purple-lighten-2">HINTS & MESSAGES &lt;/h2>
+    &lt;/v-col>
+    &lt;v-col cols="4">
+      &lt;v-responsive
+        class="mx-auto"
+        max-width="344">
+        &lt;v-text-field
+          hint="Ingrese su clave para tener acceso"
+          label="Password"
+          type="input"
+        >&lt;/v-text-field>
+    &lt;/v-responsive>
+    &lt;/v-col>
+    &lt;v-col cols="2">
+      &lt;h2>CLEARABLE &lt;br> + SCRIPT &lt;/h2>
+    &lt;/v-col>
+      &lt;v-col cols="4">
+        &lt;v-responsive
+          class="mx-auto"
+          max-width="344">
+          &lt;v-text-field
+          v-model="model"
+          hide-details="auto"
+          label="Last name"
+          clearable
+        >&lt;/v-text-field>
+    &lt;/v-responsive>
+    &lt;/v-col>
+    </div>
+  </pre>
+</body>
+</html>

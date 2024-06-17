@@ -13,6 +13,7 @@ import StudiumView from '@/views/StudiumView.vue'
 import VuetifyView from '@/views/VuetifyView.vue'
 import ContainmentView from '@/views/vuetify/containment/ContainmentView.vue'
 import NavigationView from '@/views/vuetify/navigation/NavigationView.vue'
+import FormInput from '../views/vuetify/formInput/FormInput.vue'
 
 
 const routes = [
@@ -85,6 +86,11 @@ const routes = [
     path: '/navigation',
     name: 'Navigation',
     component: NavigationView
+  },
+  {
+    path: '/formInput',
+    name: 'FormInput',
+    component: FormInput
   },
   
   

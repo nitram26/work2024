@@ -15,7 +15,7 @@
         <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
         <v-list-item link to="/containment" title="Containment" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
         <v-list-item link to="/navigation" title="Navigation" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/store" title="Form, inputs & controls" prepend-icon="mdi-database-cog-outline"></v-list-item>
+        <v-list-item link to="/formInput" title="Form, inputs & controls" prepend-icon="mdi-database-cog-outline"></v-list-item>
         <v-list-item link to="/backend" title="Layouts" prepend-icon="mdi-store"></v-list-item>
         <v-list-item link to="/backend" title="Selection" prepend-icon="mdi-store"></v-list-item>
         <v-list-item link to="/backend" title="Data & Display" prepend-icon="mdi-store"></v-list-item>
