@@ -90,7 +90,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ControladorVue2.html"
+    href="http://127.0.0.1:5502/src/assets/vue2/ControladorVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Controller </v-card-title>
