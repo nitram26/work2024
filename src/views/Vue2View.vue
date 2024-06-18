@@ -267,6 +267,23 @@
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
+   <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5500/src/assets/vue2/Prefijo.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>PREFIJO</v-card-title>
+      <v-card-subtitle>En v-text-field</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+   Prefijo en un v-text-field y que este se guarde
+    </v-card-text>
+  </v-card>
+  </v-col>
+<!-- ********************************************************************** -->
 </v-row>
 </div>
 <!-- ********************************************************************** -->

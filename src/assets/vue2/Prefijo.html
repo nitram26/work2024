@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: bisque;
+      }
+
+      .img {
+        width: 800px;
+        margin: 4em;
+        border: brown double 6px;
+      }
+    </style>
+    <title>ELEMENTOS RÁPIDOS</title>
+  </head>
+
+  <body>
+    <pre>
+          <div>
+&lt;template>
+&lt;v-text-field
+outlined
+dense
+hide-details
+:value="correlativeWithPrefix"
+@input="updateCorrelative" />
+&lt;/template>
+
+&lt;script>
+export default {
+data() {
+return {
+boxsmall: {
+correlative: ''
+}
+};
+},
+computed: {
+correlativeWithPrefix() {
+return this.boxsmall.correlative ? this.boxsmall.correlative : 'CA-';
+}
+},
+methods: {
+updateCorrelative(value) {
+// Asegúrate de que siempre comience con "CA-"
+if (!value.startsWith('CA-')) {
+value = `CA-${value}`;
+}
+this.boxsmall.correlative = value;
+}
+}
+};
+&lt;/script>
+          </div>
+        </pre>
+  </body>
+
+</html>
