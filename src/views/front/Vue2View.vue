@@ -34,7 +34,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ModelVue2.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/ModelVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> CREACIÓN  </v-card-title>
@@ -56,7 +56,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ModelVue2.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/ModelVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Model </v-card-title>
@@ -73,7 +73,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ValidacionesVue2.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/ValidacionesVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Validaciones </v-card-title>
@@ -90,7 +90,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5502/src/assets/vue2/ControladorVue2.html"
+    href="http://127.0.0.1:5502/src/assets/front/vue2/ControladorVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Controller </v-card-title>
@@ -107,7 +107,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/PagesVue2.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/PagesVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Pages </v-card-title>
@@ -126,7 +126,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ComponentVue2.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/ComponentVue2.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Component </v-card-title>
@@ -145,7 +145,7 @@
       class="mx-auto my-8"
       elevation="16"
       target="_blank"
-      href="http://127.0.0.1:5500/src/assets/vue2/Axios.html"
+      href="http://127.0.0.1:5500/src/assets/front/vue2/Axios.html"
       max-width="344" >
       <v-card-item>
         <v-card-title> AXIOS </v-card-title>
@@ -171,7 +171,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Color según Estado </v-card-title>
@@ -187,7 +187,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/BotonRefrescar.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/BotonRefrescar.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Botón refrescar </v-card-title>
@@ -204,7 +204,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/numRegistro.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/numRegistro.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Ver N° de Registros</v-card-title>
@@ -221,7 +221,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TextfieldStatus.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/TextfieldStatus.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>Registros por Estado y Categoria</v-card-title>
@@ -238,7 +238,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ListarporNombre.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/ListarporNombre.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Listar por Nombre</v-card-title>
@@ -255,7 +255,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/SeleccionarCampo.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/SeleccionarCampo.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Seleccionar Campo</v-card-title>
@@ -272,7 +272,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/Prefijo.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/Prefijo.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>PREFIJO</v-card-title>
@@ -298,7 +298,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/FechaSinhora.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> FECHA SIN HORA </v-card-title>
@@ -315,7 +315,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5500/src/assets/front/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> titulo </v-card-title>

@@ -221,7 +221,7 @@ En v-text-field y v-checkbox
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/.html"
+href="http://127.0.0.1:5500/src/assets/studium/vue3/PracticaUno.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Practica Uno </v-card-title>
