@@ -33,7 +33,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/home/ElementosRapidos.html"
+    href="http://127.0.0.1:5501/src/assets/home/ElementosRapidos.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> HTML  </v-card-title>
@@ -50,7 +50,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/home/PaginaPrincipal.html"
+    href="http://127.0.0.1:5501/src/assets/home/PaginaPrincipal.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> Navegador Principal  </v-card-title>
@@ -67,7 +67,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/home/MenuPrimario.html"
+    href="http://127.0.0.1:5501/src/assets/home/MenuPrimario.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> Menu Primario  </v-card-title>
@@ -84,7 +84,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/home/MenuSecundario.html"
+    href="http://127.0.0.1:5501/src/assets/home/MenuSecundario.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> Menu Secundario  </v-card-title>
@@ -110,7 +110,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/home/ColoresVuetify.html"
+    href="http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> COLORES </v-card-title>
@@ -136,7 +136,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5501/src/assets/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> titulo </v-card-title>
@@ -153,7 +153,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5501/src/assets/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> titulo </v-card-title>

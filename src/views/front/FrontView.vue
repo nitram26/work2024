@@ -37,7 +37,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
+    href="http://127.0.0.1:5501/src/assets/vue2/FechaSinhora.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> FECHA SIN HORA </v-card-title>
@@ -54,7 +54,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5501/src/assets/vue2/TemaMenu.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> titulo </v-card-title>

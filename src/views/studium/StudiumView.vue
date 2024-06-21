@@ -34,7 +34,7 @@
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/CrearProyecto.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CrearProyecto.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Crear Estructura </v-card-title>
@@ -51,7 +51,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/Snippet.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Snippet.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Crear Snippet </v-card-title>
@@ -68,7 +68,7 @@ Como instalarlo en VSCode
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/InterpolarTexto.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/InterpolarTexto.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Interpolar Texto</v-card-title>
@@ -85,7 +85,7 @@ Llamado estático
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/ExampleSelective.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/ExampleSelective.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> ExampleSelective </v-card-title>
@@ -102,7 +102,7 @@ Uso de If y/o Show
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/CondicionalTernario.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CondicionalTernario.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Condicional Ternaria</v-card-title>
@@ -119,7 +119,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/IfShow.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/IfShow.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> If & Show </v-card-title>
@@ -144,7 +144,7 @@ Características de uso de cada uno
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/Contador.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Contador.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Contador </v-card-title>
@@ -161,7 +161,7 @@ Que aumente y disminuya +-1
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/ReactividadBasica.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/ReactividadBasica.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>Reactividad Básica </v-card-title>
@@ -178,7 +178,7 @@ Introducción a la reactividad
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/VforRecorrido.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/VforRecorrido.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> V-FOR </v-card-title>
@@ -195,7 +195,7 @@ Números, palabras, arrays, objetos
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/VmodelUno.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/VmodelUno.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> V-MODEL </v-card-title>
@@ -221,7 +221,7 @@ En v-text-field y v-checkbox
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/PracticaUno.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/PracticaUno.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Practica Uno </v-card-title>
@@ -238,7 +238,7 @@ Repaso General
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/CuestionarioVfor.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CuestionarioVfor.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>Cuestionario V-FOR </v-card-title>
@@ -255,7 +255,7 @@ Preguntas y respuestas
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/OpcionVfor.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/OpcionVfor.html"
 max-width="344" >
 <v-card-item>
   <v-card-title> Opciones con V-for </v-card-title>
@@ -272,7 +272,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/propsVuetres.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/propsVuetres.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>PROPS </v-card-title>
@@ -289,7 +289,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/EmitVue.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/EmitVue.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>EMITS </v-card-title>
@@ -306,7 +306,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5500/src/assets/studium/vue3/Injection.html"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Injection.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>INJECTION </v-card-title>
