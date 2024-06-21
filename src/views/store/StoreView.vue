@@ -1,7 +1,7 @@
 <template>
-  <v-row class="bg-cyan-darken-1 pa-2 mt-12 fixed-top" >
+  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
       <v-col cols="11" class="text-center">
-          <h2 >STORE view </h2>
+          <h2 >STORE </h2>
     </v-col>
     <v-col cols="1" >
 
@@ -12,22 +12,20 @@
   <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
-        <v-list-item link to="/" title="TEMAS" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/vue2" title="dos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
+        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
+        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">GITHUB</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">IMPRESORA</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">VSCODE</v-btn></v-list-item>
+        
       </v-list>
     </v-navigation-drawer>
-    <!-- /////////////////////////////////////////////// -->
-  <v-row class="mt-12">
-    <v-col class="mt-4">
-      <h3 class="bg-green-darken-4 pa-4  text-center">GITHUB</h3>
+    <!-- fin de navegador derecho -->
+    <!-- ********************************** -->
+    <div id="section1" class="mt-12" >
+      <v-row class="bg-red-lighten-4">
+    <v-col cols="12" class="mt-6">
+      <h3 class="bg-blue pa-4  text-center">GITHUB</h3>
     </v-col>
-     
-      </v-row>
-      <!-- fin de navegador derecho -->
-      <v-row class="bg-green-lighten-4">
         <!-- ****************************************************************************** -->
         <v-col cols="3">
       <v-card
@@ -37,44 +35,73 @@
     href="http://127.0.0.1:5501/src/assets/store/GitCommit.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> COMMITS y RAMAS </v-card-title>
-      <v-card-subtitle>ver últimos commits</v-card-subtitle>
+      <v-card-title class="text-red"> COMMITS  </v-card-title>
+      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-   Trabajar con ellos, o regresar
+      Ver algún commit anterior
     </v-card-text>
   </v-card>
   </v-col>
-  </v-row>
-  <v-row class="mt-12">
-    <v-col class="mt-4">
-      <h3 class="bg-blue-darken-4 pa-4  text-center">PC & IMPRESORA</h3>
-    </v-col>
-     
       </v-row>
-      <!-- fin de navegador derecho -->
-      <v-row class="bg-green-lighten-4">
-        <!-- ****************************************************************************** -->
-        <v-col cols="3">
-      <v-card
+    </div>
+
+      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+      <div id="section2">
+      <v-row class="my-12 text-center bg-teal-lighten-4">
+  <v-col cols="12">
+    <h2 class="bg-pink-darken-4 pa-4">IMPRESORA</h2>
+  </v-col>
+  <!-- ****************************************** -->
+  <v-col cols="3">
+    <v-card
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
     href="http://127.0.0.1:5501/src/assets/store/ImpresoraEpson.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> IMPRESORA </v-card-title>
+      <v-card-title> Limpieza de cabezales</v-card-title>
       <v-card-subtitle>Epson L3110</v-card-subtitle>
     </v-card-item>
-    <v-card-text>
-   Limpieza de cabezales
+    <v-card-text>     
+      incluye link de apoyo
     </v-card-text>
   </v-card>
-  </v-col>
-  </v-row>
-</template>
-<!-- /////////////////////////////////////////////////////////////////////////////////////-->
+</v-col>
 
+<!-- ********************************************************************** -->
+</v-row>
+</div>
+<!-- ********************************************************************** -->
+ <div id="section3">
+<v-row class="bg-purple-lighten-4">
+  <v-col cols="12">
+    <h2 class="bg-pink-darken-4 pa-4 text-center">VSCODE</h2>
+  </v-col>
+  <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/SettingJson.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> SETTING JSON </v-card-title>
+      <v-card-subtitle> CÓDIGOS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+    Para configurar VSCODE
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+
+</v-row>
+</div>
+</template>
+<!-- ******************************* -->
 <script setup>
   import { ref } from 'vue';
 const drawer = ref(false);
@@ -82,6 +109,16 @@ const drawer = ref(false);
 const toggleDrawer = () => {
   drawer.value = !drawer.value;
 }
+// NAV
+
+const scrollTo = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+
 </script>
 <!-- ******************************* -->
 <style scoped>

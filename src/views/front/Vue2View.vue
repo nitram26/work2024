@@ -284,6 +284,23 @@
   </v-card>
   </v-col>
 <!-- ********************************************************************** -->
+   <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>SELECT</v-card-title>
+      <v-card-subtitle>tabla & campo</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+   Mostrar los elementos de un campo
+    </v-card-text>
+  </v-card>
+  </v-col>
+<!-- ********************************************************************** -->
 </v-row>
 </div>
 <!-- ********************************************************************** -->

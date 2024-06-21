@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      Notas
+      1.	El :ítems=”boxsmall” 
+      a.	Es la tabla a la que llamo
+      2.	El item-text =”correlative”
+      a.	Es el campo que quiero mostrar
+      3.	Con estos dos funciona, en este caso, sin embargo se añade otros 2 que habrá que ver para que se pueden usar
+      4.	item-value="correlative" que hace lo mismo que anterior pero solo trae object
+      5.	y el v-model que debe tener alguna funcionalidad, pero en este caso no hace nada
+      
+
+
+      SELECT
+      &lt;v-select
+        :items="boxsmall"
+        item-text="correlative"
+        item-value="correlative"
+        label="Selecione un Vale"
+        v-model="selectedItem"
+      />
+      
+      •  :items="boxsmall":, boxsmall debe ser una matriz (array) en el componente Vue que contiene los elementos a mostrar en el dropdown. 
+      •  item-text="correlative": Este atributo indica qué propiedad de cada objeto en la matriz boxsmall se usará para mostrar el texto de cada opción en el dropdown. 
+      •  item-value="correlative": Similar a item-text, este atributo indica qué propiedad de cada objeto en la matriz boxsmall se usará como el valor de cada opción en el dropdown
+      •  v-model="selectedItem": El atributo v-model enlaza el valor seleccionado del dropdown con la propiedad selectedItem del objeto data de Vue. Esto significa que cuando el usuario selecciona una opción del dropdown, el valor de selectedItem se actualiza automáticamente para reflejar la selección actual.
+
+      DATA
+       <img src="/src/assets/image/dataSelect.png" alt="" class="img">
+
+
+       BEFORE
+       <img src="/src/assets/image/beforeSelect.png" alt="" class="img">
+       
+     
+      
+      
+    </div>
+  </pre>
+</body>
+</html>
