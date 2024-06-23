@@ -16,6 +16,9 @@
   pre{
     margin-left: 2em;
   }
+  h2{
+    color: brown;
+  }
   </style>
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
@@ -27,7 +30,7 @@
       q
     </li>
     <li>
-      git log <br>
+      git log --oneline <br>
       ver los últimos commits 
     </li>
     <li>
@@ -42,11 +45,16 @@
       git checkout main o master <br>
       para regresar a la principal
     </li>
+    <h2>CAMBIAR EL HEAD</h2>
     <li>
       git reset --hard 5c0ceec <br>
       que el commit anterior reemplace el actual
     </li>
-    <h3>RAMAS</h3>
+    <li>
+      git push --force <br>
+      Para integrar los cambios del reset
+    </li>
+    <h2>RAMAS</h2>
     <li>
       Nueva rama con commit determinado  <br>git checkout -b nombre-de-nueva-rama abc1234567890
     </li>
@@ -55,8 +63,8 @@
     <li>Verificar que se esta en la rama principal <br> git branch</li>
    </ol>
    <br>
+   <H2>CONFLICTOS DE FUSION- MERGE</H2>
  <pre>
-<H1>CONFLICTOS DE FUSION- MERGE</H1>
 Para salir de un estado de fusión en Git sin fusionar los cambios y regresar a la rama main (o cualquier otra rama en la
 que estabas antes), puedes seguir estos pasos:
 
