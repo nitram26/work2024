@@ -51,6 +51,7 @@
       que el commit anterior reemplace el actual
     </li>
     <li>
+    
       git push --force <br>
       Para integrar los cambios del reset
     </li>
@@ -87,7 +88,74 @@ Volver a la rama main:
 Después de abortar la fusión, puedes volver a la rama main con:
 
 <b>git checkout main/master/rama</b>
+ <h2>GPT</h2>
+ Para regresar al commit anterior y hacer que sea el commit actual en tu rama, puedes seguir estos pasos:
 
+1. **Revisa tu historial de commits**: Asegúrate de identificar correctamente el commit al que quieres regresar. 
+Puedes usar el siguiente comando para listar los commits:
+
+  
+    git log
+
+
+    Esto te permitirá ver el historial de commits y confirmar el hash del commit al que deseas regresar.
+
+2. **Haz checkout al commit deseado**: Utiliza el comando `git checkout` para mover el HEAD al commit específico (en tu caso `9470627`):
+
+    ```bash
+    git checkout 9470627
+    ```
+
+    En este punto, estarás en un estado "detached HEAD", lo que significa que no estarás en ninguna rama específica.
+
+3. **Crea una nueva rama desde ese commit**: Si deseas crear una nueva rama desde este commit, usa:
+
+    ```bash
+    git checkout -b nombre-de-nueva-rama
+    ```
+
+    Si quieres hacer que este commit sea el commit actual en tu rama principal (por ejemplo, `main` o `master`), continúa con los siguientes pasos.
+
+4. **Regresa a tu rama principal**: Cambia a la rama principal (o la rama donde deseas que este commit sea el actual):
+
+    ```bash
+    git checkout main
+    ```
+
+5. **Resetea tu rama principal al commit deseado**:
+ Resetea la rama al commit `9470627`. Hay dos formas de hacerlo:
+
+    - **Hard reset**: Esto moverá el puntero de la rama y el HEAD al commit deseado 
+    y eliminará todos los cambios posteriores al commit 
+    (¡Ten cuidado, ya que esto puede perder cambios no confirmados!):
+
+        ```bash
+        git reset --hard 9470627
+        ```
+
+    - **Soft reset**: Esto moverá el puntero de la rama al commit deseado pero mantendrá los cambios posteriores en el área de staging:
+
+        ```bash
+        git reset --soft 9470627
+        ```
+
+    - **Mixed reset**: Esto moverá el puntero de la rama al commit deseado pero mantendrá los cambios posteriores sin añadirlos al área de staging:
+
+        ```bash
+        git reset --mixed 9470627
+        ```
+
+6. **Forzar el push (opcional)**: Si trabajas en un repositorio remoto y necesitas actualizar la rama remota, necesitarás forzar el push:
+
+    ```bash
+    git push origin main --force
+    ```
+
+Ten en cuenta que forzar el push (`--force`) puede sobrescribir cambios en la rama remota, así que úsalo con precaución 
+y asegúrate de que esto es lo que deseas hacer.
+
+Siguiendo estos pasos, puedes regresar al commit `9470627`
+ y hacerlo el commit actual en tu rama principal.
  </pre>
       <div><br><br><br>
     </div>

@@ -1,7 +1,9 @@
+
+
 <template>
-  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
+  <v-row class="bg-teal-darken-2 pa-2" >
       <v-col cols="11" class="text-center">
-          <h2 >VUE3 </h2>
+          <h2 >VUE3 COMPONENT  </h2>
     </v-col>
     <v-col cols="1" >
 
@@ -13,120 +15,323 @@
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
         <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">MODELOS DE PAG</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
-        
+        <v-list-item link to="/front" title="Intro" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
+        <v-list-item link to="/vue2" title="Componentes Básicos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
+        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
+        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- fin de navegador derecho -->
-    <!-- ********************************** -->
-    <div id="section1" class="mt-12" >
-      <v-row class="bg-red-lighten-4">
-    <v-col cols="12" class="mt-6">
-      <h3 class="bg-blue pa-4  text-center">COMPONENT JS-TS</h3>
+    <!-- *********************************************** -->
+<v-row>
+  <!-- columna -->
+  <v-col cols="12" class="bg-red-darken-2 text-center">
+<h2>Vue3 Intro</h2>
+  </v-col>
+</v-row> 
+<v-row>
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CrearProyecto.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Crear Estructura </v-card-title>
+  <v-card-subtitle>Vue.Cli - Vue.Vite</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Árbol inicial de carpetas
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Snippet.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Crear Snippet </v-card-title>
+  <v-card-subtitle>link</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Como instalarlo en VSCode
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/InterpolarTexto.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Interpolar Texto</v-card-title>
+  <v-card-subtitle>link</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Llamado estático
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/ExampleSelective.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> ExampleSelective </v-card-title>
+  <v-card-subtitle>Condicionales</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de If y/o Show
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CondicionalTernario.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Condicional Ternaria</v-card-title>
+  <v-card-subtitle>Bindear estilos desde style  no ref</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  &lt;div :class="ahorro >= 500 ? 'azul' : 'rojo'">
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/IfShow.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> If & Show </v-card-title>
+  <v-card-subtitle>Condicionales</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Características de uso de cada uno
+</v-card-text>
+</v-card>
+  </v-col>
+</v-row>
+<!-- //////////////////////////////////////////////////// -->
+  <v-row class="bg-blue-darken-2 pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >Componentes #1 </h2>
     </v-col>
-        <!-- ****************************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue3/InstalacionClient.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> INSTALACIÓN  </v-card-title>
-      <v-card-subtitle>VUE3-CLI</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Instalación y inicio de Proyecto CLI
-    </v-card-text>
-  </v-card>
-  </v-col>
-      </v-row>
-    </div>
-
-      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
-      <div id="section2">
-      <v-row class="my-12 text-center bg-teal-lighten-4">
-  <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4"> </h2>
-  </v-col>
-  <!-- ****************************************** -->
-  <v-col cols="3">
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row>
+    <v-col cols="3" class="bg-teal-lighten-4">
     <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Color según Estado </v-card-title>
-      <v-card-subtitle>Color de acuerdo al cambio de estado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>     Ver imagen
-    </v-card-text>
-  </v-card>
-</v-col>
-
-<!-- ********************************************************************** -->
-</v-row>
-</div>
-<!-- ********************************************************************** -->
- <div id="section3">
-<v-row class="bg-purple-lighten-4">
-  <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Contador.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Contador </v-card-title>
+  <v-card-subtitle>uso de if-show, imagen referencial</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Que aumente y disminuya +-1
+</v-card-text>
+</v-card>
   </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
     <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> FECHA SIN HORA </v-card-title>
-      <v-card-subtitle> Eliminar la hora</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    fecha sin hora
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-
-</v-row>
-</div>
-</template>
-<!-- ******************************* -->
-<script setup>
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/ReactividadBasica.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Reactividad Básica </v-card-title>
+  <v-card-subtitle>Ejemplo con ref</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Introducción a la reactividad
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/VforRecorrido.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> V-FOR </v-card-title>
+  <v-card-subtitle>Recorrido Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Números, palabras, arrays, objetos
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/VmodelUno.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> V-MODEL </v-card-title>
+  <v-card-subtitle>fUNCIONAMIENTO Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+En v-text-field y v-checkbox
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  </v-row>
+  <!-- /////////////////////////////////////////////////////// -->
+  <v-row class="bg-lime-darken-2 pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >Componentes #2 </h2>
+    </v-col>
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row>
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/PracticaUno.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Practica Uno </v-card-title>
+  <v-card-subtitle>Uso de nivel1</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Repaso General
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/CuestionarioVfor.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Cuestionario V-FOR </v-card-title>
+  <v-card-subtitle>Recorrido de objeto y array</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Preguntas y respuestas 
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/OpcionVfor.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title> Opciones con V-for </v-card-title>
+  <v-card-subtitle>Cuestionario en Tarjetas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  Visor temporal de respuesta usando setTimeout
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/propsVuetres.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>PROPS </v-card-title>
+  <v-card-subtitle>Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+ Interacción de componentes
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/EmitVue.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>EMITS </v-card-title>
+  <v-card-subtitle>Básico</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  interacción mediante función
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Injection.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>INJECTION </v-card-title>
+  <v-card-subtitle>Hace el trabajo de Props y Emits</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+ Envía con provide, recibe con injection
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+  </v-row>
+  <!-- /////////////////////////////////////////////////////// -->
+      </template>
+<!-- ///////////////////////////////////////////////////// -->
+  <script setup>
   import { ref } from 'vue';
 const drawer = ref(false);
 
 const toggleDrawer = () => {
   drawer.value = !drawer.value;
 }
-// NAV
-
-const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-
-</script>
-<!-- ******************************* -->
-<style scoped>
-.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 101%;
-  z-index: 1000
-}
-
-</style>
-  
+  </script>
+  <!-- ************************************************* -->
+      
+          
+      
+        
