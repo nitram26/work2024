@@ -126,9 +126,9 @@
 <!-- ********************************************************************** -->
 </v-row>
 <!-- //////////////////////////////////////////////////////////////////// -->
-<v-row class="bg-purple-lighten-4">
+<v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">titulo</h2>
+    <h2 class="bg-pink-darken-4 pa-4">PROCESSUS</h2>
   </v-col>
   <!-- ********************************************************************** -->
   <v-col cols="3" >
@@ -136,31 +136,14 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5501/src/assets/home/ProcesoHora.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> titulo </v-card-title>
-      <v-card-subtitle>detalle</v-card-subtitle>
+      <v-card-title> ITER CONVERSIONIS </v-card-title>
+      <v-card-subtitle>detalle HORA</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-      explicación
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/vue2/TemaMenu.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> titulo </v-card-title>
-      <v-card-subtitle>detalle</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      explicación
+      Alarma, reflexión y tarea.
     </v-card-text>
   </v-card>
 </v-col>

@@ -97,6 +97,24 @@
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
+  <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/LiveServer.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> LIVE SERVER </v-card-title>
+      <v-card-subtitle> app de vscode</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+    Problemas con el puerto
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
 
 </v-row>
 </div>
