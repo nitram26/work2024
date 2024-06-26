@@ -1,0 +1,79 @@
+    
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{background-color:bisque;}
+        .img{
+          width: 800px;
+          margin: 4em;
+          border: brown double 6px;
+        }
+        </style>
+        <title>ELEMENTOS RÁPIDOS</title>
+      </head>
+      <body>
+      <h1> SELECT & CHECKBOX </h1>
+      <ol>
+      <li>Realizado con vuetify</li>
+      <li>En html seria diferente la sintaxis</li>
+      </ol>
+      <img src="/src/assets/image/select&Ckeckbox.png" alt="select&Ckeckbox" class="img">
+        <pre>
+          <div>
+&lt;template>
+&lt;div>
+    &lt;h1>VUE3&lt;/h1>
+    &lt;v-row class="ml-4 bg-teal">
+      &lt;v-col cols="4">
+      &lt;v-form>
+          &lt;v-text-field
+          placeholder="Escribe aquí"
+          density="compact"
+          v-model="input"
+          >&lt;/v-text-field>
+          &lt;v-checkbox
+          v-model="agree"
+          />
+          ACEPTO TÉRMINOS Y CONDICIONES
+        &lt;/v-form>
+        &lt;br>&lt;br>&lt;br>
+        &lt;v-select
+          :items="items"
+          v-model="item1"
+          density="compact"
+          label="País"
+          >
+        &lt;/v-select>
+      &lt;/v-col>
+    &lt;/v-row> &lt;br>&lt;br>&lt;br>
+    &lt;h3>{{ input }}&lt;/h3>
+    &lt;h3>{{ item1 }}&lt;/h3>
+&lt;/div>
+&lt;/template>
+&lt;!-- ************************************* -->
+&lt;script setup>
+import { ref } from 'vue';
+
+let input = ref('')
+let agree = ref(true)
+
+const items = ref(['Spain', 'UK', 'France']);
+const item1 = ref('');
+
+&lt;/script>
+&lt;!-- ************************************* -->
+&lt;style scoped>
+
+&lt;/style>
+
+
+          </div>
+        </pre>
+      </body>
+      </html>
+
+

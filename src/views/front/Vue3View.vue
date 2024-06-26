@@ -97,6 +97,58 @@ Uso de If y/o Show
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/Bind.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>V-BIND </v-card-title>
+  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de Bind
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/Model.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>V-MODEL </v-card-title>
+  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de MODEL
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Select & Checkbox</v-card-title>
+  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Uso de Select y Checkbox con de vuetify
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
   <v-col cols="3" class="bg-teal-lighten-5">
     <v-card
 class="mx-auto my-8"

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <H2>USO DEL V-BIND => :</H2>
+  <ol>
+    <li>
+      v-bind relaciona datos del STYLE on el template, es unidireccional, se encierra entre llaves 
+    </li>
+  </ol>
+  <img src="/src/assets/image/bind1.png" alt="bind1" class="img">
+  <img src="/src/assets/image/bind2.png" alt="bind2" class="img">
+  <pre>
+    <div>
+      &lt;template>
+      &lt;div>
+       &lt;h1 class="mb-12">VUE3&lt;/h1> 
+       &lt;p :class="{ 'danger': errores} ">v-bind relaciona datos del STYLE on el template, es unidireccional&lt;/p>
+    
+       &lt;br>&lt;br>&lt;br>
+      
+      &lt;/div>
+    &lt;/template>
+    &lt;!-- ******************************* --> 
+    &lt;script setup>
+    
+    let errores = true
+    
+    &lt;/script>
+    &lt;!-- ******************************* -->
+    &lt;style scoped>
+    .danger{
+      color: red;
+    }
+    .red {
+      color: blue;
+    }
+    &lt;/style>
+    
+    
+    &lt;h2>Poner un  párrafo que cambie de color con un botón &lt;/h2>
+    
+    &lt;template>
+      &lt;div>
+       &lt;h1 class="mb-12">VUE3&lt;/h1> 
+        &lt;h2 :class="color">Este es una etiqueta que cambia de color &lt;/h2>
+    
+        &lt;v-btn @click="cambio">PULSAR&lt;/v-btn>
+       &lt;br>&lt;br>&lt;br>
+      
+      &lt;/div>
+    &lt;/template>
+    &lt;!-- ******************************* --> 
+    &lt;script setup>
+    import { ref } from 'vue';
+    
+    let color = ref('red')
+    let cambio= ()=>{
+      color.value= 'danger' 
+    }
+    
+    &lt;/script>
+    &lt;!-- ******************************* -->
+    &lt;style scoped>
+    .danger{
+      color: red;
+    }
+    .red {
+      color: blue;
+    }
+    &lt;/style>
+    
+    
+    </div>
+  </pre>
+</body>
+</html>
+
+
