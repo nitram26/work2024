@@ -26,7 +26,24 @@
     <v-col cols="12" class="mt-6">
       <h3 class="bg-blue pa-4  text-center">GITHUB</h3>
     </v-col>
-        <!-- ****************************************************************************** -->
+        <!-- ************************************************************ -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/TerminalComandos.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> TERMINAL DE COMANDOS  </v-card-title>
+      <v-card-subtitle>COMANDOS PARA CARPETAS Y ARCHIVOS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Sintaxis y ejemplos
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- ******************************************************************* -->
         <v-col cols="3">
       <v-card
     class="mx-auto my-8"
@@ -43,6 +60,8 @@
     </v-card-text>
   </v-card>
   </v-col>
+  <!-- *************************************************************** -->
+   
       </v-row>
     </div>
 
@@ -96,7 +115,7 @@
     </v-card-text>
   </v-card>
 </v-col>
-<!-- ********************************************************************** -->
+
   <!-- ********************************************************************** -->
   <v-col cols="3" >
     <v-card
