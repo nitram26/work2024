@@ -14,7 +14,7 @@
       <v-list>
         <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
         <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">GITHUB</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">IMPRESORA</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">PC & IMPRESORA</v-btn></v-list-item>
         <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">VSCODE</v-btn></v-list-item>
         
       </v-list>
@@ -49,6 +49,23 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/ASCII.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> ASCII  </v-card-title>
+      <v-card-subtitle>COMANDOS PARA SÍMBOLOS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      CÓDIGOS 
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- ******************************************************************* -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
     href="http://127.0.0.1:5501/src/assets/store/GitCommit.html"
     max-width="344" >
     <v-card-item>
@@ -69,9 +86,26 @@
       <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">IMPRESORA</h2>
+    <h2 class="bg-pink-darken-4 pa-4">PC & IMPRESORA</h2>
   </v-col>
   <!-- ****************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/mantenimientoLogico.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>Mantenimiento Lógico</v-card-title>
+      <v-card-subtitle>proceso</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>     
+      Para PC
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
   <v-col cols="3">
     <v-card
     class="mx-auto my-8"
@@ -88,7 +122,6 @@
     </v-card-text>
   </v-card>
 </v-col>
-
 <!-- ********************************************************************** -->
 </v-row>
 </div>
