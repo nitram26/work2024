@@ -16,7 +16,7 @@
         <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">TEXT FIELD</v-btn></v-list-item>
         <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">AUTOCOMPLETE</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">SWITCH</v-btn></v-list-item>
         
       </v-list>
     </v-navigation-drawer>
@@ -232,27 +232,99 @@
  <div id="section3" style="height: 100vh;">
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
+    <h2 class="bg-pink-darken-4 pa-4 text-center">SWITCH</h2>
   </v-col>
-  <!-- ********************************************************************** -->
+ 
+     <!-- *************************************************************** -->
+    <v-col cols="3">
+   <h2>INDETERMINADO</h2> 
+   <v-switch label="Switch" indeterminate></v-switch>
+  </v-col>
+  <!-- ************************************** -->
+  <v-col cols="3">
+   <H2>COLOR</H2>
+      <v-switch
+        color="primary"
+        label="COLOR primary"
+        hide-details
+      ></v-switch>
+      <p>Para vue2 necesita script-data ver documentación</p>
+    </v-col>
+      <!-- ************************************** -->
+      <v-col cols="3">
+      <h2>INSET</h2>
+        <v-switch
+          v-model="model"
+          :label="`Switch: ${model.toString()}`"
+          hide-details
+          inset
+        ></v-switch>
+      </v-col>
+        <!-- ************************************** -->
+
+<v-col cols="3">
+        <h2>MODELO CON ARRAY</h2>
+            <p>{{ people }}</p>
+    <v-switch
+      v-model="people"
+      color="primary"
+      label="John"
+      value="John"
+      hide-details
+    ></v-switch>
+    <v-switch
+      v-model="people"
+      color="primary"
+      label="Jacob"
+      value="Jacob"
+      hide-details
+    ></v-switch>
+    <p>Con Script</p>
+  </v-col>
+  <!-- ********************************** -->
+  <v-col cols="3">
+    <h2>ON LOADING</h2>
+      <v-switch
+        :model-value="true"
+        label="on loading"
+        loading="warning"
+      ></v-switch>
+      <p>Sin script</p>
+    </v-col>
+      <!-- ************************************** -->
+      <v-col cols="3">
+  <h2>IN PROGRESS</h2>
+  <v-switch v-model="switchMe">
+    <template v-slot:label>
+      Turn on the progress:
+      <v-progress-circular
+        :indeterminate="switchMe"
+        class="ms-2"
+        size="24"
+      ></v-progress-circular>
+    </template>
+  </v-switch>
+<P>Con Script</P>
+</v-col>
+      <!-- ************************************** -->
+  <!-- //////////////////////////////////////////////////// -->
   <v-col cols="3" >
     <v-card
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
+    href="http://127.0.0.1:5501/src/assets/vuetify/Switch.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> FECHA SIN HORA </v-card-title>
-      <v-card-subtitle> Eliminar la hora</v-card-subtitle>
+      <v-card-title> SWITCH </v-card-title>
+      <v-card-subtitle> Modelos</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-    fecha sin hora
+    Códigos
     </v-card-text>
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
-
 </v-row>
 </div>
 </template>
@@ -272,7 +344,10 @@ const scrollTo = (sectionId) => {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 };
-
+// switch
+let model = ref(true) 
+let people = ref('John')
+let  switchMe = ref(false)
 
 </script>
 <!-- ******************************* -->

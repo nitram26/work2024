@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <pre>
+    <div>
+      &lt;template>
+  
+   
+      &lt;v-row class="bg-teal-lighten-4">
+        &lt;v-col cols="3">
+         &lt;h2>INDETERMINADO&lt;/h2> 
+         &lt;v-switch label="Switch" indeterminate>&lt;/v-switch>
+        &lt;/v-col>
+        &lt;!-- ************************************** -->
+        &lt;v-col cols="3">
+         &lt;H2>COLOR&lt;/H2>
+            &lt;v-switch
+              color="primary"
+              label="COLOR primary"
+              hide-details
+            >&lt;/v-switch>
+            &lt;p>Para vue2 necesita script-data ver documentación&lt;/p>
+          &lt;/v-col>
+            &lt;!-- ************************************** -->
+      &lt;v-col cols="3">
+            &lt;h2>INSET&lt;/h2>
+              &lt;v-switch
+                v-model="model"
+                :label="`Switch: ${model.toString()}`"
+                hide-details
+                inset
+              >&lt;/v-switch>
+            &lt;/v-col>
+              &lt;!-- ************************************** -->
+            &lt;v-col cols="3">
+              &lt;h2>MODELO CON ARRAY&lt;/h2>
+                  &lt;p>{{ people }}&lt;/p>
+          &lt;v-switch
+            v-model="people"
+            color="primary"
+            label="John"
+            value="John"
+            hide-details
+          >&lt;/v-switch>
+          &lt;v-switch
+            v-model="people"
+            color="primary"
+            label="Jacob"
+            value="Jacob"
+            hide-details
+          >&lt;/v-switch>
+          &lt;p>Con Script&lt;/p>
+        &lt;/v-col>
+      &lt;/v-row>
+      &lt;!-- ////////////////////////////////////////////// -->
+      &lt;v-row class="bg-blue-lighten-4">
+        &lt;v-col cols="3">
+          &lt;h2>ON LOADING&lt;/h2>
+            &lt;v-switch
+              :model-value="true"
+              label="on loading"
+              loading="warning"
+            >&lt;/v-switch>
+            &lt;p>Sin script&lt;/p>
+          &lt;/v-col>
+            &lt;!-- ************************************** -->
+          &lt;v-col cols="3">
+        &lt;h2>IN PROGRESS&lt;/h2>
+        &lt;v-switch v-model="switchMe">
+          &lt;template v-slot:label>
+            Turn on the progress:
+            &lt;v-progress-circular
+              :indeterminate="switchMe"
+              class="ms-2"
+              size="24"
+            >&lt;/v-progress-circular>
+          &lt;/template>
+        &lt;/v-switch>
+      &lt;P>Con Script&lt;/P>
+      &lt;/v-col>
+      &lt;/v-row>
+      &lt;/template>
+      &lt;!-- ******************************* --> 
+      &lt;script setup>
+      import { ref } from 'vue';
+      
+      let model = ref(true) 
+      let people = ref('John')
+      let  switchMe = ref(false)
+      &lt;/script>
+      &lt;!-- ******************************* -->
+      &lt;style scoped>
+      
+      &lt;/style>
+      
+    </div>
+  </pre>
+</body>
+</html>
