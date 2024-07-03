@@ -301,6 +301,24 @@
   </v-card>
   </v-col>
 <!-- ********************************************************************** -->
+<!-- ********************************************************************** -->
+   <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/front/vue2/ModificarRegistro.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>MONGO </v-card-title>
+      <v-card-subtitle>Actualizar registro</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+   modificar Registro de Caja-SURSA
+    </v-card-text>
+  </v-card>
+  </v-col>
+<!-- ********************************************************************** -->
 </v-row>
 </div>
 <!-- ********************************************************************** -->
@@ -349,22 +367,20 @@
 </template>
 <!-- ******************************* -->
 <script setup>
-  import { ref } from 'vue';
-const drawer = ref(false);
+  import { ref } from 'vue'
+const drawer = ref(false)
 
 const toggleDrawer = () => {
-  drawer.value = !drawer.value;
+  drawer.value = !drawer.value
 }
 // NAV
 
 const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId);
+  const element = document.getElementById(sectionId)
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth' })
   }
-};
-
-
+}
 </script>
 <!-- ******************************* -->
 <style scoped>

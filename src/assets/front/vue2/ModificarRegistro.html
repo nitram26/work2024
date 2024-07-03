@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> MODIFICAR EL REGISTRO DE CAJA EN SURSA </h1>
+<ol>
+<li>Buscar el correlativo a modificar el monto de efectivo</li>
+<li> tabla boxes</li>
+<li>SINTAXIS:</li>
+<li>db.getCollection("boxes").find({ "numberBox": 1731 })</li>
+<img src="/src/assets/image/front/boxes1.png" alt="boxes1" class="img">
+<li>ir a la tabla detailboxes</li>
+<li> se busca el idBox</li>
+<li>SINTAXIS:</li>
+<li>db.getCollection("detailboxes").find({idBox:ObjectId('66839465548eb19dbe55c59c')})</li>
+<img src="/src/assets/image/front/boxes2.png" alt="boxes2" class="img">
+<li>Finalmente se abre para editar y en bono se realiza el cambio</li>
+
+</ol>
+
+</body>
+</html>
