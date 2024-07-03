@@ -386,8 +386,52 @@ max-width="344" >
 </v-card-text>
 </v-card>
   </v-col>
-  <!-- **************************************************** -->
+</v-row>
+<!-- **************************************************** -->
+  <!-- /////////////////////////////////////////////////////// -->
+  <v-row class="bg-lime-darken-2 pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >COMPONENTES 3 </h2>
+    </v-col>
   </v-row>
+  <!-- *************************************************** -->
+  <v-row>
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/PracticaUno.ht"
+max-width="344" >
+<v-card-item>
+  <v-card-title> title</v-card-title>
+  <v-card-subtitle>Con Swal</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Solo
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/studium/vue3/Injection.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>TITLE </v-card-title>
+  <v-card-subtitle>subtitle</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+ párrafo
+</v-card-text>
+</v-card>
+  </v-col>
+</v-row>
+<!-- **************************************************** -->
   <!-- /////////////////////////////////////////////////////// -->
       </template>
 <!-- ///////////////////////////////////////////////////// -->

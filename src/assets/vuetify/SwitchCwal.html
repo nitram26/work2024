@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> SWITCH CON SWAL.FIRE </h1> 
+<ol>
+<li>Switch solo se activa cuando se ingresa la clave</li>
+</ol>
+<img src="/src/assets/image/vuetify/switchClave.png" alt="switchClave" class="img">
+  <pre>
+    <div>
+      $lt;template>
+      $lt;div>
+        $lt;h1>VUE3$lt;/h1>
+        $lt;v-switch
+          v-model="isSwitchOn"
+          :label="!isSwitchOn ? 'Cierre Caja' : 'Caja Cerrada'"
+          color="blue-darken-4"
+          hide-details
+          @change="handleSwitchChange"
+        />
+      $lt;/div>
+    $lt;/template>
+    
+    $lt;script setup>
+    import { ref, watch } from 'vue';
+    import Swal from 'sweetalert2';
+    
+    let isSwitchOn = ref(true);
+    
+    const handleSwitchChange = async (value) => {
+      if (!value) {
+        const { value: password } = await Swal.fire({
+          title: 'Ingrese la clave',
+          input: 'password',
+          inputLabel: 'Clave',
+          inputPlaceholder: 'Ingrese su clave',
+          inputAttributes: {
+            maxlength: 10,
+            autocapitalize: 'off',
+            autocorrect: 'off'
+          },
+          showCancelButton: true,
+        });
+    
+        if (password === '123') {
+          isSwitchOn.value = false;
+        } else {
+          isSwitchOn.value = true;
+          Swal.fire({
+            icon: 'error',
+            title: 'Clave incorrecta',
+            text: 'Por favor, inténtelo de nuevo.',
+          });
+        }
+      } else {
+        isSwitchOn.value = true;
+      }
+    };
+    
+    // Esta atento a los cambios en isSwitchOn para garantizar que el cuadro de diálogo aparezca correctamente
+    watch(isSwitchOn, (newVal) => {
+      handleSwitchChange(newVal);
+      console.log(newVal);
+    });
+    $lt;/script>
+    
+    $lt;style scoped>
+    div{
+      margin:2em;
+    }
+    $lt;/style>
+    
+    </div>
+  </pre>
+</body>
+</html>
