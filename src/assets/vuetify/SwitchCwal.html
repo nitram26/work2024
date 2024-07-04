@@ -21,20 +21,20 @@
 <img src="/src/assets/image/vuetify/switchClave.png" alt="switchClave" class="img">
   <pre>
     <div>
-      $lt;template>
-      $lt;div>
-        $lt;h1>VUE3$lt;/h1>
-        $lt;v-switch
+      &lt;template>
+      &lt;div>
+        &lt;h1>VUE3&lt;/h1>
+        &lt;v-switch
           v-model="isSwitchOn"
           :label="!isSwitchOn ? 'Cierre Caja' : 'Caja Cerrada'"
           color="blue-darken-4"
           hide-details
           @change="handleSwitchChange"
         />
-      $lt;/div>
-    $lt;/template>
+      &lt;/div>
+    &lt;/template>
     
-    $lt;script setup>
+    &lt;script setup>
     import { ref, watch } from 'vue';
     import Swal from 'sweetalert2';
     
@@ -75,13 +75,13 @@
       handleSwitchChange(newVal);
       console.log(newVal);
     });
-    $lt;/script>
+    &lt;/script>
     
-    $lt;style scoped>
+    &lt;style scoped>
     div{
       margin:2em;
     }
-    $lt;/style>
+    &lt;/style>
     
     </div>
   </pre>

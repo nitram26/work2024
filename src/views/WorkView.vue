@@ -57,5 +57,7 @@ watch(isSwitchOn, (newVal) => {
 <style scoped>
 div{
   margin:2em;
+  background-color: blanchedalmond;
+  padding: 4em;
 }
 </style>
