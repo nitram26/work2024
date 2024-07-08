@@ -358,7 +358,7 @@ max-width="344" >
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/propsArray.html"
+href="http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html"
 max-width="344" >
 <v-card-item>
   <v-card-title>PROPS EN ARRAY </v-card-title>
