@@ -32,10 +32,10 @@
       <h2>MODELO BASE </h2>
     </v-col>
     <v-col cols="4">
-        <v-text-field 
+        <v-text-field
         width="400"
-        clearable 
-        label="Label" 
+        clearable
+        label="Titulo"
         prepend-icon="$vuetify">
     </v-text-field>
     </v-col>
