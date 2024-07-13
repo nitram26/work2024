@@ -49,7 +49,7 @@
       <v-list-item link to="/homeFront" title=" FRONT" prepend-icon="mdi-grid" @click="handle"></v-list-item>
       <v-list-item link to="/backend" title="BACK" prepend-icon="mdi-store" @click="handle"></v-list-item>
       <v-list-item link to="/data" title="DATA" prepend-icon="mdi-database-cog-outline" @click="handle"></v-list-item>
-      <v-list-item link to="/vuetify" title="VUETIFY" prepend-icon="mdi-database-cog-outline" @click="handle"></v-list-item>
+      <v-list-item link to="/framework" title="FRAMEWORK" prepend-icon="mdi-database-cog-outline" @click="handle"></v-list-item>
       <v-list-item link to="/studium" title="STUDIUM" prepend-icon="mdi-arrange-send-to-back" @click="handle"></v-list-item>
       <v-list-item link to="/project" title="PROYECTOS" prepend-icon="mdi-arrange-bring-to-front"  @click="handle"></v-list-item>
       <v-list-item link to="/store" title="STORE" prepend-icon="mdi-cart"  @click="handle"></v-list-item>

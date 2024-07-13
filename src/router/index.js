@@ -10,11 +10,12 @@ import HomeFrontView from '@/views/front/HomeFrontView.vue'
 import ProjectView from '@/views/proyectos/ProjectView.vue'
 import WorkView from '@/views/WorkView.vue'
 import StudiumView from '@/views/studium/StudiumView.vue'
-import VuetifyView from '@/views/vuetify/VuetifyView.vue'
-import ContainmentView from '@/views/vuetify/containment/ContainmentView.vue'
-import NavigationView from '@/views/vuetify/navigation/NavigationView.vue'
-import FormInput from '../views/vuetify/formInput/FormInput.vue'
-
+import VuetifyView from '@/views/framework/vuetify/VuetifyView.vue'
+import ContainmentView from '@/views/framework/vuetify/containment/ContainmentView.vue'
+import NavigationView from '@/views/framework/vuetify/navigation/NavigationView.vue'
+import FormInput from '../views/framework/vuetify/formInput/FormInput.vue'
+import FrameWork from '@/views/framework/FrameWork.vue'
+import Angular from '@/views/framework/angular/Angular.vue'
 
 const routes = [
   {
@@ -91,6 +92,16 @@ const routes = [
     path: '/formInput',
     name: 'FormInput',
     component: FormInput
+  },
+  {
+    path: '/framework',
+    name: 'Framework',
+    component: FrameWork
+  },
+  {
+    path: '/angular',
+    name: 'Angular',
+    component: Angular
   },
   
   
