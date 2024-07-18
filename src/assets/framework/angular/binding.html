@@ -16,15 +16,68 @@
         <title>ELEMENTOS RÁPIDOS</title>
       </head>
       <body>
-      <h1>  </h1> 
+      <h1> CONTADOR </h1> 
       <ol>
       <li></li>
       <li></li>
       </ol>
-      <img src="/src/assets/image" alt="" class="img">
+      <img src="/src/assets/image/angular/binding1.png" alt="binding1" class="img">
         <pre>
           <div>
-          
+            HTML
+            &lt;div class="">
+            &lt;p>Carlos Martín&lt;/p>
+            
+            &lt;span>Mi nombre es {{persona.nombre}} &lt;/span>
+            
+            &lt;button (click)="increment()">+&lt;/button>
+            &lt;span >{{num}} &lt;/span>
+            &lt;button (click)="decrement()">-&lt;/button>
+            
+            &lt;/div>
+            
+            
+            TS
+            
+            import { Component } from '@angular/core';
+            import { IPersona } from '../IPersona';
+            
+            @Component({
+              selector: 'app-contador',
+              standalone: true,
+              imports: [],
+              templateUrl: './contador.component.html',
+              styleUrl: './contador.component.css'
+            })
+            export class ContadorComponent {
+              persona: IPersona = {
+                nombre : 'Carlos',
+                edad  : 64
+              }
+            
+              num: number = 0
+            
+              increment() {
+                this.num++
+              }
+              decrement() {
+                this.num --
+              }
+            }
+            
+            CSS
+
+            button{
+              font-size: 2em;
+              color: blue;
+              margin: 1em;
+              padding: 0.5em;
+            }
+            
+            div{
+              background-color: antiquewhite;
+            }
+            
           </div>
         </pre>
       </body>

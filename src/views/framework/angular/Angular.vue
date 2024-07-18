@@ -13,8 +13,8 @@
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
   <v-list>
     <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-    <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">MODELOS DE PAG</v-btn></v-list-item>
-    <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
+    <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">INTRODUCCIÓN</v-btn></v-list-item>
+    <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">ESTUDIO</v-btn></v-list-item>
         
     <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">TRES</v-btn></v-list-item>
         
@@ -120,7 +120,7 @@
       <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
+    <h2 class="bg-pink-darken-4 pa-4">ESTUDIO  </h2>
   </v-col>
   <!-- ****************************************** -->
   <v-col cols="3">
@@ -128,13 +128,14 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/binding.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> Color según Estado </v-card-title>
-      <v-card-subtitle>Color de acuerdo al cambio de estado</v-card-subtitle>
+      <v-card-title> CONTADOR </v-card-title>
+      <v-card-subtitle>QUE AUMENTE Y DISMINUYA</v-card-subtitle>
     </v-card-item>
-    <v-card-text>     Ver imagen
+    <v-card-text> 
+      Practica básica de uso 
     </v-card-text>
   </v-card>
 </v-col>
