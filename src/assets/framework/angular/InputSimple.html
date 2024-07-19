@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> INPUT SIMPLE </h1> 
+<ol>
+<li>Crear un input</li>
+<li>un botón </li>
+<li>que lo que se escribe se vea por consola</li>
+</ol>
+
+  <pre>
+    <div>
+      HTML
+
+
+      &lt;input type="text" name="" id="" placeholder="Ingresar Nombre" class="form-control m-2" #name>
+      
+      &lt;button class="btn btn-primary m-2" (click)="mostrarConsola(name.value)">Mostrar&lt;/button>
+      
+      TS 
+      
+      import { Component } from '@angular/core';
+      
+      @Component({
+        selector: 'app-formulario',
+        standalone: true,
+        imports: [],
+        templateUrl: './formulario.component.html',
+        styleUrl: './formulario.component.css'
+      })
+      export class FormularioComponent {
+      
+          mostrarConsola(name : string){
+          console.log(name);
+          
+          }
+      }
+          
+    </div>
+  </pre>
+</body>
+</html>
+
+

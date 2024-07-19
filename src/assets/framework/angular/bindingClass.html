@@ -1,0 +1,78 @@
+    
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{background-color:bisque;}
+        .img{
+          width: 800px;
+          margin: 4em;
+          border: brown double 6px;
+        }
+        </style>
+        <title>ELEMENTOS RÁPIDOS</title>
+      </head>
+      <body>
+      <h1> Binding con Clases  </h1> 
+      <ol>
+      <li>Tres botones cambien el color del texto</li>
+      <li>luego un botón que habilite y deshabilite los botones </li>
+      </ol>
+      <img src="/src/assets/image/angular/bindingClase.PNG" alt="bindingClase" class="img">
+        <pre>
+          <div>
+            HTML
+           
+            &lt;button [class.disabled]="buttonDisabled" class="btn btn-primary"(click)="color='text-primary'" >Color 1&lt;/button> 
+            &lt;button [class.disabled]="buttonDisabled" class="btn btn-success" (click)="color='text-success'" >Color 2&lt;/button> 
+             &lt;button 
+             [class]= "{
+              disabled :buttonDisabled}" 
+              class="btn btn-danger" 
+              (click)="color='text-danger'" 
+              >
+              Color 3&lt;/button>
+            
+            
+            &lt;h4 [class]="color">Texto que cambiará de color &lt;/h4>
+            
+            &lt;br>&lt;br>&lt;br>&lt;br>&lt;br>&lt;br>
+            &lt;button (click)="buttonDisabled = !buttonDisabled " class="btn btn-success">
+              habilitar / Deshabilitar 
+            &lt;/button>
+            
+            ///////////////////////////////////////////////////////////////////////////////
+            
+            TS 
+            
+            import { Component } from '@angular/core';
+            
+            @Component({
+              selector: 'app-botones',
+              standalone: true,
+              imports: [],
+              templateUrl: './botones.component.html',
+              styleUrl: './botones.component.css'
+            })
+            export class BotonesComponent {
+            
+              color : string = ''
+              
+              buttonDisabled: boolean = false
+            
+              ngOnInit(): void {
+              
+              }
+            }
+            
+            
+          </div>
+        </pre>
+      </body>
+      </html>
+    
+
+  

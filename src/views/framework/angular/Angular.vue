@@ -139,17 +139,50 @@
     </v-card-text>
   </v-card>
 </v-col>
-
 <!-- ********************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/bindingClass.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> BINDING </v-card-title>
+      <v-card-subtitle>CLASES </v-card-subtitle>
+    </v-card-item>
+    <v-card-text> 
+     Uso de botones para cambiar clases
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- **************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/InputSimple.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> INPUT SIMPLE </v-card-title>
+      <v-card-subtitle>UNIDO A UN BOTÓN </v-card-subtitle>
+    </v-card-item>
+    <v-card-text> 
+    Lo escrito en el input se vea en consola
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- **************************************************************** -->
 </v-row>
 </div>
-<!-- ********************************************************************** -->
+<!-- **************************************************************** -->
  <div id="section3">
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
   </v-col>
-  <!-- ********************************************************************** -->
+  <!-- **************************************************************** -->
   <v-col cols="3" >
     <v-card
     class="mx-auto my-8"
