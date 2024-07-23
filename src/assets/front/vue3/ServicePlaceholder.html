@@ -1,0 +1,125 @@
+    
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{background-color:bisque;}
+        .img{
+          width: 800px;
+          margin: 4em;
+          border: brown double 6px;
+        }
+        </style>
+        <title>ELEMENTOS RÁPIDOS</title>
+      </head>
+      <body>
+      <h1> LAMAR API PLACEHOLDER </h1> 
+      <ol>
+      <li>hacer el componente DataTable.vue</li>
+      <li>llamarlo en projectView.vue</li>
+      </ol>
+      <img src="/src/assets/image/placeholder.PNG" alt="placeholder" class="img">
+        <pre>
+          <div>
+            &lt;template>
+            &lt;v-data-table
+              :headers="headers"
+              :items="datum"
+              class="elevation-2 text-h6"
+            >
+              &lt;template v-slot:top>
+                &lt;v-row>
+                  &lt;v-col cols="2" class="bg-blue-darken-1 text-center">
+                    &lt;span>PLACEHOLDER&lt;/span>
+                  &lt;/v-col>
+                  &lt;v-col cols="1" class="mt-2">
+                    &lt;v-text-field
+                      label="Cantidad"
+                      variant="outlined"
+                      prepend-inner-icon="mdi-cart"
+                      class="text-green-darken-4"
+                      hide-details="auto"
+                      hint="Registros"
+                      readonly
+                      :value="cantidadRegistros"
+                    />
+                  &lt;/v-col>
+                &lt;/v-row>
+                &lt;v-row class="bg-cyan text-h6 pl-4">
+                  &lt;v-col cols="3">
+                    APELLIDOS
+                  &lt;/v-col>
+                  &lt;v-col cols="3" class="pl-8">
+                    NOMBRE
+                  &lt;/v-col>
+                  &lt;v-col cols="3">
+                    CORREO
+                  &lt;/v-col>
+                  &lt;v-col cols="3" class="pl-10">
+                    &lt;span class="pl-8">CIUDAD&lt;/span>
+                  &lt;/v-col>
+                &lt;/v-row>
+              &lt;/template>
+            &lt;/v-data-table>
+          &lt;/template>
+          
+          &lt;script setup>
+          import { ref, computed, onMounted } from 'vue';
+          import axios from 'axios';
+          
+          const datum = ref([]);
+          const headers = [
+            { text: 'Name', value: 'name' },
+            { text: 'Username', value: 'username' },
+            { text: 'Email', value: 'email' },
+            { text: 'City', value: 'city' }
+          ];
+          
+          const cantidadRegistros = computed(() => datum.value.length);
+          
+          onMounted(async () => {
+            try {
+              const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+              datum.value = response.data.map(user => ({
+                name: user.name,
+                username: user.username,
+                email: user.email,
+                city: user.address.city
+              }));
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+          });
+          &lt;/script>
+          
+          &lt;style scoped>
+          
+          &lt;/style>
+          
+          &lt;!-- //////////////////////////////////////////////////////////// -->
+          
+          &lt;template>
+            
+            &lt;v-app>
+              &lt;v-main>
+                &lt;DataTable />
+              &lt;/v-main>
+            &lt;/v-app>
+          &lt;/template>
+          
+          &lt;script setup>
+          import DataTable from '@/components/DataTable.vue';
+          &lt;/script>
+          
+            
+          
+          </div>
+        </pre>
+      </body>
+      </html>
+    
+
+  

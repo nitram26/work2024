@@ -157,11 +157,28 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>Select & Checkbox</v-card-title>
+  <v-card-title>Checkbox</v-card-title>
   <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Uso de Select y Checkbox con de vuetify
+Si no acepta cambia de color y mensaje de no acepta
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+  <v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/SelectNuevo.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>Select</v-card-title>
+  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Si no acepta cambia de color y mensaje de no acepta
 </v-card-text>
 </v-card>
   </v-col>
@@ -403,8 +420,26 @@ max-width="344" >
 </v-card-text>
 </v-card>
   </v-col>
-</v-row>
+
 <!-- **************************************************** -->
+    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/Injection.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>PLACEHOLDER </v-card-title>
+  <v-card-subtitle>Api llamarla desde un componente </v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Reenviar la data a otro componente 
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+</v-row>
   <!-- /////////////////////////////////////////////////////// -->
   <v-row class="bg-lime-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
