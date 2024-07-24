@@ -17,7 +17,7 @@
 
         <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
         <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-database-cog-outline">FECHAS</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-arrange-bring-to-front">uno</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-arrange-bring-to-front">SURSA-FRECUENTES</v-btn></v-list-item>
         <v-list-item><v-btn @click="scrollTo('section5')" prepend-icon="mdi-arrange-send-to-back">dos</v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -341,6 +341,49 @@
     </v-card-item>
     <v-card-text>
     fecha sin hora
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href=""
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> titulo </v-card-title>
+      <v-card-subtitle>detalle</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      explicación
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+</v-row>
+</div>
+<!-- ********************************************************************** -->
+ <div id="section4">
+<v-row class="bg-purple-lighten-4">
+  <v-col cols="12">
+    <h2 class="bg-pink-darken-4 pa-4 text-center">SURSA-FRECUENTES</h2>
+  </v-col>
+  <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/front/vue2/frecuenteBono.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> MODIFICAR MONTO </v-card-title>
+      <v-card-subtitle> En BD MongoDB</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+    Se ingresó un monto equivocado
     </v-card-text>
   </v-card>
 </v-col>
