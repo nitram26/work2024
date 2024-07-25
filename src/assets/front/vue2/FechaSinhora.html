@@ -9,7 +9,57 @@
 <body>
   <pre>
     <div>
-    
+  LO MAS SENCILLO 
+  
+  
+En template agregar template item.fecha, fecha es el nombre del campo (puntoXperto/pages/recibo.vue) dentro de la table se colocan los templates 
+
+&lt;v-data-table
+:mobile-breakpoint="0"
+:footer-props="variableGlobals.rowsPerPageItems"
+:headers="headers"
+:items="recibo"
+:loading="loading"
+:options.sync="pagination"
+:items-per-page="itemsPerPage"
+:page.sync="paginaActual"
+:loading-text="'Cargando... Espere por favor'"
+dense
+:server-items-length="total"
+no-data-text="No existen registros"
+>
+&lt;template #[`item.fecha`]="{ item }">
+  &lt;span>  {{ fech(item.fecha) }}&lt;/span>
+&lt;/template>
+&lt;template #[`item.index`]="{ item }">
+  &lt;strong> {{ recibo.indexOf(item) + 1 }}.&lt;/strong>
+&lt;/template>
+&lt;template #[`item.ruc`]="{ item }">
+  &lt;span> {{ item.ruc }}&lt;/span>
+&lt;/template>
+&lt;template #[`item.actions`]="{ item }">
+  &lt;actions :edit-show="true" :delete-show="true" :register="item" @editRegister="editRecibo" @deleteRegister="deleteRecibo" />
+&lt;/template>
+&lt;/v-data-table>
+
+EN script 
+
+fech (fi) {
+  const date = new Date(fi)
+  const year = date.getFullYear()
+  let month = date.getMonth()
+  let dt = date.getDate()
+  month++
+  if (dt &lt; 10) {
+    dt = '0' + dt
+  }
+  if (month &lt; 10) {
+    month = '0' + month
+  }
+  return `${dt}/${month}/${year}`
+},
+  
+  //////////////////////////////////////////////////////////////////
 
 
 ELIMINAR LA HORA
@@ -52,6 +102,7 @@ export default {
 /* Tus estilos aquí */
 &lt;/style>
 
+////////////////////////////////////////////////////////////////
 FECHA SIN HORA 
 Funciona, pero no tuve tiempo para saber cómo se relacionan
 STUDIO//pages//tickets.vue

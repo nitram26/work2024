@@ -1,41 +1,20 @@
 <template>
-  <div class="work">
-   <h1>Practica Julio 2024</h1> 
-    <v-select
-    :items="select"
-    v-model="item"
-    label="País"
-    width="15em"
-    class="azul"
-    />
-
-   
-  </div>
-  
+    <div>
+        <h1>VUE3</h1>
+        {{ fecha }}
+     
+    </div>
 </template>
-<!-- ******************************* --> 
+<!-- ************************************* -->
 <script setup>
-import { ref } from 'vue';
-
-
-let item = ref('')
-let select = ref(['Peru', 'Brasil', 'Japón', 'India'])
-
-
+const fechaActual = new Date();
+const dia = fechaActual.getDate();
+const mes = fechaActual.getMonth() + 1; // Los meses van de 0 a 11
+const año = fechaActual.getFullYear();
+let fecha = `${dia}/${mes}/${año}`;
 
 </script>
-<!-- ******************************* -->
+<!-- ************************************* -->
 <style scoped>
-.work{
-  background-color: burlywood;
-  height: 5em;
-  margin-left: 3em;
-}
-.rojo{
-  color: red;
-}
-.azul {
-  color: blue;
-  border: 1px solid green;
-}
+
 </style>
