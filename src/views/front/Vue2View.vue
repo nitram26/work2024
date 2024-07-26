@@ -393,14 +393,14 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href=""
+    href="http://127.0.0.1:5501/src/assets/front/vue2/Actualizaciones.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> titulo </v-card-title>
-      <v-card-subtitle>detalle</v-card-subtitle>
+      <v-card-title> Actualizaciones SURSA</v-card-title>
+      <v-card-subtitle>Usuarios y Bases</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-      explicación
+      Tabla boxes, MONGODB
     </v-card-text>
   </v-card>
 </v-col>

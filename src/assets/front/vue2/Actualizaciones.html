@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> ACTUALIZAR SURSA-MONGODB </h1>
+<ol>
+<li>Actualizado hasta el 02/06/2024 incluido</li>
+<li>boxes es la tabla a usar</li>
+<li>El botón ► es el primero</li>
+</ol>
+
+  <pre>
+    <div>
+            <h2>USUARIO</h2>
+      var fechaEspecifica = ISODate("2024-06-02T05:00:00.000Z");
+      var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+      var boxesToUpdate = db.getCollection('boxes').find({ startDate: fechaEspecifica });
+      boxesToUpdate.forEach(function(box) {
+      var user = db.getCollection('users').findOne({ _id: box.idUser });
+      if (user) {
+      bulkUpdate.find({ _id: box._id }).updateOne({ $set: { fullNameStaff: user.fullNameCompleted } });
+      } else {
+      print("Advertencia: No se encontró el usuario para el box con _id: " + box._id);
+      }
+      });
+      var result = bulkUpdate.execute();
+      if (result && result.ok) {
+      print("Actualización completada");
+      } else {
+      if (result && result.writeErrors && result.writeErrors.length > 0) {
+      print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+      } else {
+      print("Error desconocido al actualizar los documentos");
+      if (result) {
+      print("Resultado completo:", JSON.stringify(result, null, 2));
+      } else {
+      print("El resultado es undefined");
+          }
+        }
+      }
+
+
+      <H2>BASES</H2>
+
+      var fechaEspecifica = ISODate("2024-06-02T05:00:00.000Z");
+      var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+      var boxesToUpdate = db.getCollection('boxes').find({ startDate: fechaEspecifica });
+      boxesToUpdate.forEach(function(box) {
+      var base = db.getCollection('bases').findOne({ _id: box.idBase });
+      if (base) {
+      bulkUpdate.find({ _id: box._id }).updateOne({ $set: { nameBase: base.code } });
+      }
+      });
+      var result = bulkUpdate.execute();
+      if (result && result.ok) {
+      print("Actualización completada");
+      } else {
+      if (result && result.writeErrors && result.writeErrors.length > 0) {
+      print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+      } else {
+      print("Error desconocido al actualizar los documentos");
+      if (result) {
+      print("Resultado completo:", JSON.stringify(result, null, 2));
+      } else {
+      print("El resultado es undefined");
+          }
+        }
+      }
+
+      <H2>ACTUALIZAR USUARIO</H2>
+      var fechaEspecifica = ISODate("2023-09-03T05:00:00.000Z");
+      var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+      var boxesToUpdate = db.getCollection('boxes').find({ startDate: fechaEspecifica });
+      boxesToUpdate.forEach(function(box) {
+        var user = db.getCollection('users').findOne({ _id: box.idUser });
+        if (user) {
+          bulkUpdate.find({ _id: box._id }).updateOne({ $set: { fullNameStaff: user.fullNameCompleted} });
+        }
+      });
+      var result = bulkUpdate.execute();
+      if (result.ok) {
+        print("Actualización completada");
+      } else {
+        print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+      }
+
+      <H2>ACTUALIZAR BASE</H2>
+      var fechaEspecifica = ISODate("2022-08-31T05:00:00.000Z");
+      var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+      var boxesToUpdate = db.getCollection('boxes').find({ startDate: fechaEspecifica });
+      boxesToUpdate.forEach(function(box) {
+        var base = db.getCollection('bases').findOne({ _id: box.idBase });
+        if (base) {
+          bulkUpdate.find({ _id: box._id }).updateOne({ $set: { nameBase: base.code } });
+        }
+      });
+      var result = bulkUpdate.execute();
+      if (result.ok) {
+        print("Actualización completada");
+      } else {
+        print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+      }
+
+
+      <H2>CODIGOS DE ACTUALIZACIONES</H2>
+      <img src="/src/assets/image/front/vue2/códigosActualizaciones.png" alt="códigosActualizaciones" class="img">
+    </div>
+  </pre>
+</body>
+</html>
+
+
