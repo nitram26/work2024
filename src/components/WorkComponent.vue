@@ -1,33 +1,23 @@
 <template>
-  <div class="uno">
-    <h2>hijo</h2>
+    <div>
+        <h1>hijo</h1>
+    </div>
+    <h2>{{ mostrar }}</h2>
 
-<h3>{{ title }} </h3>
-<p> {{ content }}</p>
-  </div>
-
+    <v-btn @click="saludo">botones</v-btn>
 </template>
-<!-- //////////////////////////////////////////////////// -->
+<!-- ************************************* -->
 <script setup>
+import { inject } from 'vue';
 
-let props = defineProps(
-  {
-  title:String,
-  content:String,
- 
+
+let mostrar = inject('viene')
+
+let saludo = ()=>{
+  mostrar.value = 'Buenas tardes'
 }
-
-)
-
-
 </script>
-<!-- //////////////////////////////////////////////////// -->
+<!-- ************************************* -->
 <style scoped>
-.uno{
-  border: solid brown 3px;
-  width: 28em;
-  padding: 3em;
-  border-radius: 2em;
-  background-color: aliceblue;
-}
+
 </style>

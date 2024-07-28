@@ -13,7 +13,7 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-  <h2>	INJECTION	</h2>
+  <h2>	INJECTION 0651</h2>
 <ol>		
 <li>	Padre: Se importa el hijo, se crea la variable y se envía con provide	</li>
 <li>	Hijo: se recibe con el inject 	</li>
@@ -38,7 +38,7 @@ import { provide, ref } from 'vue'
 import WorkView from './WorkView.vue'
 
 let canal = ref('Sofia')
-provide('mi canal', canal)
+provide('cambio', canal)
 &lt;/script>
 &lt;!-- ******************************* -->
 &lt;style scoped>
@@ -58,7 +58,7 @@ provide('mi canal', canal)
   &lt;script setup>
   import { inject } from 'vue';
   
-  let canalHijo = inject('mi canal')
+  let canalHijo = inject('cambio')
   
   const modificar = () =>{
     canalHijo.value = 'Ingrid'
