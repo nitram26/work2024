@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> Fecha Actual </h1> 
+<ol>
+<li>Usar Windows</li>
+<li>Elegir el formato desde la pagina web</li>
+<li>BUSCAR EL NOMBRE DE LA PAGINA!!!</li>
+</ol>
+<img src="/src/assets/image/javascript/fechaActual.png" alt="fechaActual" class="img">
+  <pre>
+    <div>
+      &lt;template>
+      &lt;div>
+          &lt;h1>VUE3&lt;/h1>
+          {{ fecha }}
+       
+      &lt;/div>
+    &lt;/template>
+    &lt;!-- ************************************* -->
+    &lt;script setup>
+    const fechaActual = new Date();
+    const dia = fechaActual.getDate();
+    const mes = fechaActual.getMonth() + 1; // Los meses van de 0 a 11
+    const año = fechaActual.getFullYear();
+    let fecha = `${dia}/${mes}/${año}`;
+    
+    &lt;/script>
+    &lt;!-- ************************************* -->
+    &lt;style scoped>
+    
+    &lt;/style>    
+    </div>
+  </pre>
+</body>
+</html>
+
+

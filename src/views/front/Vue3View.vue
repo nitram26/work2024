@@ -21,13 +21,14 @@
         <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- *********************************************** -->
+    <!-- //////////////////////////////////////////////// -->
 <v-row>
   <!-- columna -->
   <v-col cols="12" class="bg-red-darken-2 text-center">
 <h2>Vue3 Intro</h2>
   </v-col>
 </v-row> 
+<!-- **************************************************** -->
 <v-row>
   <v-col cols="3" class="bg-teal-lighten-5">
     <v-card
@@ -37,11 +38,28 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Crear Estructura </v-card-title>
+  <v-card-title class="text-red"> Crear Estructura </v-card-title>
   <v-card-subtitle>Vue.Cli - Vue.Vite</v-card-subtitle>
 </v-card-item>
 <v-card-text>
 Árbol inicial de carpetas
+</v-card-text>
+</v-card>
+  </v-col>
+<!-- ********************************************************* -->
+<v-col cols="3" class="bg-teal-lighten-5">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title class="text-red"> Crear Snippet </v-card-title>
+  <v-card-subtitle>link</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Como instalarlo en VSCode
 </v-card-text>
 </v-card>
   </v-col>
@@ -54,7 +72,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/RelacionarComponentes.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> LLamar un Componente </v-card-title>
+  <v-card-title class="text-red"> LLamar un Componente </v-card-title>
   <v-card-subtitle>Relacionar 2 componentes</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -63,23 +81,7 @@ Forma de unir y relacionar Componentes
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title> Crear Snippet </v-card-title>
-  <v-card-subtitle>link</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Como instalarlo en VSCode
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
+
   <v-col cols="3" class="bg-teal-lighten-5">
     <v-card
 class="mx-auto my-8"
@@ -113,7 +115,7 @@ Uso de If y/o Show
 </v-card-text>
 </v-card>
   </v-col>
-<!-- ********************************************************* -->
+
 <!-- ********************************************************* -->
   <v-col cols="3" class="bg-teal-lighten-5">
     <v-card
@@ -276,23 +278,7 @@ Números, palabras, arrays, objetos
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-  <v-col cols="3" class="bg-teal-lighten-4">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/VmodelUno.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title> V-MODEL </v-card-title>
-  <v-card-subtitle>fUNCIONAMIENTO Básico</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-En v-text-field y v-checkbox
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
+
   </v-row>
   <!-- /////////////////////////////////////////////////////// -->
   <v-row class="bg-lime-darken-2 pa-2" >
@@ -315,23 +301,6 @@ max-width="344" >
 </v-card-item>
 <v-card-text>
 Repaso General
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-  <v-col cols="3" class="bg-teal-lighten-4">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/CuestionarioVfor.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title>Cuestionario V-FOR </v-card-title>
-  <v-card-subtitle>Recorrido de objeto y array</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Preguntas y respuestas 
 </v-card-text>
 </v-card>
   </v-col>

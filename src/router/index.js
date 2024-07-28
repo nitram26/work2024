@@ -16,6 +16,7 @@ import NavigationView from '@/views/framework/vuetify/navigation/NavigationView.
 import FormInput from '../views/framework/vuetify/formInput/FormInput.vue'
 import FrameWork from '@/views/framework/FrameWork.vue'
 import Angular from '@/views/framework/angular/Angular.vue'
+import Javascript from '@/views/front/JavascriptView.vue'
 
 const routes = [
   {
@@ -102,6 +103,11 @@ const routes = [
     path: '/angular',
     name: 'Angular',
     component: Angular
+  },
+  {
+    path: '/javascript',
+    name: 'Javascript',
+    component: Javascript
   },
   
   

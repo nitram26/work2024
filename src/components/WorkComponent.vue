@@ -1,28 +1,33 @@
 <template>
-  <v-card 
-  class="mx-auto bg-teal" 
-  max-width="400"
-  height="177"
-  >
-    <v-card-title>{{ title }}</v-card-title>
-    <v-card-text>{{ content }}</v-card-text>
-  </v-card>
+  <div class="uno">
+    <h2>hijo</h2>
+
+<h3>{{ title }} </h3>
+<p> {{ content }}</p>
+  </div>
+
 </template>
 <!-- //////////////////////////////////////////////////// -->
 <script setup>
-import { defineProps } from 'vue'
-const props = defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  content: {
-    type: String,
-    required: true
-  }
-})
+
+let props = defineProps(
+  {
+  title:String,
+  content:String,
+ 
+}
+
+)
+
+
 </script>
 <!-- //////////////////////////////////////////////////// -->
 <style scoped>
-
+.uno{
+  border: solid brown 3px;
+  width: 28em;
+  padding: 3em;
+  border-radius: 2em;
+  background-color: aliceblue;
+}
 </style>

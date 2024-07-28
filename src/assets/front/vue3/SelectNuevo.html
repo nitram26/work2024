@@ -16,7 +16,7 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1> SELECT 0805</h1>
+<h1> SELECT 0705</h1>
 <ol>
 <li>Realizado con vuetify</li>
 
@@ -33,7 +33,6 @@
         &lt;h1>Practica Julio 2024&lt;/h1> 
         &lt;v-select
         :items="select"
-        v-model="item"
         label="País"
         width="15em"
         class="azul"
@@ -46,13 +45,9 @@
     &lt;!-- ******************************* --> 
     &lt;script setup>
     import { ref } from 'vue';
-    
-    
-    let item = ref('')
+
     let select = ref(['Peru', 'Brasil', 'Japón', 'India'])
-    
-    
-    
+
     &lt;/script>
     &lt;!-- ******************************* -->
     &lt;style scoped>

@@ -13,7 +13,7 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-  <h2>	Opciones V-FOR 0745	</h2>
+  <h2>	Opciones V-FOR 1745	</h2>
 <ol>		
 <li>	hacer un card y tener un objeto de preguntas 	</li>
 <li>	que cada pregunta con su respuesta aparezcan	</li>
@@ -24,65 +24,92 @@
   <pre>
     <div>
       &lt;template>
-      &lt;div>
-          &lt;h2>Opciones con V-for&lt;/h2>
-          &lt;div class="card" v-for="(titulo, index) in preguntas" :key="index" >
-            &lt;h2 >{{ titulo.pregunta }}&lt;/h2>
-            &lt;ol>
-              &lt;li v-for="(respuesta, index) in titulo.opciones" :key="index" class="res">{{ respuesta }}&lt;/li>
-              &lt;h2 :class="color">{{ titulo.respuestaCorrecta }}&lt;/h2>
-            &lt;/ol>      
-            &lt;button @click="rpta" >RESPUESTA&lt;/button>
-    
-          &lt;/div>
-      &lt;/div>
-    &lt;/template>
-    &lt;!-- ************************************* -->
-    &lt;script setup>
-    import { ref } from 'vue';
-    
-    let color = ref('rojo')
-    const rpta = () => {
-    color.value = 'verde'
-    
-    const restablecerColor = () => {
-        color.value = 'rojo';
-    }
-    setTimeout(restablecerColor, 3000)
-    }
-    const preguntas = [
-      { 
-          pregunta: "¿Lenguaje más utilizado?",
-          opciones: ["JavaScript", "Python", "Java", "C++"],
-          respuestaCorrecta: "JavaScript"
-      },
-      {
-          pregunta: "¿Significado de CSS?",
-          opciones: ["Cascading Style Sheets", "Creative Style Selector", "Code Styling System", "Crazy Stylish Syntax"],
-          respuestaCorrecta: "Cascading Style Sheets"
-      },
-      {
-          pregunta: "¿Qué tipo de lenguaje es Python?",
-          opciones: ["Interpretado", "Compilado", "Ambos", "Ninguno de los anteriores"],
-          respuestaCorrecta: "Interpretado"
-      },
-      {
-          pregunta: "¿Qué es HTML?",
-          opciones: ["Un lenguaje de programación", "Un sistema de gestión de bases de datos", "Un lenguaje de marcado", "Un lenguaje de consulta"],
-          respuestaCorrecta: "Un lenguaje de marcado"
-      },
-      {
-          pregunta: "¿Cuál de los siguientes no es un lenguaje de programación?",
-          opciones: ["HTML", "CSS", "Java", "Ruby"],
-          respuestaCorrecta: "CSS"
-      },
-      
-    ]
-    
-    &lt;/script>
-    &lt;!-- ************************************* -->
-    &lt;style scoped>
-    .card{
+  &lt;h1>PRACTICA JULIO 2024&lt;/h1>
+  
+ &lt;div v-for="(preg, index) in preguntasComputacion" :key="index" class="card">
+ &lt;span>{{ index+1 }}.- {{ preg.pregunta }}&lt;/span>
+ &lt;ul>
+  &lt;li v-for="(option, index) in preg.opciones" :key="index">{{ option }}&lt;/li> &lt;br>&lt;br>
+&lt;/ul>
+&lt;h2 v-show="ver">{{ preg.respuesta }}&lt;/h2>
+&lt;v-btn @click="see">Push&lt;/v-btn>
+&lt;/div>
+
+
+&lt;/template>
+&lt;!-- ************************************* -->
+&lt;script setup>
+import { ref } from 'vue';
+
+let ver = ref(false)
+
+let see = ()=>{
+  ver.value = !ver.value
+
+  let color = ()=>{
+    ver.value = !ver.value
+  }
+  setTimeout(color, 3000)
+}
+
+  const preguntasComputacion = [
+        {
+            pregunta: "¿Cuál de los siguientes es un lenguaje de programación orientado a objetos?",
+            opciones: [
+                "A) COBOL",
+                "B) C++",
+                "C) Assembly",
+                "D) Fortran"
+            ],
+            respuesta: "B) C++"
+        },
+        {
+            pregunta: "¿Qué es una base de datos relacional?",
+            opciones: [
+                "A) Un sistema para gestionar archivos de texto",
+                "B) Un sistema que utiliza tablas para almacenar datos y establecer relaciones entre ellos",
+                "C) Un programa para crear gráficos y diagramas",
+                "D) Un lenguaje de programación utilizado para desarrollar aplicaciones web"
+            ],
+            respuesta: "B) Un sistema que utiliza tablas para almacenar datos y establecer relaciones entre ellos"
+        },
+        {
+            pregunta: "¿Qué representa 'HTTP' en el contexto de la web?",
+            opciones: [
+                "A) HyperText Transfer Protocol",
+                "B) HyperText Transmission Program",
+                "C) HyperText Transfer Program",
+                "D) HyperText Transmission Protocol"
+            ],
+            respuesta: "A) HyperText Transfer Protocol"
+        },
+        {
+            pregunta: "¿Cuál de los siguientes NO es un sistema operativo?",
+            opciones: [
+                "A) Windows",
+                "B) Linux",
+                "C) Python",
+                "D) macOS"
+            ],
+            respuesta: "C) Python"
+        },
+        {
+            pregunta: "¿Qué significa la sigla 'SQL' en el contexto de bases de datos?",
+            opciones: [
+                "A) Structured Query Language",
+                "B) Simple Query Language",
+                "C) Sequential Query Language",
+                "D) Structured Question Language"
+            ],
+            respuesta: "A) Structured Query Language"
+        }
+    ];
+
+
+&lt;/script>
+&lt;!-- ************************************* -->
+&lt;style scoped>
+  .card{
     background-color: darkcyan;
     width: 30em;
     height: 17em;
@@ -102,7 +129,10 @@
     .res{
       margin-left: 2em;
     }
-    &lt;/style>
+    li{
+      margin-left: 2em;
+    }
+&lt;/style>
     </div>
   </pre>
 </body>
