@@ -112,23 +112,38 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
+    href="http://127.0.0.1:5501/src/assets/home/ManagerNvm.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> NVM </v-card-title>
+      <v-card-subtitle>Manager de NODE</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      INSTACIÓN Y USO
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ************************************************************ -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
     href="http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> COLORES </v-card-title>
       <v-card-subtitle>VUETIFY</v-card-subtitle>
     </v-card-item>
-    <v-card-text> 
+    <v-card-text>
       Paleta de Colores 
     </v-card-text>
   </v-card>
 </v-col>
-
- 
-<!-- ********************************************************************** -->
+<!-- ************************************************************ -->
 </v-row>
   </div>
-<!-- ******************************************************************** -->
+<!-- ************************************************************ -->
 <div id="section3" class="mt-12" >
 <v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
