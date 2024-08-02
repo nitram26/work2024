@@ -4,55 +4,31 @@
     :items="datum"
     class="elevation-2 text-h6"
   >
-    <template v-slot:top>
-      <v-row>
-        <v-col cols="2" class="bg-blue-darken-1 text-center">
-          <span>PLACEHOLDER</span>
-        </v-col>
-        <v-col cols="1" class="mt-2">
-          <v-text-field
-            label="Cantidad"
-            variant="outlined"
-            prepend-inner-icon="mdi-cart"
-            class="text-green-darken-4"
-            hide-details="auto"
-            hint="Registros"
-            readonly
-            :value="cantidadRegistros"
-          />
-        </v-col>
-      </v-row>
-      <v-row class="bg-cyan text-h6 pl-4">
-        <v-col cols="3">
-          APELLIDOS
-        </v-col>
-        <v-col cols="3" class="pl-8">
-          NOMBRE
-        </v-col>
-        <v-col cols="3">
-          CORREO
-        </v-col>
-        <v-col cols="3" class="pl-10">
-          <span class="pl-8">CIUDAD</span>
-        </v-col>
-      </v-row>
-    </template>
-  </v-data-table>
+   </v-data-table>
+   <!-- otra forma-->
+    <v-row>
+      <v-col cols="3">
+        <h5>NOMBRE</h5>
+        <ol>
+          <li v-for="(post, index) in datum" :key="index">{{ post.city}}</li>
+        </ol>
+      </v-col>
+      <!-- ********************** -->
+    </v-row>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
 const datum = ref([]);
 const headers = [
-  { text: 'Name', value: 'name' },
+  { name: 'Name', value: 'name' },
   { text: 'Username', value: 'username' },
   { text: 'Email', value: 'email' },
   { text: 'City', value: 'city' }
 ];
 
-const cantidadRegistros = computed(() => datum.value.length);
 
 onMounted(async () => {
   try {
@@ -64,7 +40,7 @@ onMounted(async () => {
       city: user.address.city
     }));
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching data:', error); 
   }
 });
 </script>
