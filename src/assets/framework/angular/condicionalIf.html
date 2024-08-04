@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> CONDICIONAL IF  </h1> 
+<ol>
+  <li>Un input que muestre por consola lo escrito</li>
+  <li>Esto a traves de un botón</li>
+  <li>Una condicional que muestre SE HA ENVIADO MENSAJE al pulsar el botón</li>
+  <li>Un botón cerrar </li>
+  <li>Y un else que muestre Mensaje de prueba mientras no se envié</li>
+ <h6>NOTA IMPORTANTE</h6>
+<li>Para usar las condicionales se tiene que importar el CommonModule</li>
+<li>Tanto en el appModules.ts como en el ts del componente</li>
+</ol>
+<img src="/src/assets/image/angular/ngIf1.PNG" alt="" class="img">
+<img src="/src/assets/image/angular/ngIf.PNG" alt="" class="img">
+  <pre>
+    <div>
+    <H2>AGREGAR EL COMMON MODULE EN  APPMODULES.TS</H2>
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { CommonModule } from '@angular/common';
+    
+    @NgModule({
+      declarations: [
+       
+       
+      ],
+      imports: [
+        BrowserModule,
+        CommonModule
+      ],
+      providers: [],
+     
+    })
+    export class AppModule { }
+    
+    <H2>EN HTML</H2>
+
+    &lt;input 
+    type="text"  
+    placeholder="Ingresar Nombre" 
+    class="form-control m-2" #name>
+    
+    &lt;button class="btn btn-primary m-2" (click)="mostrarConsola(name.value)">Mostrar en Consola&lt;/button>
+    
+    &lt;div class="alert alert-primary mt-4" *ngIf="msg; else mensaje">
+      &lt;p>SE HA ENVIADO EL MENSAJE&lt;/p>
+      &lt;button (click)="close()" class="btn btn-success">CERRAR&lt;/button>
+    &lt;/div>
+    
+    &lt;ng-template #mensaje>
+      &lt;div class="alert alert-dangerFOR">mensaje de prueba &lt;/div>
+    &lt;/ng-template>
+
+    <H2>EN EL TS</H2>
+    import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+
+@Component({
+  selector: 'app-formulario',
+  standalone: true,
+  imports: [CommonModule ],
+  templateUrl: './formulario.component.html',
+  styleUrl: './formulario.component.css'
+})
+export class FormularioComponent {
+
+  msg : boolean = false;
+
+   mostrarConsola(name : string){
+    console.log(name);
+    this.msg = true
+   }
+
+close(){
+  this.msg= false
+}
+}
+    
+
+
+    </div>
+  </pre>
+</body>
+</html>
+
+
