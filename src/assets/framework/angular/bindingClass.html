@@ -13,69 +13,79 @@
           border: brown double 6px;
         }
         </style>
-        <title>ELEMENTOS RÁPIDOS 1015</title>
+        <title>ELEMENTOS RÁPIDOS </title>
       </head>
       <body>
-      <h1> Binding con Clases  </h1> 
+      <h1> Binding con Clases 2159 </h1>
       <ol>
       <li>Tres botones cambien el color del texto</li>
       <li>luego un botón que habilite y deshabilite los botones </li>
-      <li>las clases para css se agregan solo con la palabra class</li>
       <li>El click se agrega entre parentesis</li>
-      <li>las variables se ponen [class] = "nombreDeVariable"</li>
+      <li>el disabled se pone [disabled] = "nombreDeVariable" </li>
+      <li>las clases para css se agregan solo con la palabra class</li>
       </ol>
       <img src="/src/assets/image/angular/bindingClase.PNG" alt="bindingClase" class="img">
         <pre>
           <div>
-            HTML
-           
-            &lt;button [class.disabled]="buttonDisabled" class="btn btn-primary"(click)="color='text-primary'" >Color 1&lt;/button> 
-            &lt;button [class.disabled]="buttonDisabled" class="btn btn-success" (click)="color='text-success'" >Color 2&lt;/button> 
-             &lt;button 
-             [class]= "{
-              disabled :buttonDisabled}" 
-              class="btn btn-danger" 
-              (click)="color='text-danger'" 
-              >
-              Color 3&lt;/button>
+            HTML. 
+
+            &lt;h1>BINDING&lt;/h1>
+            &lt;button 
+            [disabled]="cambio"
+            (click)="uno()">color1&lt;/button>
+
+            &lt;button 
+            [disabled]="cambio"
+            (click)="dos()">
+            color2&lt;/button>
+
+            &lt;button 
+            [disabled]="cambio" 
+            (click)="tres()">
+            color3&lt;/button>
             
+            &lt;span [class]="color">Este texto cambiará de color&lt;/span>
             
-            &lt;h4 [class]="color">Texto que cambiará de color &lt;/h4>
-            
-            &lt;br>&lt;br>&lt;br>&lt;br>&lt;br>&lt;br>
-            &lt;button (click)="buttonDisabled = !buttonDisabled " class="btn btn-success">
-              habilitar / Deshabilitar 
-            &lt;/button>
-            
-            ///////////////////////////////////////////////////////////////////////////////
-            
-            TS 
-            
+            &lt;button 
+            (click)="deshabilitar()">hab/deshab&lt;/button>
+
+            {{cambio}}
+
+            ///////////////////////////////////////////////////////////
+
+            TS. 
+
             import { Component } from '@angular/core';
-            
+
             @Component({
-              selector: 'app-botones',
+              selector: 'app-accion',
               standalone: true,
               imports: [],
-              templateUrl: './botones.component.html',
-              styleUrl: './botones.component.css'
+              templateUrl: './accion.component.html',
+              styleUrl: './accion.component.css'
             })
-            export class BotonesComponent {
-            
-              color : string = ''
-              
-              buttonDisabled: boolean = false
-            
-              ngOnInit(): void {
-              
-              }
+            export class AccionComponent {
+
+            color: string = ''
+            cambio : boolean = false
+
+            uno (){
+              this.color = 'green'
             }
-            
-            
+            dos (){
+              this.color = 'red'
+            }
+            tres (){
+              this.color = 'blue'
+            }
+
+            deshabilitar (){
+              this.cambio = !this.cambio
+            }
+
+            }
+
           </div>
         </pre>
       </body>
       </html>
-    
-
-  

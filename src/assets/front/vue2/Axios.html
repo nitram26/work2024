@@ -26,6 +26,7 @@
     headers: this.$store.getters['auth/getAuthHeader'](this.$store.getters['permission/getHeaders'])
     }).then((data) => {
     this.clients = data.data.data
+    console.log(this.clients)
     })
     },
   </pre>
