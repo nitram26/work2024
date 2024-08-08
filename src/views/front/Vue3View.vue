@@ -15,13 +15,20 @@
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
         <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/front" title="Intro" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/vue2" title="Componentes Básicos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
+        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">Vue3 INTRO</v-btn></v-list-item>
+
+        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">Componentes 1</v-btn></v-list-item>
+
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">Componentes 2</v-btn></v-list-item>
+
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store">Componentes 3</v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- fin de navegador derecho -->
+    <!-- ********************************** -->
+  
     <!-- //////////////////////////////////////////////// -->
+    <div id="section1" class="mt-12" >
 <v-row>
   <!-- columna -->
   <v-col cols="12" class="bg-red-darken-2 text-center">
@@ -219,7 +226,9 @@ Características de uso de cada uno
 </v-card>
   </v-col>
 </v-row>
+</div>
 <!-- //////////////////////////////////////////////////// -->
+<div id="section2">
   <v-row class="bg-blue-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >Componentes #1 </h2>
@@ -280,7 +289,9 @@ Números, palabras, arrays, objetos
   <!-- **************************************************** -->
 
   </v-row>
+</div>
   <!-- /////////////////////////////////////////////////////// -->
+  <div id="section3" class="mt-12" >
   <v-row class="bg-lime-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >Componentes #2 </h2>
@@ -409,7 +420,11 @@ Reenviar la data a otro componente
   </v-col>
   <!-- **************************************************** -->
 </v-row>
+</div>
+
   <!-- /////////////////////////////////////////////////////// -->
+   <div class="mt-12" id="section4">
+
   <v-row class="bg-lime-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >COMPONENTES 3 </h2>
@@ -422,14 +437,14 @@ Reenviar la data a otro componente
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.ht"
+href="http://127.0.0.1:5501/src/assets/front/vue3/framework.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> title</v-card-title>
-  <v-card-subtitle>Con Swal</v-card-subtitle>
+  <v-card-title class="text-red"> FRAMEWORKS Y PREPROCESADORES</v-card-title>
+  <v-card-subtitle>scss y bootstrap</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Solo
+Instalciones y configuraciones
 </v-card-text>
 </v-card>
   </v-col>
@@ -440,18 +455,19 @@ Solo
 class="mx-auto my-8"
 elevation="16"
 target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Injection.html"
+href=""
 max-width="344" >
 <v-card-item>
   <v-card-title>TITLE </v-card-title>
   <v-card-subtitle>subtitle</v-card-subtitle>
 </v-card-item>
 <v-card-text>
- párrafo
+ párrafosss
 </v-card-text>
 </v-card>
   </v-col>
 </v-row>
+</div>
 <!-- **************************************************** -->
   <!-- /////////////////////////////////////////////////////// -->
       </template>
@@ -462,6 +478,14 @@ const drawer = ref(false);
 
 const toggleDrawer = () => {
   drawer.value = !drawer.value;
+}
+// NAV
+
+const scrollTo = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 }
   </script>
   <!-- ************************************************* -->
