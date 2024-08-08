@@ -53,7 +53,7 @@
     href="http://127.0.0.1:5501/src/assets/front/javascript/tipoString.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> STRING  </v-card-title>
+      <v-card-title class="text-teal"> STRING  </v-card-title>
       <v-card-subtitle>Cadenas de Texto</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -71,7 +71,7 @@
     href="http://127.0.0.1:5501/src/assets/front/javascript/datoNumber.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> NUMBER  </v-card-title>
+      <v-card-title class="text-teal"> NUMBER  </v-card-title>
       <v-card-subtitle>Cadenas de Texto</v-card-subtitle>
     </v-card-item>
     <v-card-text>

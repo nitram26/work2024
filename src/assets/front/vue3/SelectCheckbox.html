@@ -16,7 +16,7 @@
         <title>ELEMENTOS RÁPIDOS</title>
       </head>
       <body>
-      <h1> CHECKBOX 0805</h1>
+      <h1> CHECKBOX 0705</h1>
       <ol>
       <li>Realizado con vuetify</li>
       <li>En html seria diferente la sintaxis</li>
@@ -25,6 +25,7 @@
      
       </ol>
       <img src="/src/assets/image/select&Ckeckbox.png" alt="select&Ckeckbox" class="img">
+      <h2>CON VUETIFY</h2>
         <pre>
           <div>
             &lt;template>
@@ -56,6 +57,36 @@
             color: blue;
           }
           &lt;/style>
+          &lt;!-- ******************************* -->
+          <H2>CON CSS </H2>
+          &lt;template>
+          &lt;div>
+        &lt;input type="checkbox" name="" id="" v-model="cambio">
+        &lt;h4 v-show="cambio ===true" class="uno">ACEPTA&lt;/h4>
+        &lt;h4 v-show="cambio ===false" class="dos"> NO ACEPTA&lt;/h4>
+          &lt;/div>
+        &lt;/template>
+        &lt;!-- ************************************* -->
+        &lt;script setup>
+        import { ref } from 'vue';
+        
+        
+        let cambio = ref(false)
+        &lt;/script>
+        &lt;!-- ************************************* -->
+        &lt;style scoped>
+        .uno {
+          background-color: antiquewhite;
+          color: brown;
+        }
+        .dos {
+          background-color: brown;
+          color: aliceblue;
+        }
+        &lt;/style>
+        
+
+
 
           </div>
         </pre>

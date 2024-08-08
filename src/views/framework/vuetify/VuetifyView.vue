@@ -29,7 +29,7 @@
     <!-- ********************************** -->
   <v-row class="mt-12">
     <v-col class="mt-4">
-      <h3 class="bg-green-darken-4 pa-4  text-center">MODELOS </h3>
+      <h3 class="bg-green-darken-4 pa-4  text-center">INTRODUCCIÓN </h3>
     </v-col>
      
       </v-row>
@@ -41,14 +41,14 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ModelVue2.html"
+    href="http://127.0.0.1:5501/src/assets/framework/vuetify/instalacion.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> CREACIÓN  </v-card-title>
-      <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
+      <v-card-title class="text-red"> VUETIFY  </v-card-title>
+      <v-card-subtitle>Secuencia de Instalación </v-card-subtitle>
     </v-card-item>
     <v-card-text>
-Model
+      Proyectos iniciales y existentes
     </v-card-text>
   </v-card>
   </v-col>
