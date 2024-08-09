@@ -16,7 +16,12 @@
   <h2>	INJECTION 0651</h2>
 <ol>		
 <li>	Padre: Se importa el hijo, se crea la variable y se envía con provide	</li>
+<li> Primero se pone el nombre de envio entre comillas simples</li>
+<li> y a continuación la variable que se envia, sin comillas</li>
+<li>Ejemplo: provide('envio', num) </li>
 <li>	Hijo: se recibe con el inject 	</li>
+<li> Ejemplo : let producto = inject('envio')</li>
+<li>Se muestra la variable producto</li>
 <li>	Para cambiar se crea una función en el hijo con un botón 	</li>
 <li>	Y el valor que se quiere cambiar. Listo 	</li>
 </ol>		
