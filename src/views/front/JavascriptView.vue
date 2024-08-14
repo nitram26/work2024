@@ -86,7 +86,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/javascript/datoNumber.html"
+    href="http://127.0.0.1:5501/src/assets/front/javascript/funciones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> FUNCIONES  </v-card-title>
