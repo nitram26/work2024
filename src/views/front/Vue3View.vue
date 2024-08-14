@@ -36,8 +36,8 @@
   </v-col>
 </v-row> 
 <!-- **************************************************** -->
-<v-row>
-  <v-col cols="3" class="bg-teal-lighten-5">
+<v-row class="bg-indigo-lighten-3">
+  <v-col cols="3" >
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -54,7 +54,7 @@ max-width="344" >
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-<v-col cols="3" class="bg-teal-lighten-5">
+<v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -71,7 +71,7 @@ Como instalarlo en VSCode
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -89,7 +89,7 @@ Forma de unir y relacionar Componentes
   </v-col>
 <!-- ********************************************************* -->
 
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -106,7 +106,7 @@ Llamado estático
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -124,7 +124,7 @@ Uso de If y/o Show
   </v-col>
 
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -141,7 +141,7 @@ Uso de Bind
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -158,7 +158,7 @@ Uso de MODEL
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3" >
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -175,7 +175,7 @@ Si no acepta cambia de color y mensaje de no acepta
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -192,7 +192,7 @@ Si no acepta cambia de color y mensaje de no acepta
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3" >
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -209,7 +209,7 @@ max-width="344" >
 </v-card>
   </v-col>
 <!-- ********************************************************* -->
-  <v-col cols="3" class="bg-teal-lighten-5">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -235,8 +235,8 @@ Características de uso de cada uno
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row>
-    <v-col cols="3" class="bg-teal-lighten-4">
+  <v-row class="bg-cyan-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -253,7 +253,7 @@ Que aumente y disminuya +-1
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -270,7 +270,7 @@ Introducción a la reactividad
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-  <v-col cols="3" class="bg-teal-lighten-4">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -298,8 +298,8 @@ Números, palabras, arrays, objetos
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row>
-    <v-col cols="3" class="bg-teal-lighten-4">
+  <v-row class="bg-blue-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -316,7 +316,7 @@ Repaso General
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -333,7 +333,7 @@ max-width="344" >
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -350,7 +350,7 @@ max-width="344" >
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-  <v-col cols="3" class="bg-teal-lighten-4">
+  <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -367,7 +367,7 @@ max-width="344" >
 </v-card>
   </v-col>
   <!-- **************************************************** -->
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -385,7 +385,7 @@ max-width="344" >
   </v-col>
   <!-- **************************************************** -->
 
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -403,7 +403,7 @@ max-width="344" >
   </v-col>
 
 <!-- **************************************************** -->
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -420,6 +420,23 @@ Reenviar la data a otro componente
 </v-card>
   </v-col>
   <!-- **************************************************** -->
+    <v-col cols="3">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title>ENRUTADO </v-card-title>
+  <v-card-subtitle>Uso Path y Name </v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Rutas fijas, dinámicas
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
 </v-row>
 </div>
 
@@ -428,12 +445,12 @@ Reenviar la data a otro componente
 
   <v-row class="bg-lime-darken-2 pa-2" >
     <v-col cols="11" class="text-center">
-      <h2 >COMPONENTES 3 </h2>
+      <h2 >ESTILOS </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row>
-    <v-col cols="3" class="bg-teal-lighten-4">
+  <v-row class="bg-purple-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
@@ -451,7 +468,7 @@ Instalciones y configuraciones
   </v-col>
   <!-- **************************************************** -->
 
-    <v-col cols="3" class="bg-teal-lighten-4">
+    <v-col cols="3">
     <v-card
 class="mx-auto my-8"
 elevation="16"
