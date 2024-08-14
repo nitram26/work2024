@@ -2,9 +2,17 @@
   <v-data-table
     :items="datum"
     class="elevation-2 text-h6"
-   
   >
   </v-data-table>
+  <v-row>
+    <v-col cols="3">
+
+      <h3 class="titulo">NOMBRE</h3>
+      <ol>
+        <li v-for="(item, index) in datum" :key="index">{{ item.NOMBRE }}</li>
+      </ol>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
@@ -30,10 +38,8 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.custom-header {
-  background-color: red; /* Cambia el color según tu preferencia */
+.titulo{
+  background-color: brown;
   color: white;
-  padding: 10px;
-  font-weight: bold;
 }
 </style>

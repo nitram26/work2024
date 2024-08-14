@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1>FUNCIONES  </h1> 
+<ol>
+<li>Llamar un funcion con un nombre</li>
+<li>una con un saludo</li>
+<li>usar un return en la funcion anterior</li>
+<li>usar parámetros</li>
+<li>valores por defecto en la anterior</li>
+<li>asignar la función a una variable</li>
+</ol>
+<img src="/src/assets/image/front/javascript/funciones.png" alt="funciones" class="img">
+  <pre>
+    <div>
+
+      //FUNCIÓN DECLARADA. Se puede invocar incluso antes de ser declarada
+      //sin parametros
+      function nombre() {
+         console.log('hola mundo');
+      }
+      nombre()
+      
+      // que devuelve valor
+      // uso de return
+      function saludo(){
+        console.log('buenos días');
+        return'valor de funcion'
+      }
+      let saludan = saludo()
+      console.log(saludan)
+      
+      // con parámetros
+      function saludar (nombre, edad){
+        console.log(`Mi nombre es ${nombre} y mi edad es ${edad} años`)
+      }
+      saludar('Carlos', 65)
+      
+      //valores por defecto
+      function pedido (producto='ninguno', cantidad=0){
+        console.log(`El cliente requiere el pruducto: ${producto} y la cantidad es: ${cantidad}`);
+      }
+      pedido()
+      
+      //FUNCION EXPRESADA Solo se puede invocar después de declararse
+      //Es la más recomendada para mejor estructuración del código
+      // ASIGNAR VALOR A UNA VARIABLE(función anónima)
+      let tarea = function(){
+        console.log('Tarea iniciada');
+      }
+      tarea()
+          
+    </div>
+  </pre>
+</body>
+</html>
