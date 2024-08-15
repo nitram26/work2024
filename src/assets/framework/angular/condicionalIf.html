@@ -16,7 +16,7 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1> CONDICIONAL IF 0541 </h1> 
+<h1> CONDICIONAL IF 1044 </h1> 
 <ol>
   <li>Un input que muestre por consola lo escrito</li>
   <li>Esto a traves de un botón</li>
@@ -29,72 +29,43 @@
 </ol>
 <img src="/src/assets/image/angular/ngIf1.PNG" alt="" class="img">
 <img src="/src/assets/image/angular/ngIf.PNG" alt="" class="img">
+<H2>AGREGAR EL COMMON MODULE EN  APPMODULES.TS</H2>
   <pre>
-    <div>
-    <H2>AGREGAR EL COMMON MODULE EN  APPMODULES.TS</H2>
-    import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
-    import { CommonModule } from '@angular/common';
-    
-    @NgModule({
-      declarations: [
-       
-       
-      ],
-      imports: [
-        BrowserModule,
-        CommonModule
-      ],
-      providers: [],
-     
-    })
-    export class AppModule { }
-    
-    <H2>EN HTML</H2>
+    <div class="div">
+      <H2>TEMPLATE</H2>
+      &lt;input type="text" #name>
 
-    &lt;input 
-    type="text"  
-    placeholder="Ingresar Nombre" 
-    class="form-control m-2" #name>
-    
-    &lt;button class="btn btn-primary m-2" (click)="mostrarConsola(name.value)">Mostrar en Consola&lt;/button>
-    
-    &lt;div class="alert alert-primary mt-4" *ngIf="msg; else mensaje">
-      &lt;p>SE HA ENVIADO EL MENSAJE&lt;/p>
-      &lt;button (click)="close()" class="btn btn-success">CERRAR&lt;/button>
-    &lt;/div>
-    
-    &lt;ng-template #mensaje>
-      &lt;div class="alert alert-dangerFOR">mensaje de prueba &lt;/div>
-    &lt;/ng-template>
+&lt;button (click)="cambio(name.value)">Press&lt;/button>
 
-    <H2>EN EL TS</H2>
-    import { Component } from '@angular/core';
+&lt;h4 *ngIf="mensaje"> {{name.value}} &lt;/h4>
+
+&lt;p *ngIf="mensaje">el mensaje ha sido enviado&lt;/p>
+
+
+<h2>SCRIPT</h2>
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-formulario',
+  selector: 'app-aarepasar',
   standalone: true,
-  imports: [CommonModule ],
-  templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css'
+  imports: [CommonModule],
+  templateUrl: './aarepasar.component.html',
+  styleUrl: './aarepasar.component.css'
 })
-export class FormularioComponent {
+export class AarepasarComponent {
 
-  msg : boolean = false;
+  mensaje : boolean = false
+cambio(name: string) {
+  name
+  this.mensaje=true
+  setTimeout(() => {
+    this.mensaje=false
 
-   mostrarConsola(name : string){
-    console.log(name);
-    this.msg = true
-   }
-
-close(){
-  this.msg= false
+  }, 3000);
+}   
 }
-}
-    
-
 
     </div>
   </pre>

@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1>*ngFor 0657 </h1> 
+<ol>
+  <li>Hacer un array en el ts</li>
+  <li>Importarlo al Html</li>
+
+  <li>ver script </li>
+<li>Para usar *ngIf y *ngFor se tiene que importar en el ts commonModule</li>
+<li>tanto en el import como en el Component/ import</li>
+<li>sintaxis: *ngFor="let persona of personas; let i = index"</li>
+<li>Sintaxis de array: personas: IPersona[] = [ {} ]</li>
+<li>import { CommonModule } from '@angular/common';</li>
+<li>  imports: [CommonModule ],</li>
+</ol>
+<img src="/src/assets/image/angular/ngFor.PNG" alt="ngFor" class="img">
+  <pre>
+    <div>
+<h2>TEMPLATE</h2>
+      &lt;div class="div">
+      &lt;ul>
+        &lt;li *ngFor="let persona of personas; let i = index"> {{ i+1}}. {{persona.nombre }} y su edad es {{persona.edad }}&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+    <H2>SCRIPT</H2>
+    import { Component } from '@angular/core';
+    import {IPersona} from '../IPersona'
+    import { CommonModule } from '@angular/common';
+    @Component({
+      selector: 'app-bucles',
+      standalone: true,
+      imports: [CommonModule ],
+      templateUrl: './bucles.component.html',
+      styleUrl: './bucles.component.css'
+    })
+    export class BuclesComponent {
+    
+      personas: IPersona[] = [
+        {
+          nombre : 'Juan', edad: 29
+        },
+        {
+          nombre : 'Carlos', edad: 64
+        },
+        {
+          nombre : 'Martin', edad: 96
+        },
+        {
+          nombre : 'Nestor', edad: 114
+        },
+      ]
+    }  
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  

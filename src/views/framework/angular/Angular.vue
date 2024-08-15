@@ -191,6 +191,23 @@
   </v-card>
 </v-col>
 <!-- **************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/ngFor.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title> *ngFor </v-card-title>
+      <v-card-subtitle>Sintaxis del ngFor</v-card-subtitle>
+    </v-card-item>
+    <v-card-text> 
+    Recorrido de un array u objeto
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- **************************************************************** -->
 </v-row>
 </div>
 <!-- **************************************************************** -->
