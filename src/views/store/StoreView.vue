@@ -143,6 +143,7 @@
 </v-row>
 </div>
 <!-- ********************************************************************** -->
+
  <div id="section3">
 <v-row class="bg-purple-lighten-4">
   <v-col cols="12">
@@ -180,6 +181,67 @@
     </v-card-item>
     <v-card-text>
     Problemas con el puerto
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+
+</v-row>
+</div>
+<div id="section3">
+<v-row class="bg-indigo-lighten-4">
+  <v-col cols="12">
+    <h2 class="bg-indigo-darken-1 pa-4 text-center">WINDOWS</h2>
+  </v-col>
+  <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/ArchivoAtexto.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>COPIAR NOMBRE </v-card-title>
+      <v-card-subtitle>DE windows</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Títulos de archivos a Word
+    </v-card-text>
+  </v-card>
+</v-col>
+
+  <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/Suspensi%C3%B3nPantalla.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>Suspender o Invernar </v-card-title>
+      <v-card-subtitle>Programar la pantalla de PC </v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Suspender después de cierto tiempo
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/SegundaPantalla.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>Audio-Video </v-card-title>
+      <v-card-subtitle>No se proyectaba la 2da pantalla </v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+     Problema: faltaba un controlador de video
     </v-card-text>
   </v-card>
 </v-col>
