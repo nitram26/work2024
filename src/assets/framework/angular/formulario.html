@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> FORMULARIOS </h1> 
+<ol>
+<li>Hacer un formulario</li>
+<li>importar FormsModule</li>
+</ol>
+<img src="/src/assets/image/angular/formulario.png" alt="formulario" class="img">
+  <pre>
+    HTML
+    <div>
+      &lt;div class="card">
+      &lt;div class="card-body">
+        &lt;form (ngSubmit)="procesar()">
+          &lt;div class="mb-2">
+            &lt;label class="form-label">Nombre:&lt;/label>
+            &lt;input type="text" name="nombre"  class="form-control" placeholder="Ingrese un Nombre" [(ngModel)]="persona.nombre">
+          &lt;/div>
+          &lt;div>
+            &lt;label class="form-label">Edad:&lt;/label>
+            &lt;input type="text" name="edad" class="form-control" placeholder="Ingrese su edad" [(ngModel)]="persona.edad">
+          &lt;/div>
+          &lt;button class="btn btn-primary mt-2">Enviar&lt;/button>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+    Nombre: {{persona.nombre }} &lt;br>  edad: {{persona.edad}}
+    
+    ///////////////////////////////////////////////////////////
+    TS
+    ///////////////////////////////////////////////////////////
+    
+    
+    import { Component } from '@angular/core';
+    import { FormsModule } from '@angular/forms';
+    
+    @Component({
+      selector: 'app-formularios',
+      standalone: true,
+      imports: [
+        FormsModule
+      ],
+      templateUrl: './formularios.component.html',
+      styleUrl: './formularios.component.css'
+    })
+    export class FormulariosComponent {
+      persona = {
+        nombre : '',
+        edad : ''
+      }
+    
+      procesar(){
+        console.log(this.persona);
+        
+      }
+    }
+     
+    </div>
+  </pre>
+</body>
+</html>
+
+

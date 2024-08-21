@@ -208,6 +208,23 @@
   </v-card>
 </v-col>
 <!-- **************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/formulario.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>Formularios </v-card-title>
+      <v-card-subtitle>[(ngModel)] </v-card-subtitle>
+    </v-card-item>
+    <v-card-text> 
+    Ejemplo Básico
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- **************************************************************** -->
 </v-row>
 </div>
 <!-- **************************************************************** -->
