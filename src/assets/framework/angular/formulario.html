@@ -19,7 +19,18 @@
 <h1> FORMULARIOS </h1> 
 <ol>
 <li>Hacer un formulario</li>
-<li>importar FormsModule</li>
+<li>importar FormsModule para que funcione el model</li>
+<li>manera de declarar el input</li>
+<li>input type="text" name="nombre"   [(ngModel)]="persona.nombre"</li>
+<li>necesita un name y la sintaxis del model</li>
+<li>en el TS se declara un objeto con los campos vacios  </li>
+<li>ejemplo:</li>
+<pre>
+  persona = {
+    nombre : '',
+    edad : ''
+  }
+</pre>
 </ol>
 <img src="/src/assets/image/angular/formulario.png" alt="formulario" class="img">
   <pre>
