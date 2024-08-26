@@ -21,7 +21,7 @@
 
         <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">Componentes 2</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store">Componentes 3</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store">ESTILOS</v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- fin de navegador derecho -->
