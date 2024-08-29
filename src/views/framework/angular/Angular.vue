@@ -131,7 +131,7 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/binding.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> CONTADOR </v-card-title>
+      <v-card-title class="text-teal"> CONTADOR </v-card-title>
       <v-card-subtitle>QUE AUMENTE Y DISMINUYA</v-card-subtitle>
     </v-card-item>
     <v-card-text> 
@@ -148,7 +148,7 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/bindingClass.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> BINDING </v-card-title>
+      <v-card-title class="text-teal"> BINDING </v-card-title>
       <v-card-subtitle>CLASES </v-card-subtitle>
     </v-card-item>
     <v-card-text> 
@@ -165,7 +165,7 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/InputSimple.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> INPUT SIMPLE </v-card-title>
+      <v-card-title class="text-teal"> INPUT SIMPLE </v-card-title>
       <v-card-subtitle>UNIDO A UN BOTÓN </v-card-subtitle>
     </v-card-item>
     <v-card-text> 
@@ -182,7 +182,7 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/condicionalIf.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> *ngIf </v-card-title>
+      <v-card-title class="text-teal"> *ngIf </v-card-title>
       <v-card-subtitle>Uso de If y If-else</v-card-subtitle>
     </v-card-item>
     <v-card-text> 
@@ -199,7 +199,7 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/ngFor.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> *ngFor </v-card-title>
+      <v-card-title class="text-teal"> *ngFor </v-card-title>
       <v-card-subtitle>Sintaxis del ngFor</v-card-subtitle>
     </v-card-item>
     <v-card-text> 
@@ -216,11 +216,28 @@
     href="http://127.0.0.1:5501/src/assets/framework/angular/formulario.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title>Formularios </v-card-title>
+      <v-card-title class="text-teal">Formularios </v-card-title>
       <v-card-subtitle>[(ngModel)] </v-card-subtitle>
     </v-card-item>
     <v-card-text> 
     Ejemplo Básico
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- **************************************************************** -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/framework/angular/validaciones.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-teal">Validaciones </v-card-title>
+      <v-card-subtitle>Formulario</v-card-subtitle>
+    </v-card-item>
+    <v-card-text> 
+    Con condicional if
     </v-card-text>
   </v-card>
 </v-col>

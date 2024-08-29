@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> VALIDACIONES </h1>
+<ol>
+<li>del formulario anterior, que si esta vacio emita un alert</li>
+<li></li>
+</ol>
+<img src="/src/assets/image/angular/validaciones1.png" alt="validaciones1" class="img">
+  <pre>
+    <div>
+      //HTML
+
+      &lt;div class="card">
+        &lt;div class="card-body">
+          &lt;form (ngSubmit)="procesar()">
+            &lt;div class="mb-2">
+              &lt;label>Nombre:&lt;/label> &lt;br>
+              &lt;input type="text" name="nombre" class="form-control" [(ngModel)]="persona.nombre"  >
+            &lt;/div>
+            &lt;h3 *ngIf="submitted && !persona.nombre" class="alert alert-danger">El nombre es obligatorio&lt;/h3>
+
+            &lt;div>
+              &lt;label>Edad:&lt;/label> &lt;br>
+              &lt;input type="text" name="edad" class="form-control" [(ngModel)]="persona.edad">
+            &lt;/div>
+            &lt;h3 *ngIf="submitted && !persona.edad" class="alert alert-danger">La edad es obligatoria&lt;/h3>
+
+            &lt;br>&lt;br>
+            &lt;button class="btn btn-success mt-4">ENVIAR&lt;/button>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+
+      //TS-JS
+
+      import { Component } from '@angular/core';
+      import { FormsModule } from '@angular/forms';
+      import { CommonModule } from '@angular/common';
+
+      @Component({
+        selector: 'app-accion',
+        standalone: true,
+        imports: [
+          FormsModule,
+          CommonModule
+        ],
+        templateUrl: './accion.component.html',
+        styleUrl: './accion.component.css'
+      })
+      export class AccionComponent {
+
+        persona = { nombre: '', edad: '' };
+        submitted = false;
+
+        procesar() {
+          this.submitted = true;
+
+          if (this.persona.nombre && this.persona.edad) {
+            // Procesar el formulario
+            console.log("Formulario enviado:", this.persona);
+          }
+        }
+
+      }
+    </div>
+  </pre>
+</body>
+</html>
+
+
