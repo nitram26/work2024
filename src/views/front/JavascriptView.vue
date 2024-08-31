@@ -93,7 +93,7 @@
       <v-card-subtitle>Tipos de funciones</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-    Caracteristicas y usos
+    Características y usos
     </v-card-text>
   </v-card>
   </v-col>

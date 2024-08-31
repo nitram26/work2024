@@ -18,16 +18,34 @@
       <body>
       <h1> LLAMAR API PLACEHOLDER </h1> 
       <ol>
-      <li>hacer el componente DataTable.vue</li>
-      <li>llamarlo en projectView.vue</li>	
-        <li>	Para llamar axios debe de estar instalado 	</li>
-        <li>	npm install axios	</li>
-        <li>	pero puede suceder que no deje instalarlo, 	</li>
-        <li>	se pude deber a que no es compatible con la versión (en mi caso de typescript)	</li>
-        <li>	se actualiza la versión con el comando	</li>
-        <li>	npm install typescript@latest	</li>
-        <li><B>NOTA</B></li>
-        <li>también es posible llamar a los datos usando un v-for</li>
+      <li>hacer el componente </li>
+      <li>llamarlo en el View</li>	
+      <li>hacer la tabla en el componente, si se usa vuetify: v-data-table</li>
+      <li>se llama los datos usando :items="datum"</li>
+      <li>se crea un array datum ref vacío</li>
+      <li>con esto enlazamos el array al template</li>
+      <h3>LLAMAR LA API</h3>
+      <li>Se llama a trabes de un onMounted()</li>
+      <li>dentro un async como función flecha</li>
+      <li>dentro de la función un try-catch</li>
+      <li>dentro del try entre llaves un let response = await axios.get ('ruta de la api') en este caso:'https://jsonplaceholder.typicode.com/users' </li>
+      <h3>Instalar axios</h3>
+      <li>	Para llamar axios debe de estar instalado 	</li>
+      <li>	npm install axios	</li>
+      <li>	pero puede suceder que no deje instalarlo, 	</li>
+      <li>	se pude deber a que no es compatible con la versión (en mi caso de typescript)	</li>
+      <li>	se actualiza la versión con el comando	</li>
+      <li>	npm install typescript@latest	</li>
+
+      <h3>Capturar los datos</h3>
+      <li>se asigna a datum.value el response.data.map({})</li>
+      <li>dentro de las llaves un objeto con los nombres de cabecera y el llamado que se hace </li>
+      <li>ejemplo  NOMBRE : user.name,</li>
+      <li>el catch (error )</li>
+      <li>entre llaves un console.error</li>
+      <li>y dentro 'revisar', error</li>
+      <li><B>NOTA</B></li>
+      <li>también es posible llamar a los datos usando un v-for</li>
        v-for="(nombre, index) in datum" :key="index">{{ nombre.NOMBRE }}         
       </ol>
       <img src="/src/assets/image/placeholder.PNG" alt="placeholder" class="img">
