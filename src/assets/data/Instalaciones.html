@@ -8,9 +8,12 @@
   <style>
   body{background-color:bisque;}
   .img{
-    width: 600px;
+    width: 500px;
     margin: 4em;
     border: brown double 6px;
+  }
+  h2{
+    color: brown;
   }
   </style>
   <title>ELEMENTOS RÁPIDOS</title>
@@ -46,16 +49,82 @@
       <img src="/src/assets/image/data/graph08.png" alt="graph08" class="img">
 
     <lI>	Y aparecerá 	</li>
-    <lI>	 	</li>
-    <lI>	Se usará ctrl+espacio para ver las opciones 	</li>
+  
       <img src="/src/assets/image/data/graph09.png" alt="graph09" class="img">
+    <lI>	Se usará ctrl+espacio para ver las opciones 	</li>
     </ol>		
     
-
+<h2>////////////////////////////////////////////////////////////////////////</h2>
 
   <pre>
     <div>
-    
+//IMPORTAR GRAPH Y ApolloServer
+      import { ApolloServer, gql } from 'apollo-server';
+
+//DATOS
+      const persons = [
+        {
+          name: "Carlos",
+          phone: "102030",
+          street: "Las Palmeras 74",
+          city: "Lima",
+          id: "1",
+        },
+        {
+          name: "Sofia",
+          phone: "405060",
+          street: "Las Palmeras 75",
+          city: "Pucusana",
+          id: "2",
+        },
+        {
+          name: "Rebeca",
+          phone: "708090",
+          street: "Las Palmeras 76",
+          city: "Huancayo",
+          id: "3",
+        },
+      ];
+
+//DESCRIBIR LOS DATOS
+      const typeDefinitions = gql`
+        type Person {
+          name: String!
+          phone: String
+          street: String!
+          id: ID!
+        }
+
+// ESTABLECER LOS QUERY O PETICIONES
+        type Query {
+          personCount: Int!
+          allPersons: [Person]!
+          findPerson(name:String!): Person
+        }
+      `;
+
+// INDICAR COMO SE RESUELVE
+      const resolvers = {
+        Query: {
+          personCount: () => persons.length,
+          allPersons: () => persons,
+        },
+      };
+
+//SE CREA EL SERVIDOR
+      const server = new ApolloServer({
+        typeDefs: typeDefinitions,
+        resolvers,
+      });
+
+//SE INICIALIZA EL SERVIDOR
+      server.listen().then(({ url }) => {
+        console.log(`Server ready at ${url}`);
+      });
+
+//SE INICIA CON:
+// node index.js
+
     </div>
   </pre>
 </body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1> CALCULO BOOLEAN </h1> 
+<ol>
+<li>SE agrega en la definición</li>
+<li>Luego en el método</li>
+</ol>
+<img src="/src/assets/image/data/buleano01.png" alt="buleano01" class="img">
+  <pre>
+    <div>
+      import { ApolloServer, gql } from 'apollo-server';
+
+      const persons = [
+        {
+          name: "Carlos",
+          phone: "102030",
+          street: "Las Palmeras 74",
+          city: "Lima",
+          age:"65",
+          id: "1",
+        },
+        {
+          name: "Sofia",
+          phone: "405060",
+          street: "Las Palmeras 75",
+          city: "Pucusana",
+          age:"47",
+          id: "2",
+        },
+        {
+          name: "Rebeca",
+          phone: "708090",
+          street: "Las Palmeras 76",
+          city: "Huancayo",
+          age:"30",
+          id: "3",
+        },
+        {
+          name: "Adrian",
+          phone: "321654",
+          street: "Las Palmeras 76",
+          city: "Ayacucho",
+          age:"14",
+          id: "4",
+        },
+      ];
+      
+      const typeDefinitions = gql`
+        type Person {
+          name: String!
+          phone: String
+          street: String!
+          city: String
+          adress: String!
+          check: String!
+          age: String!
+          canDrink: String
+          id: ID!
+        }
+      
+        type Query {
+          personCount: Int!
+          allPersons: [Person]!
+          findPerson(name:String!): Person
+        }
+      `;
+      
+      const resolvers = {
+        Query: {
+          personCount: () => persons.length,
+          allPersons: () => persons,
+          findPerson: (root, args) => {
+            const {name} = args
+            return persons.find(person => person.name ===name)
+          }
+        },
+        Person:{
+          canDrink : (root) => root.age > 18,
+          adress:(root) => `${root.street}, ${root.city}`,
+          check: () => "Carlos"
+        }
+      };
+      
+      const server = new ApolloServer({
+        typeDefs: typeDefinitions,
+        resolvers,
+      });
+      
+      server.listen().then(({ url }) => {
+        console.log(`Server ready at ${url}`);
+      });
+      
+    </div>
+  </pre>
+</body>
+</html>
+
+

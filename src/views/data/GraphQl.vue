@@ -31,26 +31,73 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/ModelVue2.html"
+    href="http://127.0.0.1:5501/src/assets/data/Instalaciones.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> CREACIÓN  </v-card-title>
+      <v-card-title class="text-purple"> INSTALACIÓN  </v-card-title>
       <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-   1. Model
-   2. Controller
-   3. Pages
-   4. Route
-   5. Component
-   6. Validaciones
+      Uso en la PLAYGROUND
     </v-card-text>
   </v-card>
   </v-col>
+  <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/acciones.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> OPERACIONES SIMPLES  </v-card-title>
+      <v-card-subtitle>EN LA PLAYGROUND</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+    Ejemplos Básicos
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/enlace.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> UNIR CAMPOS </v-card-title>
+      <v-card-subtitle>CHECK CAMPO POR DEFECTO</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      EN LA PLAYGROUND
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/buleano.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> CALCULO BOOLEAN </v-card-title>
+      <v-card-subtitle>Valores computados</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      EN LA PLAYGROUND
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
       </v-row>
     </div>
 
-      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+      <!-- /////////////////////////////////////////////////////////////-->
       <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
