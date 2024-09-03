@@ -17,6 +17,7 @@ import FormInput from '../views/framework/vuetify/formInput/FormInput.vue'
 import FrameWork from '@/views/framework/FrameWork.vue'
 import Angular from '@/views/framework/angular/Angular.vue'
 import Javascript from '@/views/front/JavascriptView.vue'
+import GraphQl from '@/views/data/GraphQl.vue'
 
 const routes = [
   {
@@ -109,6 +110,12 @@ const routes = [
     name: 'Javascript',
     component: Javascript
   },
+  {
+    path: '/graph',
+    name: 'Graph',
+    component: GraphQl
+  },
+  
   
   
 
