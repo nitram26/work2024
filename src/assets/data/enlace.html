@@ -16,12 +16,30 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1> UNIR DOS CAMPOS </h1> 
+<h1> BUSCAR </h1> 
 <ol>
+
 <li>Se a grega a typeDefs </li>
 <img src="/src/assets/image/data/enlace1.png" alt="enlace1" class="img">
 <li>En el resolvers </li>
 <img src="/src/assets/image/data/enlace2.png" alt="enlace2" class="img">
+<li>En el query se pone el nombre y entre parentesis el parametro así:</li>
+<span> findPeron(name: String!): Person</span>
+<li>indica que devuelve solo una persona </li>
+<li>en el resolvers:</li>
+<li>findPerson : (root, args) => { <br>
+  const {name} = args<br>
+  return persons.find(person => person.name === name)<br>
+  }<br>
+</li>
+<li>En el PLAYGROUND</li>
+<li>query($name: String!)  {<br>
+  findPerson(name: $name) {<br>
+    phone<br>
+  }<br>
+ 
+}</li>
+<img src="/src/assets/image/data/unirCampos.png" alt="unirCampos" class="img">
 </ol>
   <pre>
     <div>

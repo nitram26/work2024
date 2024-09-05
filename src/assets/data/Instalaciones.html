@@ -19,39 +19,98 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1> INSTALACIÓN </h1> 
+<h1> INTRODUCCIÓN </h1> 
+<OL>
+  <li>Es un lenguaje de consultas</li>
+  <li>Q = query: consulta y L = lenguage: lenguaje </li>
+  <li> Caracteristicas:</li>
+  <li>Define tus datos</li>
+  <li>Que quieres recuperar de ellos</li>
+  <li>El resultado es predecible</li>
+  <li></li>
+</OL>
+<h2> INSTALACIÓN </h2> 
 <ol>
-  <ol>		
+  <ol>
     <li>	Iniciar un proyecto	</li>
+    <li>-y significa que aceptamos todo y evita hacelo manualmente</li>
     <li>	npm init -y	</li>
+    <li>Instalar apolloServer y graphQL</li>
     <li>	npm install apollo-server graphql	</li>
-    <li>	en package.json agregar despues del  main “type” : “module”	</li>
+    <li>Preparar para usar EMMA script modules SE inserta:</li>
+    <li>	en package.json agregar después del  main poner “type” : “module”	</li>
     <li>	tener los datos (algún array de objetos)	</li>
     <img src="/src/assets/image/data/graph01.png" alt="graph01" class="img">
     <li>	importar graphQL	</li>
-    <img src="/src/assets/image/data/graph02.png" alt="graph02" class="img">
+    <img src="/src/assets/image/data/graph02.png" alt="graph02" class="img"><br>
+    <span>import {gql, ApolloServer} from 'apollo-server'</span><br><br><br>
 
-    <li>	describir los datos 	</li>
-    <img src="/src/assets/image/data/graph03.png" alt="graph03" class="img">
+    <li>	describir los datos se agrega un ! si es requerido</li>
+    <li>los tipos de datos más usados son : String, Int, ID </li>
+    <img src="/src/assets/image/data/graph03.png" alt="graph03" class="img"> <br><br>
+<span>const typeDefs = gql` 
+  type Person {<br>
+    name: String!<br>
+      phone: String<br>
+      street:String!<br>
+      city: String<br>
+      age:String<br>
+      id: ID!<br>
+  }<br><br>
+  
+    type Query {<br>
+      personCount: Int!<br>
+      allPersons : [Person]!<br>
+    
+    }<br>
+  `</span>
 
-
-    <li>	Se establecen los query o peticiones 	</li>
+    <li>	Se establecen los query o peticiones 	dentro del mismo typeDefs</li>
+    <li>se pone: type Query se abren llaves y dentro se ponen los métodos y sus tipos </li>
     <img src="/src/assets/image/data/graph04.png" alt="graph04" class="img">
 
-    <li>	Se indica como se resuelve	</li>
+    <li>	Se indica como se resuelve, esto es fuera en una const resolvers	</li>
+    <span>const resolvers = { <br>
+      Query:{<br>
+      personCount: () => persons.length,<br>
+      allPersons : () => persons<br>
+      }<br>
+    }<br><br>
+    </span>
+    <li>const resolvers = se abre llaves dentro se pone Query: nuevamente se abre llaves y se pone cada método ejemplo: personcount : () => person.length</li>
+    <li>esto indica de donde se traen los DATOS, del array persons y usando el método length</li>
+   <span> const resolvers = {
+    Query:{
+    personCount: () => persons.length,
+    allPersons : () => persons
+    }
+  }</span><br><br>
     <img src="/src/assets/image/data/graph05.png" alt="graph05" class="img">
     <li>	Se crea el servidor	</li>
+    <li>Es necesrio constatar que apolloServer se a importado </li>
+  <span> const server = new ApolloServer({ <br>
+    typeDefs, <br>
+    resolvers <br>
+  }) <br><br></span>
     <img src="/src/assets/image/data/graph06.png" alt="graph06" class="img">
     <li>	Se inicializa el servidor	</li>
+    <li>ejemplo</li>
+    <span>
+      server.listen().then(({url}) => { <br>
+        console.log(`Server ready at ${url}`);<br>
+      })
+    </span><br><br>
+   </li>
 <img src="/src/assets/image/data/graph07.png" alt="graph07" class="img">
    
     <lI>	Se inicia con: 	</li>
-      <img src="/src/assets/image/data/graph08.png" alt="graph08" class="img">
+      <img src="/src/assets/image/data/graph08.png" alt="graph08" class="img"> <br>
+      <span>node index.js</span><br><br>
 
-    <lI>	Y aparecerá 	</li>
+    <lI>	Y aparecerá 	</li> 
   
-      <img src="/src/assets/image/data/graph09.png" alt="graph09" class="img">
-    <lI>	Se usará ctrl+espacio para ver las opciones 	</li>
+      <img src="/src/assets/image/data/graph09.png" alt="graph09" class="img"> <br><br>
+    <lI>	Se usará ctrl+espacio para ver las opciones en el PLAYGROUND	</li>
     </ol>		
     
 <h2>////////////////////////////////////////////////////////////////////////</h2>

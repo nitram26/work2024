@@ -68,7 +68,7 @@
     href="http://127.0.0.1:5501/src/assets/data/enlace.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-purple"> UNIR CAMPOS </v-card-title>
+      <v-card-title class="text-purple"> BUSCAR </v-card-title>
       <v-card-subtitle>CHECK CAMPO POR DEFECTO</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -85,11 +85,29 @@
     href="http://127.0.0.1:5501/src/assets/data/buleano.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-purple"> CALCULO BOOLEAN </v-card-title>
+      <v-card-title class="text-purple">UNIR CAMPOS </v-card-title>
       <v-card-subtitle>Valores computados</v-card-subtitle>
     </v-card-item>
     <v-card-text>
       EN LA PLAYGROUND
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/acciones.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> CALCULOS </v-card-title>
+      <v-card-subtitle>CONDICIONAL</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Traer si es mayor de edad 
     </v-card-text>
   </v-card>
   </v-col>

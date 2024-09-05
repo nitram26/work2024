@@ -16,20 +16,22 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1>  GraphQL</h1> 
+  <H2>CALCULOS CON LA INFORMACIÓN   </H2>
 <ol>
-<li>En la PLAYGROUND</li>
-<li>Las alternativas se encuentran pulsando CTRL+ESPACIO</li>
-<li>Manera de Buscar </li>
-<img src="/src/assets/image/data/Imagen1.png" alt="Imagen1" class="img">
-<li>Contar </li>
-<img src="/src/assets/image/data/Imagen2.png" alt="Imagen2" class="img">
-<li>Datos totales</li>
-<img src="/src/assets/image/data/Imagen3.png" alt="Imagen3" class="img">
-<img src="/src/assets/image/data/Imagen4.png" alt="Imagen4" class="img">
-
+  <li>Quiero usando la edad me devuelva un boolean si es mayor de edad</li>
+  <span>Se define en el typeDefs</span>
+  <li>  canDrink: Boolean</li> <br>
+  <li>En el resolvers</li>
+  <span>  Person: { <br>
+    canDrink : (root) => root.age >18,<br>
+    address: (root) => `${root.street}, ${root.city}` <br>
+  }<br></span>
+ <img src="/src/assets/image/data/calculo1.png" alt="calculo1" class="img">
 </ol>
-  <pre>
+
+
+
+ 
     <div>
     
     </div>
