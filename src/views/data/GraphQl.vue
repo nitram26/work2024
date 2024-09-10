@@ -48,23 +48,6 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/acciones.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> OPERACIONES SIMPLES  </v-card-title>
-      <v-card-subtitle>EN LA PLAYGROUND</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    Ejemplos Básicos
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
     href="http://127.0.0.1:5501/src/assets/data/enlace.html"
     max-width="344" >
     <v-card-item>
@@ -94,6 +77,23 @@
   </v-card>
   </v-col>
   <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/anidar.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple">ANIDAR CAMPOS </v-card-title>
+      <v-card-subtitle>Valores computados</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      EN LA PLAYGROUND
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
 
         <v-col cols="3">
       <v-card
@@ -108,6 +108,24 @@
     </v-card-item>
     <v-card-text>
       Traer si es mayor de edad 
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/mutaciones.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> MUTACIONES </v-card-title>
+      <v-card-subtitle>AGREGAR REGISTROS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Sintaxis y uso de uuid
     </v-card-text>
   </v-card>
   </v-col>

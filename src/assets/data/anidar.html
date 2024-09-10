@@ -16,34 +16,17 @@
   <title>ELEMENTOS RÁPIDOS</title>
 </head>
 <body>
-<h1> BUSCAR </h1> 
+<h1> ANIDAR CAMPOS </h1> 
 <ol>
-
-<li>Se a grega a typeDefs </li>
-<img src="/src/assets/image/data/enlace1.png" alt="enlace1" class="img">
-<li>En el resolvers </li>
-<img src="/src/assets/image/data/enlace2.png" alt="enlace2" class="img">
-<li>En el query se pone el nombre y entre parentesis el parametro así:</li>
-<span> findPeron(name: String!): Person</span>
-<li>indica que devuelve solo una persona </li>
-<li>en el resolvers:</li>
-<li>findPerson : (root, args) => { <br>
-  const {name} = args<br>
-  return persons.find(person => person.name === name)<br>
-  }<br>
-</li>
-<li>En el PLAYGROUND</li>
-<li>query($name: String!)  {<br>
-  findPerson(name: $name) {<br>
-    phone<br>
-  }<br>
- 
-}</li>
-<img src="/src/assets/image/data/unirCampos.png" alt="unirCampos" class="img">
+<li>Crear un nuevo campo</li>
+<li>De los campos existentes incluirlos</li>
+<li>Ejemplo crear el campo address y dentro poner los existentes street y city</li>
 </ol>
+<img src="/src/assets/image/data/anidados1.png" alt="anidados1" class="img">
   <pre>
     <div>
       import {gql, ApolloServer} from 'apollo-server'
+
 
       const persons = [
         {
@@ -81,22 +64,23 @@
       ];
 
       const typeDefs = gql`
+      type Address {
+        street:String!
+        city: String
+      }
+
       type Person {
         name: String!
           phone: String
-          street:String!
-          city: String
-          address: String!
+          address: Address!
           age:String
           id: ID!
           canDrink: Boolean
       }
-
         type Query {
           personCount: Int!
           allPersons : [Person]!
           findPerson(name: String!): Person
-
         }
       `
 
@@ -110,8 +94,12 @@
           }
         },
         Person: {
-          canDrink : (root) => root.age >18,
-          address: (root) => `${root.street}, ${root.city}`
+          address : (root) =>{
+           return{
+            street: root.street,
+            city: root.city
+           }
+          }
         }
       }
 
@@ -121,7 +109,7 @@
       })
 
       server.listen().then(({url}) => {
-        console.log(`Server ready at ${url}`)
+        console.log(`Server ready at ${url}`);
       })
 
     </div>
