@@ -11,6 +11,20 @@
   <title>AXIOS</title>
 </head>
 <body>
+  <h1>ENLACE A BASE DE DATOS</h1>
+  
+  <h2>MODELO DE REGISTRO EN MONGODB</h2>
+  <pre>
+    {
+      "fullName" : "Jose Giancarlo",
+      "dni" : "13232",
+      "licence" : "323",
+      "class" : "dfeg",
+      "phone" : "1212",
+      "birthday" : "1212",
+  }
+  </pre>
+  <h2>AXIOS</h2>
   <pre>
     beforeMount () {
       axios.get(`${config.URL}closeBox`).then((data) => {
