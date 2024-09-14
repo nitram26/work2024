@@ -36,7 +36,7 @@
     href="http://127.0.0.1:5501/src/assets/home/ElementosRapidos.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> HTML  </v-card-title>
+      <v-card-title class="text-purple"> HTML  </v-card-title>
       <v-card-subtitle>Plantilla para Enlaces</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -53,7 +53,7 @@
     href="http://127.0.0.1:5501/src/assets/home/PaginaPrincipal.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> Navegador Principal  </v-card-title>
+      <v-card-title  class="text-purple"> Navegador Principal  </v-card-title>
       <v-card-subtitle>Header del App</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -70,7 +70,7 @@
     href="http://127.0.0.1:5501/src/assets/home/MenuPrimario.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> Menu Primario  </v-card-title>
+      <v-card-title  class="text-purple"> Menu Primario  </v-card-title>
       <v-card-subtitle>Para sub-página principal</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -87,7 +87,7 @@
     href="http://127.0.0.1:5501/src/assets/home/MenuSecundario.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title class="text-red"> Menu Secundario  </v-card-title>
+      <v-card-title  class="text-purple"> Menu Secundario  </v-card-title>
       <v-card-subtitle>Plantilla para páginas</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -115,7 +115,7 @@
     href="http://127.0.0.1:5501/src/assets/home/ManagerNvm.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> NVM </v-card-title>
+      <v-card-title class="text-indigo"> NVM </v-card-title>
       <v-card-subtitle>Manager de NODE</v-card-subtitle>
     </v-card-item>
     <v-card-text>
@@ -132,11 +132,28 @@
     href="http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> COLORES </v-card-title>
+      <v-card-title class="text-indigo"> COLORES </v-card-title>
       <v-card-subtitle>VUETIFY</v-card-subtitle>
     </v-card-item>
     <v-card-text>
       Paleta de Colores 
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ************************************************************ -->
+  <v-col cols="3">
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/home/EnlacesReferencias.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-indigo"> TUTORIALES </v-card-title>
+      <v-card-subtitle>REFERENCIAS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Enlaces 
     </v-card-text>
   </v-card>
 </v-col>
@@ -158,7 +175,7 @@
     href="http://127.0.0.1:5501/src/assets/home/ProcesoHora.html"
     max-width="344" >
     <v-card-item>
-      <v-card-title> ITER CONVERSIONIS </v-card-title>
+      <v-card-title class="text-blue"> ITER CONVERSIONIS </v-card-title>
       <v-card-subtitle>detalle HORA</v-card-subtitle>
     </v-card-item>
     <v-card-text>
