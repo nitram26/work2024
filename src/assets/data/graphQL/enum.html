@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 800px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+<h1>ENUM  </h1> 
+<ol>
+<li>Se usa para mostrar booleanos, estados, selecciones etc.</li>
+<li></li>
+</ol>
+<img src="/src/assets/image/data/enum1.png" alt="" class="img">
+  <pre>
+    <div>
+      import {gql, UserInputError, ApolloServer} from 'apollo-server'
+      import {v1 as uuid} from 'uuid'
+      
+      
+      const persons = [
+        {
+          name: "Carlos",
+          phone: "102030",
+          street: "Las Palmeras 74",
+          city: "Lima",
+          age:"65",
+          id: "1",
+        },
+        {
+          name: "Sofia",
+          phone: "405060",
+          street: "Las Palmeras 75",
+          city: "Pucusana",
+          age:"47",
+          id: "2",
+        },
+        {
+          name: "Rebeca",
+          phone: "708090",
+          street: "Las Palmeras 76",
+          city: "Huancayo",
+          age:"30",
+          id: "3",
+        },
+        {
+          name: "Adrian",
+          phone: "321654",
+          street: "Las Palmeras 76",
+          city: "Ayacucho",
+          age:"14",
+          id: "4",
+        },
+      ];
+      
+      const typeDefs = gql`
+      enum YesNo{
+        YES
+        NO
+      }
+      
+      type Person {
+        name: String!
+        phone: String
+        age:String
+        id: ID!
+        street:String!
+        city: String
+      }
+      
+        type Query {
+          personCount: Int!
+          allPersons(phone: YesNo) : [Person]!
+          findPerson(name: String!): Person
+      
+        }
+      
+        type Mutation{
+          addPerson(
+            name: String!
+            phone: String
+            age:String
+            street:String!
+            city: String
+          ): Person
+        }
+      `
+      
+      const resolvers = {
+        Query:{
+        personCount: () => persons.length,
+        allPersons : (root, args) => {
+          if (!args.phone) return persons
+            persons
+          
+            const byPhone = person => args.phone === "YES"? person.phone :!person.phone
+      
+            return persons.filter(byPhone)
+        }
+        },
+      
+      Mutation:{
+        addPerson: (root, args) => {
+         if (persons.find(p => p.name === args.name)) {
+          throw new UserInputError("El nombre ya existe", {
+            invalidArgs: args.name
+          });
+          
+         }
+          const person = { ...args, id: uuid()}
+          persons.push(person)
+          return person
+        }
+      },
+      
+      }
+      
+      const server = new ApolloServer({
+        typeDefs,
+        resolvers
+      })
+      
+      server.listen().then(({url}) => {
+        console.log(`Server ready at ${url}`);
+      
+      })
+      
+      
+          
+    </div>
+  </pre>
+</body>
+</html>
+
+

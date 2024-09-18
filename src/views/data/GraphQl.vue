@@ -31,7 +31,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/Instalaciones.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/Instalaciones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple"> INSTALACIÓN  </v-card-title>
@@ -48,7 +48,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/enlace.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/enlace.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple"> BUSCAR </v-card-title>
@@ -65,7 +65,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/buleano.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/buleano.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple">UNIR CAMPOS </v-card-title>
@@ -82,7 +82,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/anidar.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/anidar.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple">ANIDAR CAMPOS </v-card-title>
@@ -100,7 +100,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/acciones.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/acciones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple"> CALCULOS </v-card-title>
@@ -118,7 +118,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/mutaciones.html"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/mutaciones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-purple"> MUTACIONES </v-card-title>
@@ -126,6 +126,24 @@
     </v-card-item>
     <v-card-text>
       Sintaxis y uso de uuid
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/data/graphQL/enum.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-purple"> ENUM </v-card-title>
+      <v-card-subtitle>Proceso de Comprensión</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+     busqueda por select o boolean
     </v-card-text>
   </v-card>
   </v-col>

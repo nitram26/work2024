@@ -13,10 +13,10 @@
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
         <v-list-item link to="/" title="INICIO" prepend-icon="mdi-grid"></v-list-item>
+        <v-list-item link to="/html" title="HTML" prepend-icon="mdi-store"></v-list-item>
         <v-list-item link to="/javascript" title="JavaScript" prepend-icon="mdi-database-cog-outline"></v-list-item>
         <v-list-item link to="/vue2" title="Vue2" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
         <v-list-item link to="/vue3" title="Vue3" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/backend" title="Material D" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- /////////////////////////////////////// -->

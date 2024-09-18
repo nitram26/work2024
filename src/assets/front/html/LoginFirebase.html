@@ -1,0 +1,128 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1>AUTENTICACIÓN</h1>
+  <ol>
+    <li>Crear el proyecto y la página de login</li>
+    <li>Descargar un framework de estilos puede ser CSS o bootstrap u otros</li>
+    <h3>Framework de estilos</h3>
+    <li>Bootstrap necesita 2 paquetes, bootstrap y popper</li>
+    <li>ir a Firebase y crear una cuenta </li>
+    <li>consola.firebase.google.com</li>
+    <li>elegir Crear un proyecto</li>
+    <li>Elegir Authentication</li>
+    <li>luego el metodo que puede ser correo, telefono, social etc</li>
+    <li>Generar el SDK</li>
+    <li>EN EL MAIN.TS pegar el import, codigo, inicializar el auth </li>
+    <li>ir a firebase</li>
+    <li>registrar el correo y clave en usuarios</li>
+  </ol>
+  <img src="/src/assets/image/front/html/loginFirebase.png" alt="loginFirebase" class="img">
+  <pre>
+    <H2>HTML</H2>
+    <div>
+      &lt;!DOCTYPE html>
+&lt;html lang="es">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+  &lt;title>Login con Firebase&lt;/title>
+&lt;/head>
+&lt;body>
+  &lt;h2>Login con Firebase&lt;/h2>
+
+  &lt;div>
+    &lt;label for="email">Correo electrónico:&lt;/label>
+    &lt;input type="email" id="email" placeholder="Correo">
+  &lt;/div>
+  &lt;div>
+    &lt;label for="password">Contraseña:&lt;/label>
+    &lt;input type="password" id="password" placeholder="Contraseña">
+  &lt;/div>
+
+  &lt;button onclick="login()">Iniciar sesión&lt;/button>
+  &lt;button onclick="register()">Registrar&lt;/button>
+
+  &lt;!-- Enlace al archivo JavaScript -->
+  &lt;script type="module" src="app.js">&lt;/script>
+&lt;/body>
+&lt;/html>
+
+
+<H2>JAVASCRIPT</H2>
+// Importa los módulos de Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDEkOv70BrzFgai_jdEV5z8YrlUdx0SkxE",
+  authDomain: "validacion-istp.firebaseapp.com",
+  projectId: "validacion-istp",
+  storageBucket: "validacion-istp.appspot.com",
+  messagingSenderId: "498439316165",
+  appId: "1:498439316165:web:17e08d46c8fd4069ec46ac",
+  measurementId: "G-3FDFY98T7R"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+
+// Función para iniciar sesión
+window.login = function() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("Inicio de sesión exitoso: " + user.email);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert("Error: " + errorMessage);
+    });
+}
+
+// Función para registrar un nuevo usuario
+window.register = function() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("Usuario registrado: " + user.email);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert("Error: " + errorMessage);
+    });
+}
+
+
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  

@@ -18,8 +18,14 @@ import FrameWork from '@/views/framework/FrameWork.vue'
 import Angular from '@/views/framework/angular/Angular.vue'
 import Javascript from '@/views/front/JavascriptView.vue'
 import GraphQl from '@/views/data/GraphQl.vue'
+import HtmlView from '@/views/front/HtmlView.vue'
 
 const routes = [
+  {
+    path: '/html',
+    name: 'Html',
+    component: HtmlView
+  },
   {
     path: '/',
     name: 'home',

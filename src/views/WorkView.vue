@@ -1,19 +1,34 @@
 <template>
     <div>
-        <h1>Padre</h1>
-        <WorkComponent/>
+        <h1>Septiembre 18</h1>
+   <h2 :class="color">Esta es una etiqueta que cambia de color</h2>
+
+   <v-btn @click="cambio()">push</v-btn>
     </div>
 </template>
 <!-- ************************************* -->
 <script setup>
-import WorkComponent from '@/components/WorkComponent.vue';
-import { provide, ref } from 'vue';
+import { ref } from 'vue';
 
-let envio = ref('Buenos dias')
 
-provide('viene', envio)
+
+let color= ref('green')
+let cambio = ()=>{
+  color.value='red'
+  setTimeout(() => {
+    color.value='green'
+  }, 2000);
+}
+
 </script>
 <!-- ************************************* -->
 <style scoped>
-
+.green{
+  color: white;
+  background-color: green;
+}
+.red{
+  color: white;
+  background-color: red;
+}
 </style>

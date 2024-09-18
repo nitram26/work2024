@@ -31,12 +31,12 @@
     <div id="section1" class="mt-12" >
 <v-row>
   <!-- columna -->
-  <v-col cols="12" class="bg-red-darken-2 text-center">
+  <v-col cols="12" class="bg-purple text-center">
 <h2>Vue3 Intro</h2>
   </v-col>
 </v-row> 
 <!-- **************************************************** -->
-<v-row class="bg-indigo-lighten-3">
+<v-row class="bg-purple-lighten-4">
   <v-col cols="3" >
     <v-card
 class="mx-auto my-8"
@@ -97,7 +97,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/InterpolarTexto.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Interpolar Texto</v-card-title>
+  <v-card-title class="text-purple"> Interpolar Texto</v-card-title>
   <v-card-subtitle>link</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -114,7 +114,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/ExampleSelective.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> ExampleSelective </v-card-title>
+  <v-card-title class="text-purple"> ExampleSelective </v-card-title>
   <v-card-subtitle>Condicionales</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -132,7 +132,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/Bind.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>V-BIND </v-card-title>
+  <v-card-title class="text-purple">V-BIND </v-card-title>
   <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -149,7 +149,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/Model.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>V-MODEL </v-card-title>
+  <v-card-title class="text-purple">V-MODEL </v-card-title>
   <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -166,7 +166,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>Checkbox</v-card-title>
+  <v-card-title class="text-purple">Checkbox</v-card-title>
   <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -183,7 +183,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/SelectNuevo.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>Select</v-card-title>
+  <v-card-title class="text-purple">Select</v-card-title>
   <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -200,7 +200,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/CondicionalTernario.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Condicional Ternaria</v-card-title>
+  <v-card-title class="text-purple"> Condicional Ternaria</v-card-title>
   <v-card-subtitle>Bindear estilos desde style  no ref</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -217,7 +217,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/IfShow.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> If & Show </v-card-title>
+  <v-card-title class="text-purple"> If & Show </v-card-title>
   <v-card-subtitle>Condicionales</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -229,13 +229,13 @@ Características de uso de cada uno
 </div>
 <!-- //////////////////////////////////////////////////// -->
 <div id="section2">
-  <v-row class="bg-blue-darken-2 pa-2" >
+  <v-row class="bg-indigo pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >Componentes #1 </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row class="bg-cyan-lighten-4">
+  <v-row class="bg-indigo-lighten-4">
     <v-col cols="3">
     <v-card
 class="mx-auto my-8"
@@ -244,7 +244,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/Contador.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Contador </v-card-title>
+  <v-card-title  class="text-indigo"> Contador </v-card-title>
   <v-card-subtitle>uso de if-show, imagen referencial</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -261,7 +261,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/ReactividadBasica.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>Reactividad Básica </v-card-title>
+  <v-card-title  class="text-indigo">Reactividad Básica </v-card-title>
   <v-card-subtitle>Ejemplo con ref</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -278,7 +278,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/VforRecorrido.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> V-FOR </v-card-title>
+  <v-card-title  class="text-indigo"> V-FOR </v-card-title>
   <v-card-subtitle>Recorrido Básico</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -292,7 +292,7 @@ Números, palabras, arrays, objetos
 </div>
   <!-- /////////////////////////////////////////////////////// -->
   <div id="section3" class="mt-12" >
-  <v-row class="bg-lime-darken-2 pa-2" >
+  <v-row class="bg-blue pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >Componentes #2 </h2>
     </v-col>
@@ -307,7 +307,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Practica Uno </v-card-title>
+  <v-card-title class="text-blue"> Practica Uno </v-card-title>
   <v-card-subtitle>Uso de nivel1</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -324,7 +324,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title> Opciones con V-for </v-card-title>
+  <v-card-title  class="text-blue"> Opciones con V-for </v-card-title>
   <v-card-subtitle>Cuestionario en Tarjetas</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -341,7 +341,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>PROPS </v-card-title>
+  <v-card-title class="text-blue">PROPS </v-card-title>
   <v-card-subtitle>Básico</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -358,7 +358,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/EmitVue.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>EMITS </v-card-title>
+  <v-card-title class="text-blue">EMITS </v-card-title>
   <v-card-subtitle>Básico</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -375,7 +375,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>PROPS EN ARRAY </v-card-title>
+  <v-card-title class="text-blue">PROPS EN ARRAY </v-card-title>
   <v-card-subtitle>Básico</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -393,7 +393,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/Injection.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>INJECTION </v-card-title>
+  <v-card-title class="text-blue">INJECTION </v-card-title>
   <v-card-subtitle>Hace el trabajo de Props y Emits</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -411,7 +411,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>PLACEHOLDER </v-card-title>
+  <v-card-title class="text-blue">PLACEHOLDER </v-card-title>
   <v-card-subtitle>Api llamarla desde un componente </v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -428,11 +428,28 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title>ENRUTADO </v-card-title>
+  <v-card-title class="text-blue">ENRUTADO </v-card-title>
   <v-card-subtitle>Uso Path y Name </v-card-subtitle>
 </v-card-item>
 <v-card-text>
 Rutas fijas, dinámicas
+</v-card-text>
+</v-card>
+  </v-col>
+  <!-- **************************************************** -->
+    <v-col cols="3">
+    <v-card
+class="mx-auto my-8"
+elevation="16"
+target="_blank"
+href="http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html"
+max-width="344" >
+<v-card-item>
+  <v-card-title class="text-blue">LOGIN FIREBASE </v-card-title>
+  <v-card-subtitle>Uso de clave y contraseña </v-card-subtitle>
+</v-card-item>
+<v-card-text>
+Login usando app externa
 </v-card-text>
 </v-card>
   </v-col>
@@ -443,13 +460,13 @@ Rutas fijas, dinámicas
   <!-- /////////////////////////////////////////////////////// -->
    <div class="mt-12" id="section4">
 
-  <v-row class="bg-lime-darken-2 pa-2" >
+  <v-row class="bg-cyan pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >ESTILOS </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row class="bg-purple-lighten-4">
+  <v-row class="bg-cyan-lighten-4">
     <v-col cols="3">
     <v-card
 class="mx-auto my-8"
@@ -458,7 +475,7 @@ target="_blank"
 href="http://127.0.0.1:5501/src/assets/front/vue3/framework.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title class="text-red"> FRAMEWORKS Y PREPROCESADORES</v-card-title>
+  <v-card-title class="text-cyan"> FRAMEWORKS Y PREPROCESADORES</v-card-title>
   <v-card-subtitle>scss y bootstrap</v-card-subtitle>
 </v-card-item>
 <v-card-text>
@@ -476,7 +493,7 @@ target="_blank"
 href=""
 max-width="344" >
 <v-card-item>
-  <v-card-title>TITLE </v-card-title>
+  <v-card-title class="text-cyan">TITLE </v-card-title>
   <v-card-subtitle>subtitle</v-card-subtitle>
 </v-card-item>
 <v-card-text>
