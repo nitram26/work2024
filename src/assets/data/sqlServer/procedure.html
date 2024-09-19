@@ -1,0 +1,56 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> PROCEDIMIENTO ALMACENADO </h1> 
+  <ol>
+  <li>Son consultas que se almacenan en la misma base de datos</li>
+  <li>Su objetivo es simplificar la consulta usando variables</li>
+  </ol>
+  <img src="/src/assets/image/data/sqlServer/procedure01.png" alt="procedure01" class="img">
+  <pre>
+    <div>
+      <H2>CONSULTA SQL</H2>
+      SELECT idBase, fechaCreacion
+FROM Cliente
+WHERE YEAR(fechaCreacion) = 2023
+  AND MONTH(fechaCreacion) = 7
+  AND idBase = 1
+
+  <H2>CREACIÓN DE PROCEDIMIENTO</H2>
+      CREATE PROCEDURE sp_BuscarPorFechaYBase
+      @year INT,
+      @month INT,
+      @idBase INT
+  AS
+  BEGIN
+      SELECT idBase, fechaCreacion
+      FROM Cliente
+      WHERE YEAR(fechaCreacion) = @year
+        AND MONTH(fechaCreacion) = @month
+        AND idBase = @idBase;
+  END;
+  
+  <h2>Consulta</h2>
+  EXEC sp_BuscarPorFechaYBase @year = 2024, @month = 7, @idBase = 1;
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  

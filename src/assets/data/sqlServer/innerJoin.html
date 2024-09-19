@@ -1,0 +1,38 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> INNER JOIN </h1> 
+  <ol>
+  <li>Une 2 tablas para una consulta</li>
+  <li></li>
+  </ol>
+  <img src="/src/assets/image/data/sqlServer/innerJoint01.png" alt="innerJoint01" class="img">
+  <pre>
+    <div>
+      SELECT b.nombre, COUNT(c.id) AS totalClientes
+      FROM cliente c
+      INNER JOIN base b ON b.id = c.idBase
+      WHERE c.fechaCreacion BETWEEN '2024-01-01 00:00:00' AND '2024-12-31 23:59:59'
+      GROUP BY b.nombre;
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  
