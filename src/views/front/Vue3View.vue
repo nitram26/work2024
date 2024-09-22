@@ -15,496 +15,151 @@
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
         <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">Vue3 INTRO</v-btn></v-list-item>
+        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">INTRODUCCIÓN</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">Componentes 1</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">COMPONENTES</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">Componentes 2</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">ESTILOS</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store">ESTILOS</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store"></v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- fin de navegador derecho -->
-    <!-- ********************************** -->
-  
-    <!-- //////////////////////////////////////////////// -->
-    <div id="section1" class="mt-12" >
-<v-row>
-  <!-- columna -->
-  <v-col cols="12" class="bg-purple text-center">
-<h2>Vue3 Intro</h2>
-  </v-col>
-</v-row> 
-<!-- **************************************************** -->
-<v-row class="bg-purple-lighten-4">
-  <v-col cols="3" >
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-red"> Crear Estructura </v-card-title>
-  <v-card-subtitle>Vue.Cli - Vue.Vite</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Árbol inicial de carpetas
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-<v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-red"> Crear Snippet </v-card-title>
-  <v-card-subtitle>link</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Como instalarlo en VSCode
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/RelacionarComponentes.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-red"> LLamar un Componente </v-card-title>
-  <v-card-subtitle>Relacionar 2 componentes</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Forma de unir y relacionar Componentes
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
+    <!-- ********************************** -->  
+  <!-- /////////////////////////////////////////////////////// -->
+   <div class="mt-12" id="section1">
 
-  <v-col cols="3">
+  <v-row class="bg-purple pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >INTRODUCCIÓN </h2>
+    </v-col>
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row class="bg-purple-lighten-4">
+    <v-col
+     v-for="exercise1 in exercises"
+    :key="exercise1.id"
+     cols="12"
+     sm="6"
+     md="4"
+     lg="3"
+     >
     <v-card
-class="mx-auto my-8"
+class="mx-auto my-8 bg-brown-lighten-4"
 elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/InterpolarTexto.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title class="text-purple"> Interpolar Texto</v-card-title>
-  <v-card-subtitle>link</v-card-subtitle>
+  <v-card-title class="text-purple">{{ exercise1.title }} </v-card-title>
+  <v-card-subtitle class="">{{ exercise1.description }}</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Llamado estático
+  <p><b>Tiempo restante: {{ exercise1.remainingTime }} segundos</b></p>
 </v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/ExampleSelective.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple"> ExampleSelective </v-card-title>
-  <v-card-subtitle>Condicionales</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Uso de If y/o Show
-</v-card-text>
-</v-card>
-  </v-col>
-
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Bind.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple">V-BIND </v-card-title>
-  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Uso de Bind
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Model.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple">V-MODEL </v-card-title>
-  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Uso de MODEL
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3" >
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple">Checkbox</v-card-title>
-  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Si no acepta cambia de color y mensaje de no acepta
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/SelectNuevo.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple">Select</v-card-title>
-  <v-card-subtitle>Condicionales reactivas</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Si no acepta cambia de color y mensaje de no acepta
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3" >
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/CondicionalTernario.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple"> Condicional Ternaria</v-card-title>
-  <v-card-subtitle>Bindear estilos desde style  no ref</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-  &lt;div :class="ahorro >= 500 ? 'azul' : 'rojo'">
-</v-card-text>
-</v-card>
-  </v-col>
-<!-- ********************************************************* -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/IfShow.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-purple"> If & Show </v-card-title>
-  <v-card-subtitle>Condicionales</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Características de uso de cada uno
-</v-card-text>
+<v-card-actions>
+  <v-btn @click="startExercise1(exercise1)" :disabled="exercise1.intervalId" class="bg-blue text-white pa-2">
+    Iniciar
+  </v-btn>
+  <v-btn @click="stopExercise1(exercise1)" :disabled="!exercise1.intervalId" class="bg-red text-white">
+    Detener
+  </v-btn>
+  <v-btn :href="exercise1.link" target="_blank" class="bg-teal text-white">
+    Ver 
+  </v-btn>
+  </v-card-actions>
 </v-card>
   </v-col>
 </v-row>
 </div>
-<!-- //////////////////////////////////////////////////// -->
-<div id="section2">
+<!-- /////////////////////////////////////////////////////// -->
+
+   <div class="mt-12" id="section2">
+
   <v-row class="bg-indigo pa-2" >
     <v-col cols="11" class="text-center">
-      <h2 >Componentes #1 </h2>
+      <h2 >COMPONENTES </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
   <v-row class="bg-indigo-lighten-4">
-    <v-col cols="3">
+    <v-col
+     v-for="exercise2 in exercises2"
+    :key="exercise2.id"
+     cols="12"
+     sm="6"
+     md="4"
+     lg="3"
+     >
     <v-card
-class="mx-auto my-8"
+class="mx-auto my-8 bg-brown-lighten-4"
 elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Contador.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title  class="text-indigo"> Contador </v-card-title>
-  <v-card-subtitle>uso de if-show, imagen referencial</v-card-subtitle>
+  <v-card-title class="text-indigo">{{ exercise2.title }} </v-card-title>
+  <v-card-subtitle class="">{{ exercise2.description }}</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Que aumente y disminuya +-1
+  <p><b>Tiempo restante: {{ exercise2.remainingTime }} segundos</b></p>
 </v-card-text>
+<v-card-actions>
+  <v-btn @click="startExercise2(exercise2)" :disabled="exercise2.intervalId" class="bg-blue text-white pa-2">
+    Iniciar
+  </v-btn>
+  <v-btn @click="stopExercise2(exercise2)" :disabled="!exercise2.intervalId" class="bg-red text-white">
+    Detener
+  </v-btn>
+  <v-btn :href="stopExercise2.link" target="_blank" class="bg-teal text-white">
+    Ver 
+  </v-btn>
+  </v-card-actions>
 </v-card>
   </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/ReactividadBasica.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title  class="text-indigo">Reactividad Básica </v-card-title>
-  <v-card-subtitle>Ejemplo con ref</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Introducción a la reactividad
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/VforRecorrido.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title  class="text-indigo"> V-FOR </v-card-title>
-  <v-card-subtitle>Recorrido Básico</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Números, palabras, arrays, objetos
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-
-  </v-row>
-</div>
-  <!-- /////////////////////////////////////////////////////// -->
-  <div id="section3" class="mt-12" >
-  <v-row class="bg-blue pa-2" >
-    <v-col cols="11" class="text-center">
-      <h2 >Componentes #2 </h2>
-    </v-col>
-  </v-row>
-  <!-- *************************************************** -->
-  <v-row class="bg-blue-lighten-4">
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue"> Practica Uno </v-card-title>
-  <v-card-subtitle>Uso de nivel1</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Repaso General
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title  class="text-blue"> Opciones con V-for </v-card-title>
-  <v-card-subtitle>Cuestionario en Tarjetas</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-  Visor temporal de respuesta usando setTimeout
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">PROPS </v-card-title>
-  <v-card-subtitle>Básico</v-card-subtitle>
-</v-card-item>
-<v-card-text>
- Interacción de componentes
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-  <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/EmitVue.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">EMITS </v-card-title>
-  <v-card-subtitle>Básico</v-card-subtitle>
-</v-card-item>
-<v-card-text>
-  interacción mediante función
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">PROPS EN ARRAY </v-card-title>
-  <v-card-subtitle>Básico</v-card-subtitle>
-</v-card-item>
-<v-card-text>
- Interacción de componentes
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Injection.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">INJECTION </v-card-title>
-  <v-card-subtitle>Hace el trabajo de Props y Emits</v-card-subtitle>
-</v-card-item>
-<v-card-text>
- Envía con provide, recibe con injection
-</v-card-text>
-</v-card>
-  </v-col>
-
-<!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">PLACEHOLDER </v-card-title>
-  <v-card-subtitle>Api llamarla desde un componente </v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Reenviar la data a otro componente 
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">ENRUTADO </v-card-title>
-  <v-card-subtitle>Uso Path y Name </v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Rutas fijas, dinámicas
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html"
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-blue">LOGIN FIREBASE </v-card-title>
-  <v-card-subtitle>Uso de clave y contraseña </v-card-subtitle>
-</v-card-item>
-<v-card-text>
-Login usando app externa
-</v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
 </v-row>
 </div>
+    <!-- /////////////////////////////////////////////////////// -->
+   <div class="mt-12" id="section3">
 
-  <!-- /////////////////////////////////////////////////////// -->
-   <div class="mt-12" id="section4">
-
-  <v-row class="bg-cyan pa-2" >
+  <v-row class="bg-blue pa-2" >
     <v-col cols="11" class="text-center">
       <h2 >ESTILOS </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row class="bg-cyan-lighten-4">
-    <v-col cols="3">
+  <v-row class="bg-blue-lighten-4">
+    <v-col
+     v-for="exercise3 in exercises3"
+    :key="exercise3.id"
+     cols="12"
+     sm="6"
+     md="4"
+     lg="3"
+     >
     <v-card
-class="mx-auto my-8"
+class="mx-auto my-8 bg-brown-lighten-4"
 elevation="16"
-target="_blank"
-href="http://127.0.0.1:5501/src/assets/front/vue3/framework.html"
 max-width="344" >
 <v-card-item>
-  <v-card-title class="text-cyan"> FRAMEWORKS Y PREPROCESADORES</v-card-title>
-  <v-card-subtitle>scss y bootstrap</v-card-subtitle>
+  <v-card-title class="text-blue">{{ exercise3.title }} </v-card-title>
+  <v-card-subtitle class="">{{ exercise3.description }}</v-card-subtitle>
 </v-card-item>
 <v-card-text>
-Instalciones y configuraciones
+  <p><b>Tiempo restante: {{ exercise3.remainingTime }} segundos</b></p>
 </v-card-text>
-</v-card>
-  </v-col>
-  <!-- **************************************************** -->
-
-    <v-col cols="3">
-    <v-card
-class="mx-auto my-8"
-elevation="16"
-target="_blank"
-href=""
-max-width="344" >
-<v-card-item>
-  <v-card-title class="text-cyan">TITLE </v-card-title>
-  <v-card-subtitle>subtitle</v-card-subtitle>
-</v-card-item>
-<v-card-text>
- párrafosss
-</v-card-text>
+<v-card-actions>
+  <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-2">
+    Iniciar
+  </v-btn>
+  <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
+    Detener
+  </v-btn>
+  <v-btn :href="stopExercise3.link" target="_blank" class="bg-teal text-white">
+    Ver 
+  </v-btn>
+  </v-card-actions>
 </v-card>
   </v-col>
 </v-row>
 </div>
-<!-- **************************************************** -->
-  <!-- /////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////// -->
       </template>
 <!-- ///////////////////////////////////////////////////// -->
   <script setup>
@@ -522,6 +177,96 @@ const scrollTo = (sectionId) => {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
+// V-FOR
+const exercises = ref([
+      { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html' },
+      { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html' },
+      { id: 3, title: 'LLAMAR UN COMPONENTE', description: 'RELACIONAR 2 COMPONENTES', time: 90, remainingTime: 90, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/RelacionarComponentes.html' },
+      { id: 4, title: 'INTERPOLAR TEXTOS', description: 'BASIC', time: 90, remainingTime: 90, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/InterpolarTexto.html' },
+      { id: 5, title: 'EXAMPLE SELECTIVE', description: 'REACTIVIDAD', time: 175, remainingTime: 175, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ExampleSelective.html' },
+      { id: 6, title: 'V-BIND', description: 'REACTIVIDAD', time: 335, remainingTime: 335, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Bind.html' },
+      { id: 7, title: 'V-MODEL', description: 'CONDICIONES REACTIVAS', time: 156, remainingTime: 156, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Model.html' },
+      { id: 8, title: 'CHECKBOX', description: 'REACTIVIDAD', time: 425, remainingTime: 425, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html' },
+      { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 365, remainingTime: 365, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/SelectNuevo.html' },
+      { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 183, remainingTime: 183, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CondicionalTernario.html' },
+      { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 302, remainingTime: 302, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/IfShow.html' },
+    ]);
+    //  ********************************************************************
+const exercises2 = ref([
+      { id: 1, title: 'CONTADOR', description: 'USO DE IF & SHOW', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Contador.html' },
+      { id: 2, title: 'REACTIVIDAD', description: 'USO DE ref', time: 198, remainingTime: 198, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ReactividadBasica.html' },
+      { id: 3, title: 'V-FOR', description: 'RECORRIDOS', time: 722, remainingTime: 722, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/VforRecorrido.html' },
+      { id: 4, title: 'PRACTICA UNO', description: 'USO DE NIVELES', time: 1155, remainingTime: 1155, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html' },
+      { id: 5, title: 'OPTIONS V-FOR', description: 'CUESTIONARIO CON TARJETAS', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html' },
+      { id: 6, title: 'PROPS', description: 'SIMPLE', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html' },
+      { id: 7, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/EmitVue.html' },
+      { id: 8, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html' },
+      { id: 9, title: 'INJECTION', description: 'TIME:', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Injection.html' },
+      { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html' },
+      { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html' },
+      { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html' },
+ 
+    ]);
+    //  ********************************************************************
+const exercises3 = ref([
+      { id: 1, title: 'PROCESADORES', description: 'BOOTSTRAP', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/framework.html' },
+    ]);
+    //  ********************************************************************
+// ////////////////////////////////////////////////////////////////////////////////////////////
+    const startExercise1 = (exercise1) => {
+      if (exercise1.intervalId) return;
+
+      exercise1.intervalId = setInterval(() => {
+        if (exercise1.remainingTime > 0) {
+          exercise1.remainingTime--
+        } else {
+          clearInterval(exercise1.intervalId);
+          exercise1.intervalId = null;
+        }
+      }, 1000);
+    };
+
+    const stopExercise1 = (exercise1) => {
+      clearInterval(exercise1.intervalId);
+      exercise1.intervalId = null;
+    };
+    //  ********************************************************************
+
+    const startExercise2 = (exercise2) => {
+      if (exercise2.intervalId) return;
+
+      exercise2.intervalId = setInterval(() => {
+        if (exercise2.remainingTime > 0) {
+          exercise2.remainingTime--
+        } else {
+          clearInterval(exercise2.intervalId);
+          exercise2.intervalId = null;
+        }
+      }, 1000);
+    };
+
+    const stopExercise2 = (exercise2) => {
+      clearInterval(exercise2.intervalId);
+      exercise2.intervalId = null;
+    };
+    //  ********************************************************************
+    const startExercise3 = (exercise3) => {
+      if (exercise2.intervalId) return;
+
+      exercise3.intervalId = setInterval(() => {
+        if (exercise3.remainingTime > 0) {
+          exercise3.remainingTime--
+        } else {
+          clearInterval(exercise3.intervalId);
+          exercise2.intervalId = null;
+        }
+      }, 1000);
+    };
+    const stopExercise3 = (exercise3) => {
+      clearInterval(exercise3.intervalId);
+      exercise3.intervalId = null;
+    };
+    //  ********************************************************************
   </script>
   <!-- ************************************************* -->
       
