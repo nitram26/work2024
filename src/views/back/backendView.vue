@@ -41,12 +41,7 @@
       <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
     </v-card-item>
     <v-card-text>
-   1. Model
-   2. Controller
-   3. Pages
-   4. Route
-   5. Component
-   6. Validaciones
+    Model
     </v-card-text>
   </v-card>
   </v-col>

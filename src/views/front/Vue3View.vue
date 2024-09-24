@@ -205,6 +205,10 @@ const exercises2 = ref([
       { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html' },
       { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html' },
       { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html' },
+      { id: 13, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/.html' },
+      { id: 14, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/pinia.html' },
+      { id: 15, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/.html' },
+      { id: 16, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/layoutsComposables.html' },
  
     ]);
     //  ********************************************************************
@@ -269,7 +273,3 @@ const exercises3 = ref([
     //  ********************************************************************
   </script>
   <!-- ************************************************* -->
-      
-          
-      
-        
