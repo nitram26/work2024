@@ -107,7 +107,7 @@ max-width="344" >
   <v-btn @click="stopExercise2(exercise2)" :disabled="!exercise2.intervalId" class="bg-red text-white">
     Detener
   </v-btn>
-  <v-btn :href="stopExercise2.link" target="_blank" class="bg-teal text-white">
+  <v-btn :href="exercise2.link" target="_blank" class="bg-teal text-white">
     Ver 
   </v-btn>
   </v-card-actions>
@@ -151,7 +151,7 @@ max-width="344" >
   <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
     Detener
   </v-btn>
-  <v-btn :href="stopExercise3.link" target="_blank" class="bg-teal text-white">
+  <v-btn :href="exercise3.link" target="_blank" class="bg-teal text-white">
     Ver 
   </v-btn>
   </v-card-actions>
@@ -196,12 +196,12 @@ const exercises2 = ref([
       { id: 1, title: 'CONTADOR', description: 'USO DE IF & SHOW', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Contador.html' },
       { id: 2, title: 'REACTIVIDAD', description: 'USO DE ref', time: 198, remainingTime: 198, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ReactividadBasica.html' },
       { id: 3, title: 'V-FOR', description: 'RECORRIDOS', time: 722, remainingTime: 722, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/VforRecorrido.html' },
-      { id: 4, title: 'PRACTICA UNO', description: 'USO DE NIVELES', time: 1155, remainingTime: 1155, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html' },
-      { id: 5, title: 'OPTIONS V-FOR', description: 'CUESTIONARIO CON TARJETAS', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html' },
-      { id: 6, title: 'PROPS', description: 'SIMPLE', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html' },
+      { id: 4, title: 'PRACTICA UNO', description: 'TIME:900 ', time: 1100, remainingTime: 1100, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html' },
+      { id: 5, title: 'V-FOR', description: 'TIME:900', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html' },
+      { id: 6, title: 'PROPS', description: 'TIME:500', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html' },
       { id: 7, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/EmitVue.html' },
       { id: 8, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html' },
-      { id: 9, title: 'INJECTION', description: 'TIME:', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Injection.html' },
+      { id: 9, title: 'INJECTION', description: 'TIME: 300', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Injection.html' },
       { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html' },
       { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html' },
       { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html' },
