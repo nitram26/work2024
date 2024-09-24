@@ -1,14 +1,7 @@
 <template>
-  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >BACKEND view </h2>
-    </v-col>
-    <v-col cols="1" >
-
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
-    </v-col>
-  </v-row>
+ <MainLayout>
+    <template #main> <h1>BACK</h1> </template>
+ </MainLayout>
   <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
       <v-list>
@@ -50,7 +43,8 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////-->
 
 <script setup>
-  import { ref } from 'vue';
+  import MainLayout from '@/layouts/MainLayout.vue';
+import { ref } from 'vue';
 const drawer = ref(false);
 
 const toggleDrawer = () => {
