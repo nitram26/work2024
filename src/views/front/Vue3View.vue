@@ -1,8 +1,8 @@
 <template>
   <v-row class="bg-teal-darken-2 pa-2" >
       <v-col cols="11" class="text-center">
-          <h2 >VUE3 COMPONENT  </h2>
-    </v-col>
+          <h2>VUE3 COMPONENT  </h2>
+      </v-col>
     <v-col cols="1" >
 
 <v-btn icon @click="toggleDrawer" >
@@ -11,8 +11,31 @@
   </v-row>
   <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
+    <div class="uno">
+      <v-list-item>
+          <v-img src="@/assets/image/CERVERA.png" 
+          
+         
+          >****</v-img>
+
+        </v-list-item>
+        
+        <a href="#section3">SECCIONAR 3</a>
+    </div>
+    <div class="uno">
+      <v-list-item  >
+          <v-img
+            src="@/assets/image/CERVERA.png"
+          
+          >uno</v-img>
+
+        </v-list-item>
+        
+        <a href="#section3">SECCIONAR 4</a>
+    </div>
+    <v-list>
+     <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
+
         <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">INTRODUCCIÓN</v-btn></v-list-item>
 
         <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">COMPONENTES</v-btn></v-list-item>
@@ -271,3 +294,15 @@ const exercises3 = ref([
     //  ********************************************************************
   </script>
   <!-- ************************************************* -->
+  <style scope>
+  .uno>img{
+  width: 2em;
+  margin: 1em;
+  color: white
+  }
+
+  .uno{
+    display: flex;
+  }
+  
+  </style>
