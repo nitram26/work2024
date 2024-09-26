@@ -2,17 +2,7 @@
  <MainLayout>
     <template #main> <h1>BACK</h1> </template>
  </MainLayout>
-  <!-- ********************************************* -->
-  <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="TEMAS" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item link to="/front" title="Vue2" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/vue2" title="dos" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
-        <v-list-item link to="/store" title="tres" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="cuatro" prepend-icon="mdi-store"></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <!-- ********************************** -->
+ 
   <v-row class="mt-12">
     <v-col class="mt-4">
       <h3 class="bg-blue pa-4  text-center">MODELOS </h3>
@@ -44,12 +34,7 @@
 
 <script setup>
   import MainLayout from '@/layouts/MainLayout.vue';
-import { ref } from 'vue';
-const drawer = ref(false);
 
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-}
 </script>
 <!-- ******************************* -->
 <style scoped>
