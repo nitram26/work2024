@@ -83,6 +83,40 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/InvitarColaborador.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> INVITAR COLABORADOR  </v-card-title>
+      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Ver algún commit anterior
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/cambioCorreo.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title class="text-red"> CAMBIO DE CORREO  </v-card-title>
+      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+      Ver algún commit anterior
+    </v-card-text>
+  </v-card>
+  </v-col>
+  <!-- *************************************************************** -->
+        <v-col cols="3">
+      <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
     href="http://127.0.0.1:5501/src/assets/store/IngresarDatos.html"
     max-width="344" >
     <v-card-item>
