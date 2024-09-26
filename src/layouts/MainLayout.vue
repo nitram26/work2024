@@ -12,7 +12,12 @@
 </template>
 <!-- ************************************* -->
 <script setup>
+import { ref } from 'vue';
+const drawer = ref(false);
 
+const toggleDrawer = () => {
+  drawer.value = !drawer.value;
+}
 </script>
 <!-- ************************************* -->
 <style scoped>

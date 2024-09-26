@@ -44,12 +44,12 @@
 
 <script setup>
   import MainLayout from '@/layouts/MainLayout.vue';
-import { ref } from 'vue';
-const drawer = ref(false);
+// import { ref } from 'vue';
+// const drawer = ref(false);
 
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-}
+// const toggleDrawer = () => {
+//   drawer.value = !drawer.value;
+// }
 </script>
 <!-- ******************************* -->
 <style scoped>
