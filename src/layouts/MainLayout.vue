@@ -36,9 +36,13 @@
    <v-img src="@/assets/image/CERVERA.png" class="img"></v-img>
    <slot name="image6"></slot>
  </div>
+   <div class="dos">
+   <v-img src="@/assets/image/CERVERA.png" class="img"></v-img>
+   <slot name="image7"></slot>
  </div>
-
+ </div>
  </v-navigation-drawer>
+ 
 </template>
 <!-- ************************************* -->
 <script setup>

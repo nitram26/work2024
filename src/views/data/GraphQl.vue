@@ -1,237 +1,89 @@
 <template>
-  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >GraphQL</h2>
-    </v-col>
-    <v-col cols="1" >
-
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
-    </v-col>
-  </v-row>
-  <!-- ********************************************* -->
-  <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">INSTALACIÓN</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
-        
-      </v-list>
-    </v-navigation-drawer>
-    <!-- fin de navegador derecho -->
+ <NavInterno>
+  <template #main><h4>GraphQL</h4></template>
+  <template #title1><h4>INICIO</h4></template>
+  <template #title2><h4>OPTIONS</h4></template>
+ </NavInterno>
     <!-- ********************************** -->
-    <div id="section1" class="mt-12" >
-      <v-row class="bg-red-lighten-4">
-    <v-col cols="12" class="mt-6">
-      <h3 class="bg-blue pa-4  text-center">INICIOS</h3>
+    <div class="mt-12" id="section1">
+         <v-row class="bg-purple-lighten-4">
+      <v-col
+       v-for="exercise1 in exercises"
+      :key="exercise1.id"
+       cols="12"
+       sm="6"
+       md="4"
+       lg="3"
+       >
+      <v-card
+    class="mx-auto my-8 bg-brown-lighten-4"
+    elevation="16"
+    max-width="344" >
+    <v-card-item>
+    <v-card-title class="text-purple">{{ exercise1.title }} </v-card-title>
+    <v-card-subtitle class="">{{ exercise1.description }}</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+    <p><b>Tiempo restante: {{ exercise1.remainingTime }} segundos</b></p>
+    </v-card-text>
+    <v-card-actions>
+    <v-btn @click="startExercise1(exercise1)" :disabled="exercise1.intervalId" class="bg-blue text-white pa-2">
+      Iniciar
+    </v-btn>
+    <v-btn @click="stopExercise1(exercise1)" :disabled="!exercise1.intervalId" class="bg-red text-white">
+      Detener
+    </v-btn>
+    <v-btn :href="exercise1.link" target="_blank" class="bg-teal text-white">
+      Ver 
+    </v-btn>
+    </v-card-actions>
+    </v-card>
     </v-col>
-        <!-- ****************************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/Instalaciones.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> INSTALACIÓN  </v-card-title>
-      <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Uso en la PLAYGROUND
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/enlace.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> BUSCAR </v-card-title>
-      <v-card-subtitle>CHECK CAMPO POR DEFECTO</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      EN LA PLAYGROUND
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/buleano.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple">UNIR CAMPOS </v-card-title>
-      <v-card-subtitle>Valores computados</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      EN LA PLAYGROUND
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/anidar.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple">ANIDAR CAMPOS </v-card-title>
-      <v-card-subtitle>Valores computados</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      EN LA PLAYGROUND
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/acciones.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> CALCULOS </v-card-title>
-      <v-card-subtitle>CONDICIONAL</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Traer si es mayor de edad 
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/mutaciones.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> MUTACIONES </v-card-title>
-      <v-card-subtitle>AGREGAR REGISTROS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Sintaxis y uso de uuid
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/graphQL/enum.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> ENUM </v-card-title>
-      <v-card-subtitle>Proceso de Comprensión</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-     busqueda por select o boolean
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-      </v-row>
+    </v-row>
     </div>
-
-      <!-- /////////////////////////////////////////////////////////////-->
+<!-- ********************************************************************** -->
       <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
   </v-col>
-  <!-- ****************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/TemaMenu.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Color según Estado </v-card-title>
-      <v-card-subtitle>Color de acuerdo al cambio de estado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>     Ver imagen
-    </v-card-text>
-  </v-card>
-</v-col>
-
-<!-- ********************************************************************** -->
 </v-row>
 </div>
 <!-- ********************************************************************** -->
- <div id="section3">
-<v-row class="bg-purple-lighten-4">
-  <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
-  </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5500/src/assets/vue2/FechaSinhora.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> FECHA SIN HORA </v-card-title>
-      <v-card-subtitle> Eliminar la hora</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    fecha sin hora
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-
-</v-row>
-</div>
 </template>
-<!-- ******************************* -->
+<!-- /////////////////////////////////////////////// -->
 <script setup>
+  import NavInterno from '@/layouts/NavInterno.vue';
   import { ref } from 'vue';
-const drawer = ref(false);
 
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-}
-// NAV
+const exercises = ref([
+      { id: 1, title: 'INSTALACIÓN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/Instalaciones.html' },
+      { id: 2, title: 'BUSCAR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/enlace.html' },
+      { id: 3, title: 'UNIR CAMPOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/buleano.html' },
+      { id: 4, title: 'ANIDAR CAMPOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/anidar.html' },
+      { id: 5, title: 'CALCULOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/acciones.html' },
+      { id: 6, title: 'MUTACIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html' },
+      { id: 7, title: 'ENUM', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/data/graphQL/enum.html' },
+    ]);
+    const startExercise1 = (exercise1) => {
+      if (exercise1.intervalId) return;
 
-const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-
+      exercise1.intervalId = setInterval(() => {
+        if (exercise1.remainingTime > 0) {
+          exercise1.remainingTime--
+        } else {
+          clearInterval(exercise1.intervalId);
+          exercise1.intervalId = null;
+        }
+      }, 1000);
+    };
+    const stopExercise1 = (exercise1) => {
+      clearInterval(exercise1.intervalId);
+      exercise1.intervalId = null;
+    }; 
 </script>
 <!-- ******************************* -->
 <style scoped>
-.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 101%;
-  z-index: 1000
-}
+
 
 </style>

@@ -11,28 +11,6 @@
   </v-row>
   <!-- ********************************************* -->
   <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-    <div class="uno">
-      <v-list-item>
-          <v-img src="@/assets/image/CERVERA.png" 
-          
-         
-          >****</v-img>
-
-        </v-list-item>
-        
-        <a href="#section3">SECCIONAR 3</a>
-    </div>
-    <div class="uno">
-      <v-list-item  >
-          <v-img
-            src="@/assets/image/CERVERA.png"
-          
-          >uno</v-img>
-
-        </v-list-item>
-        
-        <a href="#section3">SECCIONAR 4</a>
-    </div>
     <v-list>
      <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
 
@@ -185,6 +163,7 @@ max-width="344" >
 <!-- ///////////////////////////////////////////////////// -->
   <script setup>
   import { ref } from 'vue';
+
 const drawer = ref(false);
 
 const toggleDrawer = () => {
