@@ -41,7 +41,7 @@
          &lt;div class="mt-12" id="section1">
          &lt;v-row class="bg-purple-lighten-4">
       &lt;v-col
-       v-for="exercise1 in exercises"
+       v-for="exercise1 in exercises1"
       :key="exercise1.id"
        cols="12"
        sm="6"
@@ -82,9 +82,9 @@ import MainLayout from '@/layouts/MainLayout.vue';
 import { ref } from 'vue';
 
  
-   const exercises = ref([
-      { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html' },
-      { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html' },
+   const exercises1 = ref([
+      { id: 1, title: 'CREAR ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
+      { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
     
   
     ]);

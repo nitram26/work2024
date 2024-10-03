@@ -1,431 +1,239 @@
-<template>
-  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >VUE2 </h2>
-    </v-col>
-    <v-col cols="1" >
+    <template>
+  <NavInterno>
+    <template #main>VUE2</template>
+    <template #title1><h4>MODELOS </h4></template>
+    <template #title2><h4> OPTIONS</h4></template>
+    <template #title3><h4>FECHA </h4></template>
+  </NavInterno>
+ 
+      <!-- fin de navegador derecho -->
+<!-- ////////////////////////////////////////////////////////// -->
+<div id="section1">
+     <v-row class="my-12 text-center bg-purple-lighten-4">
+ <v-col cols="12">
+   <h2 class="bg-pink-darken-4 pa-4">MODELOS </h2>
+ </v-col>
+</v-row>
 
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
-    </v-col>
-  </v-row>
-  <!-- ********************************************* -->
-  <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">MODELOS DE PAG</v-btn></v-list-item>
+<!-- *************************************************************** -->
+<div class="mt-12">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise1 in exercises1"
+       :key="exercise1.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise1.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise1.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise1.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise1(exercise1)" :disabled="exercise1.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise1(exercise1)" :disabled="!exercise1.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise1.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
+  </div>
 
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-database-cog-outline">FECHAS</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-arrange-bring-to-front">SURSA-FRECUENTES</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section5')" prepend-icon="mdi-arrange-send-to-back">dos</v-btn></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <!-- fin de navegador derecho -->
-    <!-- ********************************** -->
-    <div id="section1" class="mt-12" >
-      <v-row class="bg-red-lighten-4">
-    <v-col cols="12" class="mt-6">
-      <h3 class="bg-blue pa-4  text-center">MODELOS DE PAGINAS COMPLETAS</h3>
-    </v-col>
-        <!-- ****************************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> CREACIÓN  </v-card-title>
-      <v-card-subtitle>Secuencia de Desarrollo</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-   1. Model
-   2. Controller
-   3. Pages
-   4. Route
-   5. Component
-   6. Validaciones
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- ****************************************************************************** -->
- <v-col cols="3">
-        <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Model </v-card-title>
-      <v-card-subtitle>Proyectos Sursa</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    Modelo básico para los model de Vue2
-    </v-card-text>
-  </v-card>
-      </v-col>
-<!-- ****************************************************************************** -->
-      <v-col cols="3">
-        <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ValidacionesVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Validaciones </v-card-title>
-      <v-card-subtitle>Proyectos Sursa</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Validaciones para el Front y Back
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ****************************************************************************** -->
-      <v-col cols="3">
-        <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ControladorVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Controller </v-card-title>
-      <v-card-subtitle>Página completa</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Código total de una página
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-      <v-col cols="3">
-        <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/PagesVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Pages </v-card-title>
-      <v-card-subtitle>Página completa</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-1.	Creada la pagina la podemos llamar en la PC <br>
-2.	La ruta de llamada debe coincidir con la ruta<br>
-3.	En el headers adecuar los nombres de acuerdo al modelo y la bd<br>
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-      <v-col cols="3">
-        <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ComponentVue2.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Component </v-card-title>
-      <v-card-subtitle>Página completa</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      1.	Cambiar mayúsculas y minúsculas <br>
-      2.	En los model las rutas y los nombres, línea 20 <br>
-      3.	Cambiar la ruta en controlador líneas 45 y 47<br>
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ****************************************************************************** -->
-<v-col cols="3">
-          <v-card
-      class="mx-auto my-8"
-      elevation="16"
-      target="_blank"
-      href="http://127.0.0.1:5501/src/assets/front/vue2/Axios.html"
-      max-width="344" >
-      <v-card-item>
-        <v-card-title> AXIOS </v-card-title>
-        <v-card-subtitle>Para obtener el enlace a la base de datos</v-card-subtitle>
-      </v-card-item>
-      <v-card-text>
-      axios básico con el objeto de hacer una prueba inicial
-      </v-card-text>
-    </v-card>
-        </v-col>
-      </v-row>
-    </div>
-
-      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
-      <div id="section2">
+ <!-- ///////////////////////////////////////////////// -->
+      <div id="section2" class="mt-12" >
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4">Vue2 OPTIONS </h2>
+    <h2 class="bg-pink-darken-4 pa-4">OPTIONS  </h2>
   </v-col>
+</v-row>
+    
   <!-- ****************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/TemaMenu.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Color según Estado </v-card-title>
-      <v-card-subtitle>Color de acuerdo al cambio de estado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>     Ver imagen
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/BotonRefrescar.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Botón refrescar </v-card-title>
-      <v-card-subtitle>Ver imagen</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      El botón refrescará la pagina
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/numRegistro.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Ver N° de Registros</v-card-title>
-      <v-card-subtitle>Ver imagen</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Cantidad de registros de una Página
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/TextfieldStatus.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>Registros por Estado y Categoria</v-card-title>
-      <v-card-subtitle>Incluye Iconos con color</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Ver por consola o en Pantalla
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ListarporNombre.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Listar por Nombre</v-card-title>
-      <v-card-subtitle>En Add</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-     Traer registros de BD de acuerdo a selección
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/SeleccionarCampo.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Seleccionar Campo</v-card-title>
-      <v-card-subtitle>En la tabla</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-     Traer registros de acuerdo a selección
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-   <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>PREFIJO</v-card-title>
-      <v-card-subtitle>En v-text-field</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-   Prefijo en un v-text-field y que este se guarde
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- ********************************************************************** -->
-   <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>SELECT</v-card-title>
-      <v-card-subtitle>tabla & campo</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-   Mostrar los elementos de un campo
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- ********************************************************************** -->
-<!-- ********************************************************************** -->
-   <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/ModificarRegistro.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>MONGO </v-card-title>
-      <v-card-subtitle>Actualizar registro</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-   modificar Registro de Caja-SURSA
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- ********************************************************************** -->
-</v-row>
-</div>
-<!-- ********************************************************************** -->
- <div id="section3">
-<v-row class="bg-purple-lighten-4">
+  <div class="mt-12">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise2 in exercises2"
+       :key="exercise2.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise2.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise2.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise2.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise2(exercise2)" :disabled="exercise2.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise2(exercise2)" :disabled="!exercise2.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise2.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
+  </div>
+<!-- *************************************************** -->
+<div id="section3" class="mt-12" >
+<v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">FECHA</h2>
+    <h2 class="bg-pink-darken-4 pa-4">FECHA </h2>
   </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/FechaSinhora.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> FECHA SIN HORA </v-card-title>
-      <v-card-subtitle> Eliminar la hora</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    fecha sin hora
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href=""
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> titulo </v-card-title>
-      <v-card-subtitle>detalle</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      explicación
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
 </v-row>
-</div>
-<!-- ********************************************************************** -->
- <div id="section4">
-<v-row class="bg-purple-lighten-4">
-  <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">SURSA-FRECUENTES</h2>
-  </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/frecuenteBono.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> MODIFICAR MONTO </v-card-title>
-      <v-card-subtitle> En BD MongoDB</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    Se ingresó un monto equivocado
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/front/vue2/Actualizaciones.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Actualizaciones SURSA</v-card-title>
-      <v-card-subtitle>Usuarios y Bases</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Tabla boxes, MONGODB
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-</v-row>
+  <!-- ************************************************* -->
+  <div class="mt-12">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise3 in exercises3"
+       :key="exercise3.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise3.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise3.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise3.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise3.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
 </div>
 </template>
-<!-- ******************************* -->
+<!-- ///////////////////////////////////////////////////////////// -->
 <script setup>
-  import { ref } from 'vue'
-const drawer = ref(false)
-
-const toggleDrawer = () => {
-  drawer.value = !drawer.value
-}
-// NAV
-
-const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
+  import NavInterno from '@/layouts/NavInterno.vue';
+import { ref } from 'vue';
+// 01/////////////////////////////////////////////////////
+const exercises1 = ref([
+       { id: 1, title: 'CREACIÓN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html' },
+       { id: 2, title: 'MODEL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html' },
+       { id: 3, title: ' VALIDACIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ValidacionesVue2.html' },
+       { id: 4, title: 'CONTROLLER', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ControladorVue2.html' },
+       { id: 5, title: 'PAGES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/PagesVue2.html' },
+       { id: 6, title: 'COMPONENT', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ComponentVue2.html' },
+       { id: 7, title: 'AXIOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Axios.html' },
+       { id: 8, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+ 
+     
+     ]);
+     const startExercise1 = (exercise1) => {
+       if (exercise1.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise1.remainingTime > 0) {
+           exercise1.remainingTime--
+         } else {
+           clearInterval(exercise1.intervalId);
+           exercise1.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise1 = (exercise1) => {
+       clearInterval(exercise1.intervalId);
+       exercise1.intervalId = null;
+     }; 
+    //  02 ///////////////////////////////////////////////////
+    const exercises2 = ref([
+       { id: 1, title: ' Color según Estado ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/TemaMenu.html' },
+       { id: 2, title: 'Botón refrescar', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/BotonRefrescar.html' },
+       { id: 3, title: '  Ver N° de Registros', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/numRegistro.html' },
+       { id: 4, title: 'Registros por Estado y Categoria ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/TextfieldStatus.html' },
+       { id: 5, title: 'Listar por Nombre ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ListarporNombre.html' },
+       { id: 6, title: 'Seleccionar Campo ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/SeleccionarCampo.html' },
+       { id: 7, title: ' PREFIJO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html' },
+       { id: 8, title: 'SELECT ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html' },
+       { id: 9, title: 'MONGO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ModificarRegistro.html' },
+       { id: 10, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+     
+     ]);
+     const startExercise2 = (exercise2) => {
+       if (exercise2.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise2.remainingTime > 0) {
+           exercise2.remainingTime--
+         } else {
+           clearInterval(exercise2.intervalId);
+           exercise2.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise2 = (exercise2) => {
+       clearInterval(exercise2.intervalId);
+       exercise2.intervalId = null;
+     }; 
+    //  03 ///////////////////////////////////////////////////
+    const exercises3 = ref([
+       { id: 1, title: 'FECHA SIN HORA', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/FechaSinhora.html' },
+       { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+  
+     
+     ]);
+     const startExercise3 = (exercise3) => {
+       if (exercise3.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise3.remainingTime > 0) {
+           exercise3.remainingTime--
+         } else {
+           clearInterval(exercise3.intervalId);
+           exercise3.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise3 = (exercise3) => {
+       clearInterval(exercise3.intervalId);
+       exercise3.intervalId = null;
+     }; 
 </script>
-<!-- ******************************* -->
+<!-- /////////////////////////////////////////////////////////// -->
 <style scoped>
 .fixed-top {
   position: fixed;
@@ -436,3 +244,6 @@ const scrollTo = (sectionId) => {
 }
 
 </style>
+   
+
+  

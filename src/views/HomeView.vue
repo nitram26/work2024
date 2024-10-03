@@ -1,259 +1,228 @@
 <template>
-  <v-row class="bg-cyan-darken-1 pa-2 mt-12 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >HOME </h2>
-    </v-col>
-    <v-col cols="1" >
-
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
-    </v-col>
-  </v-row>
-  <!-- ********************************************* -->
-  <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">MODELOS DE PAG</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">OPTIONS</v-btn></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">PROCESSUS</v-btn></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  <v-row class="mt-12">
-    <v-col class="mt-4">
-      <h3 class="bg-green-darken-4 pa-4  text-center"> MODELOS</h3>
-    </v-col>
-     
-      </v-row>
+  <NavInterno>
+    <template #main>HOME</template>
+    <template #title1><h4>INICIO</h4></template>
+    <template #title2><h4>OPTIONS</h4></template>
+    <template #title3><h4>PROCESSUS</h4></template>
+  </NavInterno>
+ 
       <!-- fin de navegador derecho -->
-     <div id="section1" class="mt-12" >
-      <v-row class="bg-red-lighten-4">
-        <!-- ****************************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/ElementosRapidos.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-purple"> HTML  </v-card-title>
-      <v-card-subtitle>Plantilla para Enlaces</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Plantilla para referencia a HTML
-    </v-card-text>
-  </v-card>
-  </v-col>
+<!-- ////////////////////////////////////////////////////////// -->
+<div id="section1">
+     <v-row class="my-12 text-center bg-purple-lighten-4">
+ <v-col cols="12">
+   <h2 class="bg-pink-darken-4 pa-4">MODELOS </h2>
+ </v-col>
+</v-row>
+</div>
 <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/PaginaPrincipal.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple"> Navegador Principal  </v-card-title>
-      <v-card-subtitle>Header del App</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Plantilla para iniciar
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/MenuPrimario.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple"> Menu Primario  </v-card-title>
-      <v-card-subtitle>Para sub-página principal</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Antes del navegador interno
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/MenuSecundario.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple"> Menu Secundario  </v-card-title>
-      <v-card-subtitle>Plantilla para páginas</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Para navegador dentro de página
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/secundarioYTarjetas.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple"> Secundario con Tarjetas </v-card-title>
-      <v-card-subtitle>Código Mejorado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Para navegador dentro de página
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/TarjetaVfor.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple"> Tarjetas con V-for </v-card-title>
-      <v-card-subtitle>Código Mejorado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Para navegador dentro de página
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/NavInterno.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title  class="text-purple">NAV INTERNO </v-card-title>
-      <v-card-subtitle>Código Mejorado</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Para navegador dentro de página
-    </v-card-text>
-  </v-card>
-  </v-col>
-<!-- *************************************************************** -->
- 
- 
-      </v-row>
-    </div>
-      <!-- *****************************************************************-->
+ <v-row>
+  <div class="mt-12">
+          <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise1 in exercises1"
+       :key="exercise1.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise1.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise1.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise1.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise1(exercise1)" :disabled="exercise1.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise1(exercise1)" :disabled="!exercise1.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise1.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
+    </v-row>
+
+ <!-- ///////////////////////////////////////////////// -->
       <div id="section2" class="mt-12" >
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4"> OPTIONS </h2>
   </v-col>
-  <!-- ****************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/ManagerNvm.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-indigo"> NVM </v-card-title>
-      <v-card-subtitle>Manager de NODE</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      INSTACIÓN Y USO
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ************************************************************ -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-indigo"> COLORES </v-card-title>
-      <v-card-subtitle>VUETIFY</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Paleta de Colores 
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ************************************************************ -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/EnlacesReferencias.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-indigo"> TUTORIALES </v-card-title>
-      <v-card-subtitle>REFERENCIAS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Enlaces 
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ************************************************************ -->
 </v-row>
+  
+  <!-- ****************************************** -->
+  <div class="mt-12">
+          <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise2 in exercises2"
+       :key="exercise2.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise2.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise2.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise2.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise2(exercise2)" :disabled="exercise2.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise2(exercise2)" :disabled="!exercise2.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise2.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
   </div>
-<!-- ************************************************************ -->
+<!-- *************************************************** -->
 <div id="section3" class="mt-12" >
 <v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">PROCESSUS</h2>
   </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/home/ProcesoHora.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-blue"> ITER CONVERSIONIS </v-card-title>
-      <v-card-subtitle>detalle HORA</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Alarma, reflexión y tarea.
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
 </v-row>
+  <!-- ************************************************* -->
+  <div class="mt-12">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise3 in exercises3"
+       :key="exercise3.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise3.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise3.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise3.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise3.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
 </div>
 </template>
 <!-- ///////////////////////////////////////////////////////////// -->
 <script setup>
-  import { ref } from 'vue';
-const drawer = ref(false);
-
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-}
-
-// NAV interno
-const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+  import NavInterno from '@/layouts/NavInterno.vue';
+import { ref } from 'vue';
+// 01/////////////////////////////////////////////////////
+const exercises1 = ref([
+       { id: 1, title: 'HTML', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5501/src/assets/home/ElementosRapidos.html' },
+       { id: 2, title: 'NAV PRINCIPAL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/PaginaPrincipal.html' },
+       { id: 3, title: ' MENU PRIMARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/MenuPrimario.html' },
+       { id: 4, title: 'MENU SECUNDARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/MenuSecundario.html' },
+       { id: 5, title: 'SECUNDARIO CON TARJETAS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/secundarioYTarjetas.html' },
+       { id: 6, title: 'TARJETAS V-FOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/TarjetaVfor.html' },
+       { id: 7, title: 'NAV INTERNO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/NavInterno.html' },
+     ]);
+     const startExercise1 = (exercise1) => {
+       if (exercise1.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise1.remainingTime > 0) {
+           exercise1.remainingTime--
+         } else {
+           clearInterval(exercise1.intervalId);
+           exercise1.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise1 = (exercise1) => {
+       clearInterval(exercise1.intervalId);
+       exercise1.intervalId = null;
+     }; 
+    //  02 ///////////////////////////////////////////////////
+    const exercises2 = ref([
+       { id: 1, title: 'NVM', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ManagerNvm.html' },
+       { id: 2, title: 'COLORES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html' },
+       { id: 3, title: ' TUTORIALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/EnlacesReferencias.html' },
+     
+     ]);
+     const startExercise2 = (exercise2) => {
+       if (exercise2.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise2.remainingTime > 0) {
+           exercise2.remainingTime--
+         } else {
+           clearInterval(exercise2.intervalId);
+           exercise2.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise2 = (exercise2) => {
+       clearInterval(exercise2.intervalId);
+       exercise2.intervalId = null;
+     }; 
+    //  03 ///////////////////////////////////////////////////
+    const exercises3 = ref([
+       { id: 1, title: 'PROCESSUS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ProcesoHora.html' },
+       { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+  
+     
+     ]);
+     const startExercise3 = (exercise3) => {
+       if (exercise3.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise3.remainingTime > 0) {
+           exercise3.remainingTime--
+         } else {
+           clearInterval(exercise3.intervalId);
+           exercise3.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise3 = (exercise3) => {
+       clearInterval(exercise3.intervalId);
+       exercise3.intervalId = null;
+     }; 
 </script>
 <!-- /////////////////////////////////////////////////////////// -->
 <style scoped>
