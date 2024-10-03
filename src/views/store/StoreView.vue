@@ -1,24 +1,11 @@
 <template>
-  <v-row class="bg-purple-darken-4 pa-2 mt-12 fixed-top" >
-      <v-col cols="11" class="text-center">
-          <h2 >STORE </h2>
-    </v-col>
-    <v-col cols="1" >
-
-<v-btn icon @click="toggleDrawer" >
-    <v-img src="@/assets/image/CERVERA.png" alt="My Image2" style="width: 39px; border-radius: 1em;"/></v-btn>
-    </v-col>
-  </v-row>
-  <!-- ********************************************* -->
-  <v-navigation-drawer v-model="drawer" class="br-teal-darken-4" theme="dark">
-      <v-list>
-        <v-list-item link to="/" title="HOME" prepend-icon="mdi-grid"></v-list-item>
-        <v-list-item ><v-btn @click="scrollTo('section1')" prepend-icon="mdi-arrange-bring-to-front">GITHUB</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">PC & IMPRESORA</v-btn></v-list-item>
-        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">VSCODE</v-btn></v-list-item>
-        
-      </v-list>
-    </v-navigation-drawer>
+  <NavInterno>
+    <template #main>STORE</template>
+    <template #title1>GITHUB</template>
+    <template #title2>PC & IMPRESORA</template>
+    <template #title3>VSCODE</template>
+    <template #title4>WINDOWS & CHROME</template>
+  </NavInterno>
     <!-- fin de navegador derecho -->
     <!-- ********************************** -->
     <div id="section1" class="mt-12" >
@@ -26,114 +13,46 @@
     <v-col cols="12" class="mt-6">
       <h3 class="bg-blue pa-4  text-center">GITHUB</h3>
     </v-col>
-        <!-- ************************************************************ -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/TerminalComandos.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> TERMINAL DE COMANDOS  </v-card-title>
-      <v-card-subtitle>COMANDOS PARA CARPETAS Y ARCHIVOS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Sintaxis y ejemplos
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- ******************************************************************* -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/ASCII.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> ASCII  </v-card-title>
-      <v-card-subtitle>COMANDOS PARA SÍMBOLOS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      CÓDIGOS 
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- ******************************************************************* -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/GitCommit.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> COMMITS  </v-card-title>
-      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Ver algún commit anterior
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/InvitarColaborador.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> INVITAR COLABORADOR  </v-card-title>
-      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Ver algún commit anterior
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/cambioCorreo.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> CAMBIO DE CORREO  </v-card-title>
-      <v-card-subtitle>EMPLEO DE COMMITS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Ver algún commit anterior
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-        <v-col cols="3">
-      <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/IngresarDatos.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title class="text-red"> Acciones  </v-card-title>
-      <v-card-subtitle>Acciones necesarias</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Ingresar datos
-    </v-card-text>
-  </v-card>
-  </v-col>
-  <!-- *************************************************************** -->
-   
-      </v-row>
+  </v-row>
+<!-- ********************************************** -->
+<div class="mt-12" id="section1">
+          <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise1 in exercises"
+       :key="exercise1.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise1.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise1.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise1.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise1(exercise1)" :disabled="exercise1.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise1(exercise1)" :disabled="!exercise1.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise1.link" target="_blank" class="bg-teal text-white">
+       Ver
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
     </div>
-
-      <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+<!-- /////////////////////////////////////////////////////////////////////////////////////-->
       <div id="section2">
       <v-row class="my-12 text-center bg-teal-lighten-4">
   <v-col cols="12">
@@ -280,27 +199,58 @@
   </v-card>
 </v-col>
 <!-- ********************************************************************** -->
+  <v-col cols="3" >
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    target="_blank"
+    href="http://127.0.0.1:5501/src/assets/store/CorreoYDrive.html"
+    max-width="344" >
+    <v-card-item>
+      <v-card-title>GOOGLE DRIVE</v-card-title>
+      <v-card-subtitle>Subir, editar y descargar archivos </v-card-subtitle>
+    </v-card-item>
+    <v-card-text>
+     abrir correo en otra pc
+    </v-card-text>
+  </v-card>
+</v-col>
+<!-- ********************************************************************** -->
 
 </v-row>
 </div>
 </template>
 <!-- ******************************* -->
 <script setup>
-  import { ref } from 'vue';
-const drawer = ref(false);
+  import NavInterno from '@/layouts/NavInterno.vue';
+import { ref } from 'vue';
 
-const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-}
-// NAV
-
-const scrollTo = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
+//v-for
+const exercises = ref([
+       { id: 1, title: 'TERMINAL DE COMANDOS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/TerminalComandos.html' },
+       { id: 2, title: 'ASII', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/ASCII.html' },
+       { id: 3, title: 'COMMITS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/GitCommit.html' },
+       { id: 4, title: 'INVITAR COLABORADOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/InvitarColaborador.html' },
+       { id: 5, title: 'CAMBIO DE CORREO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/cambioCorreo.html' },
+       { id: 6, title: 'ACCIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/IngresarDatos.html' },
+       { id: 7, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+     ]);
+     const startExercise1 = (exercise1) => {
+       if (exercise1.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise1.remainingTime > 0) {
+           exercise1.remainingTime--
+         } else {
+           clearInterval(exercise1.intervalId);
+           exercise1.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise1 = (exercise1) => {
+       clearInterval(exercise1.intervalId);
+       exercise1.intervalId = null;
+     }; 
 
 </script>
 <!-- ******************************* -->

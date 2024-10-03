@@ -8,15 +8,13 @@
      <template #image5>  <a href="/graph" class="lat">PhpMyAdmin</a> </template>
      <template #image6>  <a href="/graph" class="lat">SQL</a> </template>
   </MainLayout>
+     <!-- fin de navegador derecho -->
    <!-- ********************************************* -->
     <v-row class="mt-12">
      <v-col class="mt-4">
        <h3 class="bg-blue pa-4  text-center">MODELOS </h3>
      </v-col>
-      
-       </v-row>
-       <!-- fin de navegador derecho -->
-    
+    </v-row>
          <!-- ****************************************************************************** -->
          <div class="mt-12" id="section1">
          <v-row class="bg-purple-lighten-4">
