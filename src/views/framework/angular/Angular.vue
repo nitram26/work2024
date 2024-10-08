@@ -33,7 +33,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/instalacion.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/instalacion.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> INSTALACIÓN  </v-card-title>
@@ -50,7 +50,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/DescripcionDeComponente.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/DescripcionDeComponente.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> COMPONENTES  </v-card-title>
@@ -67,7 +67,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/CrearComponente.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/CrearComponente.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> CREAR UN COMPONENTE  </v-card-title>
@@ -84,7 +84,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/interpolacion.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/interpolacion.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> INTERPOLACIÓN  </v-card-title>
@@ -101,7 +101,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/TipadoDDatos.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/TipadoDDatos.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> TIPADO DE DATOS  </v-card-title>
@@ -128,7 +128,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/binding.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/binding.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> CONTADOR </v-card-title>
@@ -145,7 +145,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/bindingClass.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/bindingClass.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> BINDING </v-card-title>
@@ -162,7 +162,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/InputSimple.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/InputSimple.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> INPUT SIMPLE </v-card-title>
@@ -179,7 +179,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/condicionalIf.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/condicionalIf.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> *ngIf </v-card-title>
@@ -196,7 +196,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/ngFor.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/ngFor.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal"> *ngFor </v-card-title>
@@ -213,7 +213,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/formulario.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/formulario.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal">Formularios </v-card-title>
@@ -230,7 +230,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/framework/angular/validaciones.html"
+    href="http://127.0.0.1:5502/src/assets/framework/angular/validaciones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-teal">Validaciones </v-card-title>

@@ -60,8 +60,8 @@
    import { ref } from 'vue';
 
    const exercises = ref([
-    { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html' },
-    { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html' },
+    { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CrearProyecto.html' },
+    { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Snippet.html' },
     ]);
 
     const startExercise1 = (exercise1) => {

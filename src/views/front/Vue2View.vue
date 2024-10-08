@@ -152,13 +152,13 @@
 import { ref } from 'vue';
 // 01/////////////////////////////////////////////////////
 const exercises1 = ref([
-       { id: 1, title: 'CREACIÓN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html' },
-       { id: 2, title: 'MODEL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ModelVue2.html' },
-       { id: 3, title: ' VALIDACIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ValidacionesVue2.html' },
-       { id: 4, title: 'CONTROLLER', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ControladorVue2.html' },
-       { id: 5, title: 'PAGES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/PagesVue2.html' },
-       { id: 6, title: 'COMPONENT', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ComponentVue2.html' },
-       { id: 7, title: 'AXIOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Axios.html' },
+       { id: 1, title: 'CREACIÓN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5502/src/assets/front/vue2/ModelVue2.html' },
+       { id: 2, title: 'MODEL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ModelVue2.html' },
+       { id: 3, title: ' VALIDACIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ValidacionesVue2.html' },
+       { id: 4, title: 'CONTROLLER', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ControladorVue2.html' },
+       { id: 5, title: 'PAGES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/PagesVue2.html' },
+       { id: 6, title: 'COMPONENT', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ComponentVue2.html' },
+       { id: 7, title: 'AXIOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/Axios.html' },
        { id: 8, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
  
      
@@ -181,15 +181,15 @@ const exercises1 = ref([
      }; 
     //  02 ///////////////////////////////////////////////////
     const exercises2 = ref([
-       { id: 1, title: ' Color según Estado ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/TemaMenu.html' },
-       { id: 2, title: 'Botón refrescar', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/BotonRefrescar.html' },
-       { id: 3, title: '  Ver N° de Registros', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/numRegistro.html' },
-       { id: 4, title: 'Registros por Estado y Categoria ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/TextfieldStatus.html' },
-       { id: 5, title: 'Listar por Nombre ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ListarporNombre.html' },
-       { id: 6, title: 'Seleccionar Campo ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/SeleccionarCampo.html' },
-       { id: 7, title: ' PREFIJO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html' },
-       { id: 8, title: 'SELECT ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/Prefijo.html' },
-       { id: 9, title: 'MONGO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/ModificarRegistro.html' },
+       { id: 1, title: ' Color según Estado ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/TemaMenu.html' },
+       { id: 2, title: 'Botón refrescar', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/BotonRefrescar.html' },
+       { id: 3, title: '  Ver N° de Registros', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/numRegistro.html' },
+       { id: 4, title: 'Registros por Estado y Categoria ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/TextfieldStatus.html' },
+       { id: 5, title: 'Listar por Nombre ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ListarporNombre.html' },
+       { id: 6, title: 'Seleccionar Campo ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/SeleccionarCampo.html' },
+       { id: 7, title: ' PREFIJO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/Prefijo.html' },
+       { id: 8, title: 'SELECT ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/Prefijo.html' },
+       { id: 9, title: 'MONGO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ModificarRegistro.html' },
        { id: 10, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
      
      ]);
@@ -211,7 +211,7 @@ const exercises1 = ref([
      }; 
     //  03 ///////////////////////////////////////////////////
     const exercises3 = ref([
-       { id: 1, title: 'FECHA SIN HORA', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue2/FechaSinhora.html' },
+       { id: 1, title: 'FECHA SIN HORA', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/FechaSinhora.html' },
        { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
   
      

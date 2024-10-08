@@ -58,7 +58,7 @@
    import { ref } from 'vue';
  
  const exercises1 = ref([
-       { id: 1, title: 'LOGIN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/html/LoginFirebase.html' },
+       { id: 1, title: 'LOGIN', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/html/LoginFirebase.html' },
        { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
    
      ]);

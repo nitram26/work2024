@@ -88,7 +88,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/vuetify/Botones.html"
+    href="http://127.0.0.1:5502/src/assets/vuetify/Botones.html"
     max-width="344" >
     <v-card-item>
       <v-card-title class="text-red"> BOTONES  </v-card-title>
@@ -196,7 +196,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/vuetify/Cards.html"
+    href="http://127.0.0.1:5502/src/assets/vuetify/Cards.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> CARDS </v-card-title>
@@ -380,7 +380,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/vuetify/CardIcon.html"
+    href="http://127.0.0.1:5502/src/assets/vuetify/CardIcon.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> CARDS CON ICONO E IMAGEN </v-card-title>

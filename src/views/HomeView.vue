@@ -153,13 +153,13 @@
 import { ref } from 'vue';
 // 01/////////////////////////////////////////////////////
 const exercises1 = ref([
-       { id: 1, title: 'HTML', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5501/src/assets/home/ElementosRapidos.html' },
-       { id: 2, title: 'NAV PRINCIPAL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/PaginaPrincipal.html' },
-       { id: 3, title: ' MENU PRIMARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/MenuPrimario.html' },
-       { id: 4, title: 'MENU SECUNDARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/MenuSecundario.html' },
-       { id: 5, title: 'SECUNDARIO CON TARJETAS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/secundarioYTarjetas.html' },
-       { id: 6, title: 'TARJETAS V-FOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/TarjetaVfor.html' },
-       { id: 7, title: 'NAV INTERNO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/NavInterno.html' },
+       { id: 1, title: 'HTML', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link:'http://127.0.0.1:5502/src/assets/home/ElementosRapidos.html' },
+       { id: 2, title: 'NAV PRINCIPAL', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/PaginaPrincipal.html' },
+       { id: 3, title: ' MENU PRIMARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/MenuPrimario.html' },
+       { id: 4, title: 'MENU SECUNDARIO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/MenuSecundario.html' },
+       { id: 5, title: 'SECUNDARIO CON TARJETAS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/secundarioYTarjetas.html' },
+       { id: 6, title: 'TARJETAS V-FOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/TarjetaVfor.html' },
+       { id: 7, title: 'NAV INTERNO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/NavInterno.html' },
      ]);
      const startExercise1 = (exercise1) => {
        if (exercise1.intervalId) return;
@@ -179,9 +179,9 @@ const exercises1 = ref([
      }; 
     //  02 ///////////////////////////////////////////////////
     const exercises2 = ref([
-       { id: 1, title: 'NVM', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ManagerNvm.html' },
-       { id: 2, title: 'COLORES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ColoresVuetify.html' },
-       { id: 3, title: ' TUTORIALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/EnlacesReferencias.html' },
+       { id: 1, title: 'NVM', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ManagerNvm.html' },
+       { id: 2, title: 'COLORES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ColoresVuetify.html' },
+       { id: 3, title: ' TUTORIALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/EnlacesReferencias.html' },
      
      ]);
      const startExercise2 = (exercise2) => {
@@ -202,7 +202,7 @@ const exercises1 = ref([
      }; 
     //  03 ///////////////////////////////////////////////////
     const exercises3 = ref([
-       { id: 1, title: 'PROCESSUS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/home/ProcesoHora.html' },
+       { id: 1, title: 'PROCESSUS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ProcesoHora.html' },
        { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
   
      

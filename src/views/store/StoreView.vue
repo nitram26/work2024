@@ -64,7 +64,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/mantenimientoLogico.html"
+    href="http://127.0.0.1:5502/src/assets/store/mantenimientoLogico.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>Mantenimiento Lógico</v-card-title>
@@ -81,7 +81,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/ImpresoraEpson.html"
+    href="http://127.0.0.1:5502/src/assets/store/ImpresoraEpson.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Limpieza de cabezales</v-card-title>
@@ -108,7 +108,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/SettingJson.html"
+    href="http://127.0.0.1:5502/src/assets/store/SettingJson.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> SETTING JSON </v-card-title>
@@ -126,7 +126,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/LiveServer.html"
+    href="http://127.0.0.1:5502/src/assets/store/LiveServer.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> LIVE SERVER </v-card-title>
@@ -152,7 +152,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/ArchivoAtexto.html"
+    href="http://127.0.0.1:5502/src/assets/store/ArchivoAtexto.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>COPIAR NOMBRE </v-card-title>
@@ -170,7 +170,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/Suspensi%C3%B3nPantalla.html"
+    href="http://127.0.0.1:5502/src/assets/store/Suspensi%C3%B3nPantalla.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>Suspender o Invernar </v-card-title>
@@ -187,7 +187,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/SegundaPantalla.html"
+    href="http://127.0.0.1:5502/src/assets/store/SegundaPantalla.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>Audio-Video </v-card-title>
@@ -204,7 +204,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/store/CorreoYDrive.html"
+    href="http://127.0.0.1:5502/src/assets/store/CorreoYDrive.html"
     max-width="344" >
     <v-card-item>
       <v-card-title>GOOGLE DRIVE</v-card-title>
@@ -227,12 +227,12 @@ import { ref } from 'vue';
 
 //v-for
 const exercises = ref([
-       { id: 1, title: 'TERMINAL DE COMANDOS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/TerminalComandos.html' },
-       { id: 2, title: 'ASII', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/ASCII.html' },
-       { id: 3, title: 'COMMITS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/GitCommit.html' },
-       { id: 4, title: 'INVITAR COLABORADOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/InvitarColaborador.html' },
-       { id: 5, title: 'CAMBIO DE CORREO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/cambioCorreo.html' },
-       { id: 6, title: 'ACCIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/store/IngresarDatos.html' },
+       { id: 1, title: 'TERMINAL DE COMANDOS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/TerminalComandos.html' },
+       { id: 2, title: 'ASII', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/ASCII.html' },
+       { id: 3, title: 'COMMITS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/GitCommit.html' },
+       { id: 4, title: 'INVITAR COLABORADOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/InvitarColaborador.html' },
+       { id: 5, title: 'CAMBIO DE CORREO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/cambioCorreo.html' },
+       { id: 6, title: 'ACCIONES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/IngresarDatos.html' },
        { id: 7, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
      ]);
      const startExercise1 = (exercise1) => {

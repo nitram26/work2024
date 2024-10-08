@@ -179,41 +179,42 @@ const scrollTo = (sectionId) => {
 }
 // V-FOR
 const exercises = ref([
-      { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CrearProyecto.html' },
-      { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Snippet.html' },
-      { id: 3, title: 'LLAMAR UN COMPONENTE', description: 'RELACIONAR 2 COMPONENTES', time: 90, remainingTime: 90, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/RelacionarComponentes.html' },
-      { id: 4, title: 'INTERPOLAR TEXTOS', description: 'BASIC', time: 90, remainingTime: 90, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/InterpolarTexto.html' },
-      { id: 5, title: 'EXAMPLE SELECTIVE', description: 'REACTIVIDAD', time: 175, remainingTime: 175, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ExampleSelective.html' },
-      { id: 6, title: 'V-BIND', description: 'REACTIVIDAD', time: 335, remainingTime: 335, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Bind.html' },
-      { id: 7, title: 'V-MODEL', description: 'CONDICIONES REACTIVAS', time: 156, remainingTime: 156, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Model.html' },
-      { id: 8, title: 'CHECKBOX', description: 'REACTIVIDAD', time: 425, remainingTime: 425, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/SelectCheckbox.html' },
-      { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 365, remainingTime: 365, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/SelectNuevo.html' },
-      { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 183, remainingTime: 183, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/CondicionalTernario.html' },
-      { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 302, remainingTime: 302, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/IfShow.html' },
+      { id: 1, title: 'CREAR PROYECTO', description: 'VUE CLI - VUE VITE', time: 1, remainingTime: 1, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CrearProyecto.html' },
+      { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 1, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Snippet.html' },
+      { id: 3, title: 'LLAMAR UN COMPONENTE', description: 'RELACIONAR 2 COMPONENTES', time: 60, remainingTime: 60, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/RelacionarComponentes.html' },
+      { id: 4, title: 'INTERPOLAR TEXTOS', description: 'BASIC', time: 60, remainingTime: 60, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/InterpolarTexto.html' },
+      { id: 5, title: 'EXAMPLE SELECTIVE', description: 'REACTIVIDAD', time: 150, remainingTime: 150, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ExampleSelective.html' },
+      { id: 6, title: 'V-BIND', description: 'REACTIVIDAD', time: 335, remainingTime: 335, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Bind.html' },
+      { id: 7, title: 'V-MODEL', description: 'CONDICIONES REACTIVAS', time: 156, remainingTime: 156, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Model.html' },
+      { id: 8, title: 'CHECKBOX', description: 'REACTIVIDAD', time: 425, remainingTime: 425, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectCheckbox.html' },
+      { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 300, remainingTime: 300, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectNuevo.html' },
+      // /////////////////////////////////////////////////////////////////
+      { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 183, remainingTime: 183, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CondicionalTernario.html' },
+      { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 302, remainingTime: 302, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/IfShow.html' },
     ]);
     //  ********************************************************************
 const exercises2 = ref([
-      { id: 1, title: 'CONTADOR', description: 'USO DE IF & SHOW', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Contador.html' },
-      { id: 2, title: 'REACTIVIDAD', description: 'USO DE ref', time: 198, remainingTime: 198, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ReactividadBasica.html' },
-      { id: 3, title: 'V-FOR', description: 'RECORRIDOS', time: 722, remainingTime: 722, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/VforRecorrido.html' },
-      { id: 4, title: 'PRACTICA UNO', description: 'TIME:900 ', time: 1100, remainingTime: 1100, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PracticaUno.html' },
-      { id: 5, title: 'V-FOR', description: 'TIME:900', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/OpcionVfor.html' },
-      { id: 6, title: 'PROPS', description: 'TIME:500', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/propsVuetres.html' },
-      { id: 7, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/EmitVue.html' },
-      { id: 8, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/PrpsArray.html' },
-      { id: 9, title: 'INJECTION', description: 'TIME: 300', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Injection.html' },
-      { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/ServicePlaceholder.html' },
-      { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Enrutado.html' },
-      { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/LoginFirebase.html' },
-      { id: 13, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/.html' },
-      { id: 14, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/pinia.html' },
-      { id: 15, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/layoutsComposables.html' },
-      { id: 16, title: 'ANIMACIONES E ICONOS ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/Animacion&Icono.html' },
+      { id: 1, title: 'CONTADOR', description: 'USO DE IF & SHOW', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Contador.html' },
+      { id: 2, title: 'REACTIVIDAD', description: 'USO DE ref', time: 198, remainingTime: 198, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ReactividadBasica.html' },
+      { id: 3, title: 'V-FOR', description: 'RECORRIDOS', time: 722, remainingTime: 722, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/VforRecorrido.html' },
+      { id: 4, title: 'PRACTICA UNO', description: 'TIME:900 ', time: 1100, remainingTime: 1100, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PracticaUno.html' },
+      { id: 5, title: 'V-FOR', description: 'TIME:900', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/OpcionVfor.html' },
+      { id: 6, title: 'PROPS', description: 'TIME:500', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/propsVuetres.html' },
+      { id: 7, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/EmitVue.html' },
+      { id: 8, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PrpsArray.html' },
+      { id: 9, title: 'INJECTION', description: 'TIME: 300', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Injection.html' },
+      { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ServicePlaceholder.html' },
+      { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Enrutado.html' },
+      { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/LoginFirebase.html' },
+      { id: 13, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/.html' },
+      { id: 14, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
+      { id: 15, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/layoutsComposables.html' },
+      { id: 16, title: 'ANIMACIONES E ICONOS ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Animacion&Icono.html' },
  
     ]);
     //  ********************************************************************
 const exercises3 = ref([
-      { id: 1, title: 'PROCESADORES', description: 'BOOTSTRAP', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5501/src/assets/front/vue3/framework.html' },
+      { id: 1, title: 'PROCESADORES', description: 'BOOTSTRAP', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/framework.html' },
     ]);
     //  ********************************************************************
 // ////////////////////////////////////////////////////////////////////////////////////////////

@@ -63,7 +63,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/sqlServer/procedure.html"
+    href="http://127.0.0.1:5502/src/assets/data/sqlServer/procedure.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> Color según Estado </v-card-title>
@@ -89,7 +89,7 @@
     class="mx-auto my-8"
     elevation="16"
     target="_blank"
-    href="http://127.0.0.1:5501/src/assets/data/sqlServer/innerJoin.html"
+    href="http://127.0.0.1:5502/src/assets/data/sqlServer/innerJoin.html"
     max-width="344" >
     <v-card-item>
       <v-card-title> INNER JOINT </v-card-title>
