@@ -1,0 +1,151 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  .li{
+    border: brown 1px solid;
+    margin: 0.5em;
+    padding: 0.2em;
+    font-size: 1.2em;
+    width: 30em;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> DDL BASE DE DATOS </h1> 
+  <ol>
+    <li class="li"><a href="#def">DEFINICIONES</a></li>
+    <li class="li"><a href="#crear">CREAR BD</a></li>
+    <li class="li"><a href="#modificar">MODIFICAR</a></li>
+    <li class="li"><a href="#eliminar">ELIMINAR</a></li>
+    <li class="li"><a href="#ver">VER TODAS LAS BD</a></li>
+    <li class="li"><a href="#CrearGrafica">CREAR BD CON INTERFAZ GRAFICA</a></li>
+    <li class="li"><a href="#"></a></li>
+    <li class="li"><a href="#"></a></li>
+    <li class="li"><a href="#"></a></li>
+  </ol>
+
+  <!-- ************************************************* -->
+   <section id="def">
+
+     <H2>DDL LENGUAJE DE DEFINICIÓN DE DATOS</H2>
+     <ol>
+       <li>Sirve para estructurar la tabla, sus definiciones son: <br> 
+        a.	CREATE<br>
+        b.	DROP<br>
+        c.	ALTER  </li>
+        <li>	Se empieza con las tablas que no tienen relación con otras, es decir aquellas que solo tienen PK luego las que tienen FK.</li>
+        <li>	Si se necesita comentar una línea se utilizan --. Luego se hacen los comentarios</li>
+        <li>Las FK deben tener el mismo tipo de dato que la PK y nombre de ser posible para evitar conflictos</li>
+      </ol>
+      <img src="/src/assets/image/data/sqlServer/bdNombres.png" alt="bdNombres" class="img">
+    </section>
+  <!-- ************************************************* -->
+   <section id="crear">
+    <h4>Crear</h4>
+   <ol>
+    <li>CREATE DATABASE BD_FAMILIA <br>
+      GO </li>
+    <li>BD_FAMILIA ES NOMBRE DE LA BASE</li>
+    <li>no debe empezar con un número o algún carácter especial y tampoco debe contener espacios en blanco.</li>
+  
+   </ol>
+   </section>
+  <!-- ************************************************* -->
+   <section id="modificar">
+    <h4>MODIFICAR</h4>
+    <ol>
+      <li>USE MASTER<br>
+        GO <br><br>
+        ALTER DATABASE BD_INSTITUTO<br>
+        MODIFY NAME=INSTITUTO<br>
+        GO </li>
+      <li>BD_INSTITUTO es el nombre de la base de datos</li>
+      <li>La modificación se hace en la master, sea el nombre o algún archivo del sistema</li>
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="eliminar">
+    <h4>ELIMINAR</h4>
+    <ol>
+      <li>DROP DATABASE INSTITUTO</li>
+      <li>INSTITUTO ES NOMBRE DE LA BASE</li>
+      <li>La eliminación se hace en la master </li>
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="ver">
+    <h4>VER BDs</h4>
+    <ol>
+      <li>EXEC SP_HELPDB</li>
+      <li>Permite ver todas las BD</li>
+  
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="validar">
+    <h4>BASE NUEVA VALIDADA</h4>
+    <ol>
+      <li>IF DB_ID('BD_BIBLIOTECA') IS NOT NULL <br>
+        BEGIN<br>
+        DROP DATABASE BD_BIBLIOTECA<br>
+        END<br>
+        GO<br><br>
+        --CREANDO LA BASE DE DATOS<br>
+        CREATE DATABASE BD_BIBLIOTECA
+        </li>
+   
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="CrearGrafica">
+    <h4>CREAR BD CON INTERFAZ GRÁFICA</h4>
+    <ol>
+      <li>PANEL/C+EN BASE DE DATOS <br>
+        C+ EN OPCIÓN BASE DE DATOS<br>
+        COLOCAR NOMBRE<br>
+        ACEPTAR
+        </li>
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="">
+    <h4></h4>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+  <section id="">
+    <h4></h4>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   
+    </ol>
+   </section>
+  <!-- ************************************************* -->
+
+
+</body>
+</html>
+    
+
+  

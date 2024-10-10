@@ -1,0 +1,131 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  .li{
+    border: brown 1px solid;
+    margin: 0.5em;
+    padding: 0.2em;
+    font-size: 1.2em;
+    width: 30em;
+  }
+  .color{
+    color: brown;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> TABLAS </h1> 
+  <ol>
+  <li class="li"><a href="#01">CREAR</a></li>
+  <li class="li"><a href="#02">AGREGAR CAMPO</a></li>
+  <li class="li"><a href="#03">PRIMARY KEY</a></li>
+  <li class="li"><a href="#04">FOREIGN KEY</a></li>
+  <li class="li"><a href="#05"></a></li>
+ 
+  </ol>
+  <img src="/src/assets/image" alt="" class="img">
+<!-- ********************************************* -->
+ <section id="01">
+  <h4>CREAR</h4>
+  <ol>
+    <li>CREATE TABLE FAMILIA <br>
+      (<br>
+        CAMPO1	TIPO DE DATO PRIMARY KEY NOT NULL<br>
+      )<br>
+      GO
+      </li>
+    <li>FAMILIA es nombre de la tabla <br>
+      CAMPO1 es el nombre del campo <br>
+      PRIMARY KEY indica la restricción que es una llave primaria</li>
+    <li>EL TIPO DE DATO y el registro debe incluir si es NULL <br>
+      Luego se escribirán el resto de campos en la secuencia NOMBRE, TIPO DE DATO Y NULL / NOT NULL
+      </li> <br>
+      <h5 class="color">AGREGAR EL AUTONUMERADO</h5>
+      <LI>CREATE TABLE BOLETA ( <br>
+        IDitem  int  IDENTITY (100,1),<br>
+      )</LI>
+      <LI>AUTONUMERADO <br>
+        (100,1) el primer número indica donde inicia la secuencia, el segundo el paso (de 1 en 1)
+        </LI>
+      <LI>RESTRICCIÓN: consiste en la definición de una característica adicional que tiene una columna</LI>
+  </ol>
+ </section>
+<!-- ********************************************* -->
+ <section id="02">
+  <h4 class="color">AGREGAR CAMPO </h4>
+  <ol>
+    <li>ALTER TABLE PRODUCTO <br>
+      ADD STOCK  INT   NOT NULL <br>
+      GO</li>
+    <li>PRODUCTO es el nombre de la tabla
+      STOCK el nombre de la nueva columna
+      </li>
+  <H4>SI SE QUIEREN AGREGAR VARIOS CAMPOS:</H4>
+  <li>ALTER TABLE PRODUCTO <br>
+    ADD PRE_COSTO 	  MONEY		NOT NULL,<br>
+        UNI_MEDIDA	  VARCHAR(25)	NOT NULL, <br>
+        COD_CATE CHAR(3)	NOT NULL <br>
+    GO
+    </li>
+  </ol>
+ </section>
+<!-- ********************************************* -->
+ <section id="03">
+  <h4>PRIMARY KEY</h4>
+  <P>DESPUES DE HABER SIDO CREADA</P>
+  <ol>
+    <li>ALTER TABLE Usuario <br>
+      ADD PRIMARY KEY (Cod_Usua) </li>
+    <li>Usuario es la tabla a la cual se desea añadir una PK
+      (Cod_Usua) es el campo tendrá la PK </li>
+    <li></li>
+  </ol>
+ </section>
+<!-- ********************************************* -->
+ <section id="04">
+  <h4>FOREIGN KEY</h4>
+  <P>En SQL, la palabra clave CONSTRAINT se usa para definir restricciones en las columnas de una tabla, con el fin de garantizar la integridad de los datos. Una restricción (constraint) puede asegurar que los valores en una columna cumplan ciertas condiciones o relaciones entre tablas.</P>
+  <ol>
+    <H4>CUANDO SE ESTA CREANDO LA TABLA</H4>
+    <li>NOMBRE_TABLA1 es la tabla donde se insertará la FK
+      (COLUMNA) es la columna que contiene la PK que se insertara
+      NOMBRE_TABLA2 es la tabla donde está ubicada la PK
+      </li>
+      <H4>CUANDO YA HA SIDO CREADA LA TABLA</H4>
+    <li>ALTER TABLE NOMBRE_TABLA1 <br>
+      ADD FOREIGN KEY (COLUMNA) REFERENCES NOMBRE_TABLA2 <br>
+      GO</li>
+
+      <h5>AL INICIAR LA TABLA</h5>
+      <li>CONSTRAINT fk_id foreign key (id_compra) references alumno (id_alu)</li>
+      <li>fk_id es el alias foreign key (el nombre del campo) references el nombre de la tabla(el nombre del campo de origen)</li>
+      <li>Se usa cuando se instala la tabla inicialmente, es otra forma de hacerla durante la creación. </li>
+  </ol>
+ </section>
+<!-- ********************************************* -->
+ <section id="05">
+  <h4></h4>
+  <ol>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+ </section>
+<!-- ********************************************* -->
+</body>
+</html>
+    
+
+  
