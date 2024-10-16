@@ -183,14 +183,13 @@ const exercises = ref([
       { id: 2, title: 'CREAR SNIPPET', description: 'LINK', time: 120, remainingTime: 1, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Snippet.html' },
       { id: 3, title: 'LLAMAR UN COMPONENTE', description: 'RELACIONAR 2 COMPONENTES', time: 60, remainingTime: 60, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/RelacionarComponentes.html' },
       { id: 4, title: 'INTERPOLAR TEXTOS', description: 'BASIC', time: 60, remainingTime: 60, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/InterpolarTexto.html' },
-      { id: 5, title: 'EXAMPLE SELECTIVE', description: 'REACTIVIDAD', time: 150, remainingTime: 150, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ExampleSelective.html' },
+      { id: 5, title: 'EXAMPLE SELECTIVE', description: 'REACTIVIDAD', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ExampleSelective.html' },
       { id: 6, title: 'V-BIND', description: 'REACTIVIDAD', time: 335, remainingTime: 335, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Bind.html' },
-      { id: 7, title: 'V-MODEL', description: 'CONDICIONES REACTIVAS', time: 156, remainingTime: 156, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Model.html' },
-      { id: 8, title: 'CHECKBOX', description: 'REACTIVIDAD', time: 425, remainingTime: 425, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectCheckbox.html' },
-      { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 300, remainingTime: 300, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectNuevo.html' },
-      // /////////////////////////////////////////////////////////////////
-      { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 183, remainingTime: 183, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CondicionalTernario.html' },
-      { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 302, remainingTime: 302, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/IfShow.html' },
+      { id: 7, title: 'V-MODEL', description: 'CONDICIONES REACTIVAS', time: 136, remainingTime: 136, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Model.html' },
+      { id: 8, title: 'CHECKBOX', description: 'REACTIVIDAD', time: 325, remainingTime: 325, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectCheckbox.html' },
+      { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 200, remainingTime: 200, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectNuevo.html' },
+      { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 163, remainingTime: 163, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CondicionalTernario.html' },
+      { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 202, remainingTime: 202, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/IfShow.html' },
     ]);
     //  ********************************************************************
 const exercises2 = ref([

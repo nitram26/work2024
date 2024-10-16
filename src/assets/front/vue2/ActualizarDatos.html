@@ -1,0 +1,183 @@
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> ACTUALIZAR DATOS DE SURSA </h1> 
+  <ol>
+  <li>Se hace en MongoDB en la tabla boxes</li>
+  <li>Se puede confirmar en page Ingresos, tiene personal y bases</li>
+  </ol>
+
+  <pre>
+    <div>
+      *********01 Usuario******************************************* <input type="checkbox" name="" id="">
+
+
+db.getCollection('users').updateMany({}, [
+  {
+    $set: {
+      fullNameCompleted: {
+        $concat: ["$fullName", " ", "$lastNameP", " ", "$lastNameM"]
+      }
+    }
+  }
+]);
+
+
+
+******** 02 Personal***************************************************/<input type="checkbox" name="" id="">
+
+
+
+var fechaInicio = ISODate("2024-10-01T00:00:00.000Z");
+var fechaFin = ISODate("2024-10-15T23:59:59.999Z");
+// Inicializar la operación de actualización en bloque 02 Personal
+var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+
+// Buscar los documentos dentro del rango de fechas
+var boxesToUpdate = db.getCollection('boxes').find({
+  startDate: {
+    $gte: fechaInicio,
+    $lte: fechaFin
+  }
+});
+// Contar los documentos encontrados
+var count = boxesToUpdate.count();
+print("Número de documentos encontrados: " + count);
+// Iterar sobre los documentos encontrados
+boxesToUpdate.forEach(function(box) {
+  var user = db.getCollection('users').findOne({ _id: box.idUser });
+  if (user) {
+    var currentBox = db.getCollection('boxes').findOne({ _id: box._id });
+    print("Actualizando box ID: " + box._id + " de " + currentBox.fullNameStaff + " a " + user.fullNameCompleted);
+    bulkUpdate.find({ _id: box._id }).updateOne({ $set: { fullNameStaff: user.fullNameCompleted } });
+  } else {
+    print("No se encontró el usuario para idUser: " + box.idUser);
+  }
+});
+// Ejecutar la operación de actualización
+var result = bulkUpdate.execute();
+if (result.ok) {
+  print("Actualización completada");
+} else {
+  if (result.writeErrors && result.writeErrors.length > 0) {
+    print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+  } else {
+    print("Error al actualizar los documentos: No se encontraron errores de escritura.");
+  }
+}
+
+
+*** 03 Base********************************************************<input type="checkbox" name="" id="">
+
+
+
+var fechaInicio = ISODate("2024-10-03T00:00:00.000Z"); // Fecha de inicio del rango 03 Base 
+var fechaFin = ISODate("2024-10-15T23:59:59.999Z");   // Fecha de fin del rango
+
+var bulkUpdate = db.getCollection('boxes').initializeUnorderedBulkOp();
+var boxesToUpdate = db.getCollection('boxes').find({
+  startDate: {
+    $gte: fechaInicio,
+    $lte: fechaFin
+  }
+});
+
+// Verifica si hay documentos que coincidan con la consulta
+if (boxesToUpdate.count() === 0) {
+  print("No se encontraron documentos con las fechas especificadas.");
+} else {
+  boxesToUpdate.forEach(function(box) {
+    var base = db.getCollection('bases').findOne({ _id: box.idBase });
+    if (base) {
+      bulkUpdate.find({ _id: box._id }).updateOne({ $set: { nameBase: base.code } });
+    }
+  });
+
+  var result = bulkUpdate.execute();
+
+  if (result.ok) {
+    print("Actualización completada");
+  } else if (result.writeErrors && result.writeErrors.length > 0) {
+    print("Error al actualizar los documentos: " + result.writeErrors[0].errmsg);
+  } else {
+    // Imprime el resultado completo para investigar más detalles
+    print("Error desconocido durante la actualización. Resultado: ");
+    printjson(result);
+  }
+}
+
+
+*** 04 Actualizar Montos**********************************************<input type="checkbox" name="" id="">
+
+var fechaInicio = ISODate("2024-09-01T00:00:00.000Z"); // Fecha de inicio del rango 04 Montos 
+var fechaFin = ISODate("2024-09-15T23:59:59.999Z"); // Fecha de fin del rango
+
+db.getCollection('boxes').aggregate([
+    {
+        $match: {
+            startDate: { // Filtra los documentos de la colección box para el rango de fechas
+                $gte: fechaInicio, // Mayor o igual a la fecha de inicio
+                $lte: fechaFin // Menor o igual a la fecha de fin
+            }
+        }
+    },
+    {
+        $lookup: {
+            from: "detailboxes", // Nombre de la colección detailBox
+            localField: "_id", // Campo en la colección box que se relaciona con detailBox
+            foreignField: "idBox", // Campo en la colección detailBox que se relaciona con box
+            as: "detailBoxData" // Nombre del campo para almacenar los datos relacionados
+        }
+    },
+    {
+        $unwind: "$detailBoxData" // Desenrolla el arreglo de documentos relacionados
+    },
+    {
+        $group: {
+            _id: "$_id", // Agrupa por el campo _id de la colección box
+            totalDetail: { $sum: "$detailBoxData.bono" } // Calcula la suma de bono
+        }
+    },
+    {
+        $merge: {
+            into: "boxes", // Nombre de la colección en la que se actualizarán los documentos
+            whenMatched: "merge", // Opción para fusionar documentos existentes
+            whenNotMatched: "insert" // Opción para insertar documentos si no existen
+        }
+    }
+]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  

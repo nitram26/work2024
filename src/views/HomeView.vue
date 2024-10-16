@@ -202,8 +202,9 @@ const exercises1 = ref([
      }; 
     //  03 ///////////////////////////////////////////////////
     const exercises3 = ref([
-       { id: 1, title: 'PROCESSUS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ProcesoHora.html' },
-       { id: 2, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 1, title: 'VIA', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ProcesoHora.html' },
+       { id: 2, title: 'PROCESSUS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 3, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
   
      
      ]);
