@@ -2,21 +2,21 @@
   <MainLayout>
      <template #main> <h1>BACK</h1> </template>
      <template #image1>  <a href="/graph" class="lat">GRAPH</a> </template>
-     <template #image2>  <a href="/graph" class="lat">SQL Server</a> </template>
-     <template #image3>  <a href="/graph" class="lat">MongoDB</a> </template>
-     <template #image4>  <a href="/graph" class="lat">Sequlize</a> </template>
-     <template #image5>  <a href="/graph" class="lat">PhpMyAdmin</a> </template>
-     <template #image6>  <a href="/graph" class="lat">SQL</a> </template>
+     <template #image2>  <a href="/" class="lat"></a> </template>
+     <template #image3>  <a href="/" class="lat"></a> </template>
+     <template #image4>  <a href="/" class="lat"></a> </template>
+     <template #image5>  <a href="/" class="lat"></a> </template>
+     <template #image6>  <a href="/" class="lat"></a> </template>
   </MainLayout>
      <!-- fin de navegador derecho -->
    <!-- ********************************************* -->
-    <v-row class="mt-12">
+    <v-row class="">
      <v-col class="mt-4">
        <h3 class="bg-blue pa-4  text-center">MODELOS </h3>
      </v-col>
     </v-row>
          <!-- ****************************************************************************** -->
-         <div class="mt-12" id="section1">
+         <div class="" id="section1">
          <v-row class="bg-purple-lighten-4">
       <v-col
        v-for="exercise1 in exercises"

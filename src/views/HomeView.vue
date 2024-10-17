@@ -9,7 +9,7 @@
       <!-- fin de navegador derecho -->
 <!-- ////////////////////////////////////////////////////////// -->
 <div id="section1">
-     <v-row class="my-12 text-center bg-purple-lighten-4">
+     <v-row class="mt-1 text-center bg-purple-lighten-4">
  <v-col cols="12">
    <h2 class="bg-pink-darken-4 pa-4">MODELOS </h2>
  </v-col>
@@ -17,7 +17,7 @@
 </div>
 <!-- *************************************************************** -->
  <v-row>
-  <div class="mt-12">
+  <div class="mt-1">
           <v-row class="bg-purple-lighten-4">
        <v-col
         v-for="exercise1 in exercises1"
@@ -56,15 +56,15 @@
     </v-row>
 
  <!-- ///////////////////////////////////////////////// -->
-      <div id="section2" class="mt-12" >
-      <v-row class="my-12 text-center bg-teal-lighten-4">
+      <div id="section2" class="mt-1" >
+      <v-row class="mt-1 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4"> OPTIONS </h2>
   </v-col>
 </v-row>
   
   <!-- ****************************************** -->
-  <div class="mt-12">
+  <div class="mt-1">
           <v-row class="bg-purple-lighten-4">
        <v-col
         v-for="exercise2 in exercises2"
@@ -102,14 +102,14 @@
      </div>
   </div>
 <!-- *************************************************** -->
-<div id="section3" class="mt-12" >
+<div id="section3" class="mt-1" >
 <v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">PROCESSUS</h2>
   </v-col>
 </v-row>
   <!-- ************************************************* -->
-  <div class="mt-12">
+  <div class="mt-1">
     <v-row class="bg-purple-lighten-4">
        <v-col
         v-for="exercise3 in exercises3"
@@ -182,6 +182,8 @@ const exercises1 = ref([
        { id: 1, title: 'NVM', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ManagerNvm.html' },
        { id: 2, title: 'COLORES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/ColoresVuetify.html' },
        { id: 3, title: ' TUTORIALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/EnlacesReferencias.html' },
+       { id: 4, title: ' EMMET', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/Emmet.html' },
+       { id: 5, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
      
      ]);
      const startExercise2 = (exercise2) => {

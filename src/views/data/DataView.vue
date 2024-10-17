@@ -14,9 +14,9 @@
       <v-list>
         <v-list-item link to="/" title="TEMAS" prepend-icon="mdi-grid"></v-list-item>
         <v-list-item link to="/graph" title="GraphQL" prepend-icon="mdi-arrange-bring-to-front"></v-list-item>
-        <v-list-item link to="/vue2" title="Mongo DB" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
+        <v-list-item link to="/" title="Mongo DB" prepend-icon="mdi-arrange-send-to-back"></v-list-item>
         <v-list-item link to="/sqlServer" title="SQL Server" prepend-icon="mdi-database-cog-outline"></v-list-item>
-        <v-list-item link to="/backend" title="PhpMyAdmin" prepend-icon="mdi-store"></v-list-item>
+        <v-list-item link to="/" title="PhpMyAdmin" prepend-icon="mdi-store"></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- ********************************** -->

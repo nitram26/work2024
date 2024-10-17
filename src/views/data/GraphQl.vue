@@ -5,7 +5,7 @@
   <template #title2><h4>OPTIONS</h4></template>
  </NavInterno>
     <!-- ********************************** -->
-    <div class="mt-12" id="section1">
+    <div class="" id="section1">
          <v-row class="bg-purple-lighten-4">
       <v-col
        v-for="exercise1 in exercises"

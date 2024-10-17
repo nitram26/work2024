@@ -6,14 +6,14 @@
   </NavInterno>
      <!-- ********************************** -->
      <div id="section1">
-     <v-row class="my-12 text-center bg-purple-lighten-4">
+     <v-row class=" text-center bg-purple-lighten-4">
  <v-col cols="12">
    <h2 class="bg-pink-darken-4 pa-4">INICIO </h2>
  </v-col>
 </v-row>
 </div>
 <!-- ***************************************************************** -->
-     <div class="mt-12">
+     <div class="mt-1">
           <v-row class="bg-purple-lighten-4">
        <v-col
         v-for="exercise1 in exercises1"

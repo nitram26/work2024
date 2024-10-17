@@ -26,7 +26,7 @@
     <!-- fin de navegador derecho -->
     <!-- ********************************** -->  
   <!-- /////////////////////////////////////////////////////// -->
-   <div class="mt-12" id="section1">
+   <div class="" id="section1">
 
   <v-row class="bg-purple pa-2" >
     <v-col cols="11" class="text-center">
@@ -71,7 +71,7 @@ max-width="344" >
 </div>
 <!-- /////////////////////////////////////////////////////// -->
 
-   <div class="mt-12" id="section2">
+   <div class="" id="section2">
 
   <v-row class="bg-indigo pa-2" >
     <v-col cols="11" class="text-center">
@@ -115,7 +115,7 @@ max-width="344" >
 </v-row>
 </div>
     <!-- /////////////////////////////////////////////////////// -->
-   <div class="mt-12" id="section3">
+   <div class="" id="section3">
 
   <v-row class="bg-blue pa-2" >
     <v-col cols="11" class="text-center">

@@ -7,15 +7,16 @@
     <template #title4>WINDOWS & CHROME</template>
   </NavInterno>
     <!-- fin de navegador derecho -->
-    <!-- ********************************** -->
-    <div id="section1" class="mt-12" >
+    <!-- ////////////////////////////////////////////////////// -->
+    <div id="section1" class="mt-1" >
       <v-row class="bg-red-lighten-4">
     <v-col cols="12" class="mt-6">
       <h3 class="bg-blue pa-4  text-center">GITHUB</h3>
     </v-col>
   </v-row>
+
 <!-- ********************************************** -->
-<div class="mt-12" id="section1">
+<div class="mt-1" id="section1">
           <v-row class="bg-purple-lighten-4">
        <v-col
         v-for="exercise1 in exercises"
@@ -52,173 +53,144 @@
      </v-row>
      </div>
     </div>
-<!-- /////////////////////////////////////////////////////////////////////////////////////-->
+<!-- ////////////////////////////////////////////////////////////-->
       <div id="section2">
-      <v-row class="my-12 text-center bg-teal-lighten-4">
+      <v-row class="my-1 text-center bg-teal-lighten-4">
   <v-col cols="12">
     <h2 class="bg-pink-darken-4 pa-4">PC & IMPRESORA</h2>
   </v-col>
+  </v-row>
   <!-- ****************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/mantenimientoLogico.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>Mantenimiento Lógico</v-card-title>
-      <v-card-subtitle>proceso</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>     
-      Para PC
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3">
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/ImpresoraEpson.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> Limpieza de cabezales</v-card-title>
-      <v-card-subtitle>Epson L3110</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>     
-      incluye link de apoyo
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-</v-row>
-</div>
-<!-- ********************************************************************** -->
-
- <div id="section3">
-<v-row class="bg-purple-lighten-4">
+  <div class="mt-1">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise2 in exercises2"
+       :key="exercise2.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise2.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise2.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise2.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise2(exercise2)" :disabled="exercise2.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise2(exercise2)" :disabled="!exercise2.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise2.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
+  </div>
+<!-- *************************************************** -->
+<div id="section3" class="mt-1" >
+<v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
-    <h2 class="bg-pink-darken-4 pa-4 text-center">VSCODE</h2>
+    <h2 class="bg-pink-darken-4 pa-4">VSCODE </h2>
   </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/SettingJson.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> SETTING JSON </v-card-title>
-      <v-card-subtitle> CÓDIGOS</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    Para configurar VSCODE
-    </v-card-text>
-  </v-card>
-</v-col>
-
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/LiveServer.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title> LIVE SERVER </v-card-title>
-      <v-card-subtitle> app de vscode</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-    Problemas con el puerto
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-
 </v-row>
+  <!-- ************************************************* -->
+  <div class="mt-1">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise3 in exercises3"
+       :key="exercise3.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise3.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise3.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise3.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise3.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
 </div>
-<div id="section3">
-<v-row class="bg-indigo-lighten-4">
+   <!-- ///////////////////////////////////////////////////////// -->
+<div id="section3" class="mt-1" >
+<v-row class="bg-purple-lighten-4 text-center">
   <v-col cols="12">
-    <h2 class="bg-indigo-darken-1 pa-4 text-center">WINDOWS</h2>
+    <h2 class="bg-pink-darken-4 pa-4">WINDOWS </h2>
   </v-col>
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/ArchivoAtexto.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>COPIAR NOMBRE </v-card-title>
-      <v-card-subtitle>DE windows</v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Títulos de archivos a Word
-    </v-card-text>
-  </v-card>
-</v-col>
-
-  <!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/Suspensi%C3%B3nPantalla.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>Suspender o Invernar </v-card-title>
-      <v-card-subtitle>Programar la pantalla de PC </v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-      Suspender después de cierto tiempo
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/SegundaPantalla.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>Audio-Video </v-card-title>
-      <v-card-subtitle>No se proyectaba la 2da pantalla </v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-     Problema: faltaba un controlador de video
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-  <v-col cols="3" >
-    <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    target="_blank"
-    href="http://127.0.0.1:5502/src/assets/store/CorreoYDrive.html"
-    max-width="344" >
-    <v-card-item>
-      <v-card-title>GOOGLE DRIVE</v-card-title>
-      <v-card-subtitle>Subir, editar y descargar archivos </v-card-subtitle>
-    </v-card-item>
-    <v-card-text>
-     abrir correo en otra pc
-    </v-card-text>
-  </v-card>
-</v-col>
-<!-- ********************************************************************** -->
-
 </v-row>
+  <!-- ************************************************* -->
+  <div class="mt-1">
+    <v-row class="bg-purple-lighten-4">
+       <v-col
+        v-for="exercise4 in exercises4"
+       :key="exercise4.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        >
+       <v-card
+     class="mx-auto my-8 bg-brown-lighten-4"
+     elevation="16"
+     max-width="344" >
+     <v-card-item>
+     <v-card-title class="text-purple">{{ exercise4.title }} </v-card-title>
+     <v-card-subtitle class="">{{ exercise4.description }}</v-card-subtitle>
+     </v-card-item>
+     <v-card-text>
+     <p><b>Tiempo restante: {{ exercise4.remainingTime }} segundos</b></p>
+     </v-card-text>
+     <v-card-actions>
+     <v-btn @click="startExercise4(exercise4)" :disabled="exercise4.intervalId" class="bg-blue text-white pa-2">
+       Iniciar
+     </v-btn>
+     <v-btn @click="stopExercise4(exercise4)" :disabled="!exercise4.intervalId" class="bg-red text-white">
+       Detener
+     </v-btn>
+     <v-btn :href="exercise4.link" target="_blank" class="bg-teal text-white">
+       Ver 
+     </v-btn>
+     </v-card-actions>
+     </v-card>
+     </v-col>
+     </v-row>
+     </div>
 </div>
+   <!-- ///////////////////////////////////////////////////////// -->
+
+
 </template>
 <!-- ******************************* -->
 <script setup>
@@ -251,7 +223,79 @@ const exercises = ref([
        clearInterval(exercise1.intervalId);
        exercise1.intervalId = null;
      }; 
-
+  //  02 ///////////////////////////////////////////////////
+  const exercises2 = ref([
+       { id: 1, title: 'MANTENIMIENTO LÓGICO ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/mantenimientoLogico.html' },
+       { id: 2, title: 'LIMPIEZA DE CABEZALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/ImpresoraEpson.html' },
+       { id: 3, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+     
+     ]);
+     const startExercise2 = (exercise2) => {
+       if (exercise2.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise2.remainingTime > 0) {
+           exercise2.remainingTime--
+         } else {
+           clearInterval(exercise2.intervalId);
+           exercise2.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise2 = (exercise2) => {
+       clearInterval(exercise2.intervalId);
+       exercise2.intervalId = null;
+     }; 
+    //  03 ///////////////////////////////////////////////////
+    const exercises3 = ref([
+       { id: 1, title: 'SETTING.JSON VSCODE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/SettingJson.html' },
+       { id: 2, title: 'LIVE SERVER', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/LiveServer.html' },
+       { id: 3, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+  
+     
+     ]);
+     const startExercise3 = (exercise3) => {
+       if (exercise3.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise3.remainingTime > 0) {
+           exercise3.remainingTime--
+         } else {
+           clearInterval(exercise3.intervalId);
+           exercise3.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise3 = (exercise3) => {
+       clearInterval(exercise3.intervalId);
+       exercise3.intervalId = null;
+     }; 
+    //  03 ///////////////////////////////////////////////////
+    const exercises4 = ref([
+       { id: 1, title: 'COPIAR NOMBRE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/ArchivoAtexto.html' },
+       { id: 2, title: 'SUSPENDER O INVERNAR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/Suspensi%C3%B3nPantalla.html' },
+       { id: 3, title: 'AUDIO VIDEO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/SegundaPantalla.html' },
+       { id: 4, title: 'GOOGLE DRIVE', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/CorreoYDrive.html' },
+       { id: 5, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+  
+     
+     ]);
+     const startExercise4 = (exercise4) => {
+       if (exercise4.intervalId) return;
+ 
+       exercise1.intervalId = setInterval(() => {
+         if (exercise4.remainingTime > 0) {
+           exercise4.remainingTime--
+         } else {
+           clearInterval(exercise4.intervalId);
+           exercise4.intervalId = null;
+         }
+       }, 1000);
+     };
+     const stopExercise4 = (exercise4) => {
+       clearInterval(exercise4.intervalId);
+       exercise4.intervalId = null;
+     }; 
 </script>
 <!-- ******************************* -->
 <style scoped>

@@ -10,7 +10,7 @@
    
   </MainLayout>
    <!-- ********************************************* -->
-    <v-row class="mt-12">
+    <v-row class="mt-1">
      <v-col class="mt-4">
        <h3 class="bg-blue pa-4  text-center">MODELOS </h3>
      </v-col>
@@ -19,7 +19,7 @@
        <!-- fin de navegador derecho -->
     
          <!-- ****************************************************************************** -->
-         <div class="mt-12" id="section1">
+         <div class="mt-1" id="section1">
          <v-row class="bg-purple-lighten-4">
       <v-col
        v-for="exercise1 in exercises1"
