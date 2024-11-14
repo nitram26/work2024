@@ -18,9 +18,9 @@
 
         <v-list-item><v-btn @click="scrollTo('section2')" prepend-icon="mdi-store">COMPONENTES</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">ESTILOS</v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section3')" prepend-icon="mdi-store">REFERENCIAS</v-btn></v-list-item>
 
-        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store"></v-btn></v-list-item>
+        <v-list-item><v-btn @click="scrollTo('section4')" prepend-icon="mdi-store">ESTILOS</v-btn></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <!-- fin de navegador derecho -->
@@ -117,13 +117,13 @@ max-width="344" >
     <!-- /////////////////////////////////////////////////////// -->
    <div class="" id="section3">
 
-  <v-row class="bg-blue pa-2" >
+  <v-row class="bg-indigo pa-2" >
     <v-col cols="11" class="text-center">
-      <h2 >ESTILOS </h2>
+      <h2 >REFERENCIAS </h2>
     </v-col>
   </v-row>
   <!-- *************************************************** -->
-  <v-row class="bg-blue-lighten-4">
+  <v-row class="bg-indigo-lighten-4">
     <v-col
      v-for="exercise3 in exercises3"
     :key="exercise3.id"
@@ -137,20 +137,64 @@ class="mx-auto my-8 bg-brown-lighten-4"
 elevation="16"
 max-width="344" >
 <v-card-item>
-  <v-card-title class="text-blue">{{ exercise3.title }} </v-card-title>
+  <v-card-title class="text-indigo">{{ exercise3.title }} </v-card-title>
   <v-card-subtitle class="">{{ exercise3.description }}</v-card-subtitle>
 </v-card-item>
 <v-card-text>
   <p><b>Tiempo restante: {{ exercise3.remainingTime }} segundos</b></p>
 </v-card-text>
 <v-card-actions>
-  <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-2">
+  <v-btn @click="startExercise3(exercise3)" :disabled="exercise3.intervalId" class="bg-blue text-white pa-3">
     Iniciar
   </v-btn>
   <v-btn @click="stopExercise3(exercise3)" :disabled="!exercise3.intervalId" class="bg-red text-white">
     Detener
   </v-btn>
   <v-btn :href="exercise3.link" target="_blank" class="bg-teal text-white">
+    Ver 
+  </v-btn>
+  </v-card-actions>
+</v-card>
+  </v-col>
+</v-row>
+</div>
+    <!-- /////////////////////////////////////////////////////// -->
+   <div class="" id="section3">
+
+  <v-row class="bg-blue pa-2" >
+    <v-col cols="11" class="text-center">
+      <h2 >ESTILOS </h2>
+    </v-col>
+  </v-row>
+  <!-- *************************************************** -->
+  <v-row class="bg-blue-lighten-4">
+    <v-col
+     v-for="exercise4 in exercises4"
+    :key="exercise4.id"
+     cols="12"
+     sm="6"
+     md="4"
+     lg="3"
+     >
+    <v-card
+class="mx-auto my-8 bg-brown-lighten-4"
+elevation="16"
+max-width="344" >
+<v-card-item>
+  <v-card-title class="text-blue">{{ exercise4.title }} </v-card-title>
+  <v-card-subtitle class="">{{ exercise4.description }}</v-card-subtitle>
+</v-card-item>
+<v-card-text>
+  <p><b>Tiempo restante: {{ exercise4.remainingTime }} segundos</b></p>
+</v-card-text>
+<v-card-actions>
+  <v-btn @click="startExercise4(exercise4)" :disabled="exercise4.intervalId" class="bg-blue text-white pa-2">
+    Iniciar
+  </v-btn>
+  <v-btn @click="stopExercise4(exercise4)" :disabled="!exercise4.intervalId" class="bg-red text-white">
+    Detener
+  </v-btn>
+  <v-btn :href="exercise4.link" target="_blank" class="bg-teal text-white">
     Ver 
   </v-btn>
   </v-card-actions>
@@ -196,23 +240,27 @@ const exercises2 = ref([
       { id: 1, title: 'CONTADOR', description: 'TIME:', time: 175, remainingTime: 175, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Contador.html' },
       { id: 2, title: 'REACTIVIDAD', description: 'TIME:', time: 140, remainingTime: 140, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ReactividadBasica.html' },
       { id: 3, title: 'V-FOR', description: 'TIME:', time: 400, remainingTime: 400, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/VforRecorrido.html' },
-      { id: 4, title: 'PRACTICA UNO', description: 'TIME:900 ', time: 1100, remainingTime: 1100, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PracticaUno.html' },
-      { id: 5, title: 'V-FOR', description: 'TIME:900', time: 1005, remainingTime: 1005, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/OpcionVfor.html' },
-      { id: 6, title: 'PROPS', description: 'TIME:500', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/propsVuetres.html' },
-      { id: 7, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/EmitVue.html' },
-      { id: 8, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PrpsArray.html' },
-      { id: 9, title: 'INJECTION', description: 'TIME: 300', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Injection.html' },
-      { id: 10, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ServicePlaceholder.html' },
-      { id: 11, title: 'RUTAS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Enrutado.html' },
-      { id: 12, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/LoginFirebase.html' },
-      { id: 13, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/.html' },
-      { id: 14, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
-      { id: 15, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/layoutsComposables.html' },
-      { id: 16, title: 'ANIMACIONES E ICONOS ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Animacion&Icono.html' },
+      { id: 4, title: 'PRACTICA UNO', description: 'TIME:900 ', time: 600, remainingTime: 600, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PracticaUno.html' },
+      { id: 5, title: 'V-FOR', description: 'TIME:', time: 500, remainingTime: 500, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/OpcionVfor.html' },
+      { id: 6, title: 'RUTAS', description: 'TIME:', time: 1000, remainingTime: 1000, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Enrutado.html' },
+      { id: 7, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/layoutsComposables.html' },
+      { id: 8, title: 'ANIMACIONES E ICONOS ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Animacion&Icono.html' },
  
     ]);
     //  ********************************************************************
 const exercises3 = ref([
+      { id: 1, title: 'PROPS', description: 'TIME:500', time: 535, remainingTime: 535, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/propsVuetres.html' },
+      { id: 2, title: 'EMITS', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/EmitVue.html' },
+      { id: 3, title: 'PROPS EN ARRAY', description: 'TIME:', time: 549, remainingTime: 549, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/PrpsArray.html' },
+      { id: 4, title: 'INJECTION', description: 'TIME: 300', time: 411, remainingTime: 411, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Injection.html' },
+      { id: 5, title: 'PLACEHOLDER', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/ServicePlaceholder.html' },
+      { id: 6, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/LoginFirebase.html' },
+      { id: 7, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/.html' },
+      { id: 8, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
+ 
+    ]);
+    //  ********************************************************************
+const exercises4 = ref([
       { id: 1, title: 'PROCESADORES', description: 'BOOTSTRAP', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/framework.html' },
     ]);
     //  ********************************************************************

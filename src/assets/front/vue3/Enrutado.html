@@ -17,6 +17,67 @@
 </head>
 <body>
 <h1> ENRUTADO </h1> 
+<H2>USANDO VUETIFY</H2>
+<pre>
+  &lt;template>
+  &lt;v-app>
+
+    &lt;!-- Barra de navegación superior *******************************-->
+    &lt;v-app-bar app color="primary" dark>
+      &lt;v-toolbar-title>Mi Aplicación&lt;/v-toolbar-title>
+      &lt;v-spacer>&lt;/v-spacer>
+
+      &lt;!-- Botones de navegación **********************************-->
+      &lt;v-btn
+        v-for="(route, index) in routes"
+        :key="index"
+        :color="isActive(route.path) ? 'green' : 'white'"
+        text
+        @click="() => navigate(route.path)"
+      >
+        {{ route.name }}
+      &lt;/v-btn>
+    &lt;/v-app-bar>
+
+    &lt;!-- Contenido principal***************************************** -->
+    &lt;v-main>
+      &lt;v-container fluid class="pa-4">
+        &lt;router-view>&lt;/router-view>
+      &lt;/v-container>
+    &lt;/v-main>
+  &lt;/v-app>
+&lt;/template>
+
+&lt; ///////////////////////////////////////////////////////////////////// -->
+
+&lt;script setup>
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+// Definimos las rutas de navegación
+const routes = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' }
+]
+
+// Función para navegar a la ruta seleccionada
+const navigate = (path) => {
+  router.push(path)
+}
+
+// Función para verificar si la ruta actual está activa
+const isActive = (path) => {
+  return route.path === path
+}
+&lt;/script>
+
+</pre>
+
+
+
+<h2>FORMA CLÁSICA</h2>
 <ol>
 <li>Por estructuración las vistas o paginas ejemplo: NombreView.vue</li>
 <li>Crear un navegador con el nombre de las rutas</li>
