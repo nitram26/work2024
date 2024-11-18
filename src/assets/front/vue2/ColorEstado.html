@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{background-color:bisque;}
+  .img{
+    width: 600px;
+    margin: 4em;
+    border: brown double 6px;
+  }
+  </style>
+  <title>ELEMENTOS RÁPIDOS</title>
+</head>
+<body>
+  <h1> Poner de color un elemento traído de la base de datos  </h1> 
+  <ol>
+  <li>Se hace en la page === view</li>
+ 
+  </ol>
+
+  <pre>
+    <div>
+     
+<h3>1.	Se crea el template</h3>
+&lt;template #[`item.status`]="{ item }">
+                    &lt;span
+                      :class="{
+                        'text-success': item.status === 'compras',
+                        'text-error': item.status === 'ventas'
+                      }"
+                    >
+                      {{ item.status }}
+                    &lt;/span>
+                  &lt;/template>
+
+<h3>2.	Se enlaza con el header:</h3>
+
+headers: [
+        { text: 'N°', value: 'index', sortable: false },
+        { text: 'Empresa', value: 'idCompany.shortName', align: 'rigth', sortable: false },
+        { text: 'RUC', value: 'ruc', align: 'rigth', sortable: false },
+        { text: 'Proveedor', value: 'providerName', align: 'rigth', sortable: false },
+        { text: 'Categoria ', value: 'providerType', align: 'rigth', sortable: false },
+        { text: 'Teléfono', value: 'phone', align: 'rigth', sortable: false },
+        // { text: 'Correo', value: 'email', align: 'rigth', sortable: false },
+        { text: 'Dirección', value: 'direction', align: 'rigth', sortable: false },
+        { text: 'Estado', value: 'status', align: 'center', sortable: false },
+        { text: 'Acciones', value: 'actions', align: 'center', sortable: false }
+      ],
+
+<h3>3.	Se agrega los estilos</h3>
+
+&lt;style scoped>
+
+.text-success {
+  color: white;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  background-color: green;
+}
+
+.text-error {
+  color: white;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  background-color: blue;
+}
+
+&lt;/style>
+<img src="/src/assets/image/front/vue2/colorSlot01.png" alt="colorSlot01" class="img">
+<img src="/src/assets/image/front/vue2/colorSlot02.png" alt="colorSlot02" class="img">
+
+
+&lt;h2>USANDO VUETIFY + V-CHIP&lt;/h2>
+&lt;!-- color al estado -->
+
+              &lt;template #[`item.state`]="{ item }">
+                &lt;v-chip
+                  :color="item.state ? 'green' : 'blue'"
+                  dark
+                >
+                  {{ item.state ? 'Activo' : 'Inactivo' }}
+                &lt;/v-chip>
+              &lt;/template>
+
+              <img src="/src/assets/image/front/vue2/colorSlot03.png" alt="colorSlot03" class="img">
+
+
+    </div>
+  </pre>
+</body>
+</html>
+    
+
+  

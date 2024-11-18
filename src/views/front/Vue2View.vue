@@ -160,7 +160,8 @@ const exercises1 = ref([
        { id: 6, title: 'COMPONENT', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ComponentVue2.html' },
        { id: 7, title: 'AXIOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/Axios.html' },
        { id: 8, title: 'ACTUALIZAR DATOS SURSA', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ActualizarDatos.html' },
-       { id: 9, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 9, title: 'COLOR DINÁMICO EN TABLA', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue2/ColorEstado.html' },
+       { id: 10, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
  
      
      ]);
