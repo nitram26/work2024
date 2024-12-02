@@ -234,6 +234,7 @@ const exercises = ref([
       { id: 9, title: 'SELECT', description: 'CON VUETIFY', time: 200, remainingTime: 150, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/SelectNuevo.html' },
       { id: 10, title: 'CONDICIONAL TERNARIO', description: 'CON :CLASS', time: 100, remainingTime: 100, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/CondicionalTernario.html' },
       { id: 11, title: 'V-IF & V-SHOW', description: 'CONDICIONALES', time: 150, remainingTime: 150, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/IfShow.html' },
+      { id: 12, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
     ]);
     //  ********************************************************************
 const exercises2 = ref([
@@ -245,6 +246,8 @@ const exercises2 = ref([
       { id: 6, title: 'RUTAS', description: 'TIME:', time: 1000, remainingTime: 1000, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Enrutado.html' },
       { id: 7, title: 'LAYOUTS & COMPOSABLES ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/layoutsComposables.html' },
       { id: 8, title: 'ANIMACIONES E ICONOS ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/Animacion&Icono.html' },
+      { id: 9, title: 'ROUTER ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/routerVuetify.html' },
+      { id: 10, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
  
     ]);
     //  ********************************************************************
@@ -257,11 +260,13 @@ const exercises3 = ref([
       { id: 6, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/LoginFirebase.html' },
       { id: 7, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/.html' },
       { id: 8, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
+      { id: 9, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
  
     ]);
     //  ********************************************************************
 const exercises4 = ref([
       { id: 1, title: 'PROCESADORES', description: 'BOOTSTRAP', time: 375, remainingTime: 375, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/framework.html' },
+      { id: 2, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
     ]);
     //  ********************************************************************
 // ////////////////////////////////////////////////////////////////////////////////////////////

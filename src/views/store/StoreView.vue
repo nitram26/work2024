@@ -229,7 +229,8 @@ const exercises = ref([
   const exercises2 = ref([
        { id: 1, title: 'MANTENIMIENTO LÓGICO ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/mantenimientoLogico.html' },
        { id: 2, title: 'LIMPIEZA DE CABEZALES', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/ImpresoraEpson.html' },
-       { id: 3, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 3, title: ' EXTENDER PANTALLA', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/pantalla.html' },
+       { id: 4, title: ' ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
      
      ]);
      const startExercise2 = (exercise2) => {
@@ -278,7 +279,8 @@ const exercises = ref([
        { id: 2, title: 'SUSPENDER O INVERNAR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/Suspensi%C3%B3nPantalla.html' },
        { id: 3, title: 'AUDIO VIDEO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/SegundaPantalla.html' },
        { id: 4, title: 'GOOGLE DRIVE', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/CorreoYDrive.html' },
-       { id: 5, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 5, title: 'BORRAR DATOS DE CACHÉ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/BorrarDatos.html' },
+       { id: 6, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
   
      
      ]);
