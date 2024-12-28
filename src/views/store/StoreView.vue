@@ -204,7 +204,7 @@ const exercises = ref([
        { id: 3, title: 'COMMITS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/GitCommit.html' },
        { id: 4, title: 'INVITAR COLABORADOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/InvitarColaborador.html' },
        { id: 5, title: 'CAMBIO DE CORREO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/cambioCorreo.html' },
-       { id: 6, title: 'ACCESOS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/IngresarDatos.html' },
+       { id: 6, title: 'ACCESOS', description: 'TIME: PARA SOFIA', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/IngresarDatos.html' },
        { id: 7, title: 'DEPLOY GITHUB', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/DeployGithub.html' },
        { id: 8, title: 'SUBIR PROYECTO A GITHUB', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/crearProyecto.html' },
        { id: 9, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },

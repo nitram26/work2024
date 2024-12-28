@@ -159,7 +159,7 @@ max-width="344" >
 </v-row>
 </div>
     <!-- /////////////////////////////////////////////////////// -->
-   <div class="" id="section3">
+   <div class="" id="section4">
 
   <v-row class="bg-blue pa-2" >
     <v-col cols="11" class="text-center">
@@ -260,7 +260,9 @@ const exercises3 = ref([
       { id: 6, title: 'LOGIN FIREBASE', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/LoginFirebase.html' },
       { id: 7, title: 'VUEX ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/.html' },
       { id: 8, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
-      { id: 9, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
+      { id: 9, title: 'PWA ', description: 'TIME: Funciona Sin Internet', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pwa.html' },
+      { id: 10, title: 'i18n ', description: 'TIME: Paquete de Idiomas', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/i18n.html' },
+      { id: 11, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
  
     ]);
     //  ********************************************************************
