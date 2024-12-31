@@ -262,7 +262,8 @@ const exercises3 = ref([
       { id: 8, title: 'PINIA ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pinia.html' },
       { id: 9, title: 'PWA ', description: 'TIME: Funciona Sin Internet', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/pwa.html' },
       { id: 10, title: 'i18n ', description: 'TIME: Paquete de Idiomas', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/i18n.html' },
-      { id: 11, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
+      { id: 11, title: 'Plugins ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/front/vue3/plugins.html' },
+      { id: 12, title: ' ', description: 'TIME:', time: 160, remainingTime: 160, intervalId: null, link: '' },
  
     ]);
     //  ********************************************************************
