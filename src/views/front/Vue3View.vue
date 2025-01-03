@@ -290,6 +290,8 @@ const exercises4 = ref([
       clearInterval(exercise1.intervalId);
       exercise1.intervalId = null;
     };
+
+    cons
     //  ********************************************************************
 
     const startExercise2 = (exercise2) => {
