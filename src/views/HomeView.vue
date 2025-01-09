@@ -160,6 +160,8 @@ const exercises1 = ref([
        { id: 5, title: 'SECUNDARIO CON TARJETAS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/secundarioYTarjetas.html' },
        { id: 6, title: 'TARJETAS V-FOR', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/TarjetaVfor.html' },
        { id: 7, title: 'NAV INTERNO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/NavInterno.html' },
+       { id: 8, title: 'IA DEVELOPERS', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/home/IADeveloper.html' },
+       { id: 9, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
      ]);
      const startExercise1 = (exercise1) => {
        if (exercise1.intervalId) return;

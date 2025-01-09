@@ -208,6 +208,7 @@ const exercises = ref([
        { id: 7, title: 'DEPLOY GITHUB', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/DeployGithub.html' },
        { id: 8, title: 'SUBIR PROYECTO A GITHUB', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/crearProyecto.html' },
        { id: 9, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 9, title: 'Cuenta en GitHub', description: 'Crear una Cuenta', time: 600, remainingTime: 600, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/cuentaGithub.html' },
      ]);
      const startExercise1 = (exercise1) => {
        if (exercise1.intervalId) return;
@@ -280,7 +281,8 @@ const exercises = ref([
        { id: 3, title: 'AUDIO VIDEO', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/SegundaPantalla.html' },
        { id: 4, title: 'GOOGLE DRIVE', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/CorreoYDrive.html' },
        { id: 5, title: 'BORRAR DATOS DE CACHÉ', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/BorrarDatos.html' },
-       { id: 6, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
+       { id: 6, title: 'YouTube', description: 'Traducción automática', time: 120, remainingTime: 120, intervalId: null, link: 'http://127.0.0.1:5502/src/assets/store/youtube.html' },
+       { id: 7, title: '', description: 'TIME:', time: 120, remainingTime: 120, intervalId: null, link: '' },
   
      
      ]);
